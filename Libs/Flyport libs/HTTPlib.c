@@ -311,7 +311,8 @@ int cHTTPRequest()
 						char contentlength[5];
 						sprintf(contentlength, "%d", strlen(httpWriteBuffer));
 						GSMWrite(contentlength);
-						GSMWrite("\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept: */*");
+						GSMWrite("\r\nContent-Type: application/json\r\nAccept: */*");
+						//GSMWrite("\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept: */*");
 						GSMWrite("\r\n\r\n");
 						GSMWrite(httpWriteBuffer);
 					}

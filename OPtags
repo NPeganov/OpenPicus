@@ -17,17 +17,21 @@ An_i_dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^stati
 An_i_getan_i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^static float An_i_getan_i (void * _self,va_list *app)$/;"	kind:f	line:87	file:
 BASICDEVICES_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	50;"	kind:d	line:50
 BOTH_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	72;"	kind:d	line:72
-BaseUrl	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * BaseUrl = "http:\/\/httpbin.org";$/;"	kind:v	line:18	file:
+BaseUrl	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * BaseUrl = "ecloud.dataart.com";\/\/\/ecapi8";$/;"	kind:v	line:6	file:
+BaseUrl	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * BaseUrl = "ecloud.dataart.com";\/\/\/ecapi8";$/;"	kind:v	line:21	file:
 Baud_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^static unsigned int Baud_ = 0;$/;"	kind:v	line:13	file:
 Board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^const void *Board = &_Board;$/;"	kind:v	line:335
 Board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Board$/;"	kind:s	line:78	file:
 BoardClass	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^struct BoardClass$/;"	kind:s	line:78
 Board_ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^static void *Board_ctor (void * _self, va_list *app)$/;"	kind:f	line:95	file:
+COMMON_UTILS_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CommonUtils.h	2;"	kind:d	line:2
+CONNECTED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	CONNECTED,$/;"	kind:e	line:16	enum:SocketState
 CRC	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	unsigned short CRC = CRC16(&ModbusBuf[MB_PLOAD_IND + 0], ModbusBuf[MB_PSIZE_IND]);$/;"	kind:l	line:73
 CRC16	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CRC16Calc.c	/^unsigned short CRC16(unsigned char * pcBlock, unsigned short len)$/;"	kind:f	line:38
 CRC16	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CRC16Calc.h	/^unsigned short CRC16(unsigned char * pcBlock, unsigned short len);$/;"	kind:p	line:4
 CTS_232	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	9;"	kind:d	line:9	file:
 Coils	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	Coils 		= FC_Read_Coils,$/;"	kind:e	line:23	enum:MODBUS_READ_TYPE
+ConnectionAtteptsNum	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	const unsigned char ConnectionAtteptsNum = 3;$/;"	kind:l	line:50
 Crc16Table	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CRC16Calc.c	/^static const unsigned short Crc16Table[256] = {$/;"	kind:v	line:3	file:
 D3VR_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	56;"	kind:d	line:56
 D3V_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	57;"	kind:d	line:57
@@ -43,8 +47,10 @@ DIG_PORTS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.
 DInputs	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	DInputs	 	= FC_Read_Discrete_Inputs,$/;"	kind:e	line:24	enum:MODBUS_READ_TYPE
 DOUBLE_PORT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	66;"	kind:d	line:66
 DUTY	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	73;"	kind:d	line:73
-DevId	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * DevId = "b55cf00a-FFFF-AAAA-BBBB-8af2a112cb57";$/;"	kind:v	line:15	file:
-DevKey	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * DevKey = "b55cf00a-FFFF-AAAA-BBBB-8af2a112cb57";$/;"	kind:v	line:16	file:
+DevId	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";$/;"	kind:v	line:3	file:
+DevId	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";$/;"	kind:v	line:18	file:
+DevKey	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:4	file:
+DevKey	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:19	file:
 Dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^const void *Dig_io = &_Dig_io;$/;"	kind:v	line:166
 Dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^struct Dig_io$/;"	kind:s	line:55	file:
 Dig_io_attach	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static void* Dig_io_attach (void * _board,void *_sensor,int n)$/;"	kind:f	line:107	file:
@@ -68,6 +74,8 @@ EC_UNEXPECTED_DATA	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\Mo
 ERR_PORT_ALREADY_USED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	77;"	kind:d	line:77
 ERR_WRONG_PORTNUM	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	76;"	kind:d	line:76
 ERR_WRONG_PORT_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	78;"	kind:d	line:78
+EstablishHttpConnecion	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num)$/;"	kind:f	line:157
+EstablishHttpConnecion	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num);$/;"	kind:p	line:24
 FC_Read_Coils	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Coils 				= 0x01,$/;"	kind:e	line:8	enum:MODBUS_FUNCTION_CODE
 FC_Read_Discrete_Inputs	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Discrete_Inputs 	= 0x02,$/;"	kind:e	line:9	enum:MODBUS_FUNCTION_CODE
 FC_Read_Holding_Registers	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Holding_Registers 	= 0x03,$/;"	kind:e	line:10	enum:MODBUS_FUNCTION_CODE
@@ -78,15 +86,28 @@ FC_Write_Multiple_Registers	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\I
 FC_Write_Single_Coil	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Single_Coil 		= 0x05,$/;"	kind:e	line:12	enum:MODBUS_FUNCTION_CODE
 FC_Write_Single_Register	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Single_Register 	= 0x06,$/;"	kind:e	line:13	enum:MODBUS_FUNCTION_CODE
 FREQUENCY	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	72;"	kind:d	line:72
-FlyportTask	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^void FlyportTask()$/;"	kind:f	line:20
+FlyportTask	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^void FlyportTask()$/;"	kind:f	line:28
+FormRegistrationRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\Rest.h	/^cJSON * FormRegistrationRequest();$/;"	kind:p	line:8
+FormRegistrationRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^cJSON * FormRegistrationRequest()$/;"	kind:f	line:9
+GET_STATUS_FAILURE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	GET_STATUS_FAILURE		$/;"	kind:e	line:18	enum:SocketState
 GROVEBOARD_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	50;"	kind:d	line:50
 GROVEINTERFACES_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	50;"	kind:d	line:50
 GROVELIB_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	49;"	kind:d	line:49
 GetBaud	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	int (*GetBaud)();$/;"	kind:m	line:19	struct:SerialPort	access:public
+GetError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CommonUtils.c	/^void GetError()$/;"	kind:f	line:3
+GetError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CommonUtils.h	/^void GetError();$/;"	kind:p	line:6
+GetHttpResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:58
+GetHttpResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:23
+GetHttpStatus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^enum SocketState GetHttpStatus(TCP_SOCKET* conn)$/;"	kind:f	line:108
+GetHttpStatus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^enum SocketState GetHttpStatus(TCP_SOCKET* conn);$/;"	kind:p	line:25
 GroveNest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	55;"	kind:d	line:55
 GrovePort	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^}GrovePort;$/;"	kind:t	line:92	typeref:struct:__anon1
 GroveStarted	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BOOL GroveStarted = FALSE;$/;"	kind:v	line:92
 HRegisters	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	HRegisters 	= FC_Read_Holding_Registers,$/;"	kind:e	line:25	enum:MODBUS_READ_TYPE
+HTTPConnect	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port)$/;"	kind:f	line:130
+HTTPConnect	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port);$/;"	kind:p	line:26
+HTTP_UTILS_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	2;"	kind:d	line:2
+HttpResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse$/;"	kind:s	line:8
 I2C	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	67;"	kind:d	line:67
 I2C_PORTS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	60;"	kind:d	line:60
 I2C_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	61;"	kind:d	line:61
@@ -121,8 +142,11 @@ MODBUS_READ_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\Modb
 MODBUS_SERIAL_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	2;"	kind:d	line:2
 ModbusBuf	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char ModbusBuf[512];$/;"	kind:v	line:27
 ModbusMaster	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ModbusMaster$/;"	kind:s	line:155
+NOT_CONNECTED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	NOT_CONNECTED,$/;"	kind:e	line:17	enum:SocketState
 NOT_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	69;"	kind:d	line:69
 NOT_USED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	64;"	kind:d	line:64
+NtwKey	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:5	file:
+NtwKey	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:20	file:
 OnBusy	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnBusy(char* phoneNumber)$/;"	kind:f	line:32
 OnError	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnError(int error, int errorNumber)$/;"	kind:f	line:70
 OnNoCarrier	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnNoCarrier(char* phoneNumber)$/;"	kind:f	line:20
@@ -133,11 +157,16 @@ OnSMSSentReport	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnSMSSentR
 P1_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	70;"	kind:d	line:70
 P2_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	71;"	kind:d	line:71
 PWM	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	71;"	kind:d	line:71
+ParseResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse ParseResponse(unsigned char* BufForResp)$/;"	kind:f	line:171
+ParseResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse ParseResponse(unsigned char* BufForResp);$/;"	kind:p	line:27
 Pin1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Pin1;			\/\/ 	Pin1 number - Association with Flyport pin number (analog channel for analog ports)$/;"	kind:m	line:87	struct:__anon1	access:public
 Pin2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Pin2;			\/\/	Pin2 number - Association with Flyport pin number (analog channel for analog ports)$/;"	kind:m	line:88	struct:__anon1	access:public
 PortNum	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	unsigned char PortNum;$/;"	kind:m	line:14	struct:SerialPort	access:public
 Port_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^static unsigned char Port_ = 0;$/;"	kind:v	line:12	file:
+ProcessComand	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CommonUtils.c	/^BOOL ProcessComand()$/;"	kind:f	line:22
+ProcessComand	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CommonUtils.h	/^BOOL ProcessComand();$/;"	kind:p	line:7
 Qnty	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	short Qnty;$/;"	kind:m	line:149	struct:ReadRegistersResp	access:public
+REST_API_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\Rest.h	2;"	kind:d	line:2
 RE_485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	4;"	kind:d	line:4	file:
 RS485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^const struct SerialPort RS485 = $/;"	kind:v	line:78	typeref:struct:SerialPort
 RS485BufferSize	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^int RS485BufferSize(int port);$/;"	kind:p	line:69
@@ -177,10 +206,18 @@ ReadByte	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial
 ReadHRegisters	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	struct ReadRegistersResp (*ReadHRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);	$/;"	kind:m	line:158	struct:ModbusMaster	typeref:struct:ModbusMaster::ReadHRegisters	access:public
 ReadRegistersResp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ReadRegistersResp$/;"	kind:s	line:145
 RecievedCRC	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char RecievedCRC[2] = {0, 0};$/;"	kind:l	line:123
+RegRequestJson	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	cJSON * RegRequestJson = FormRegistrationRequest();	$/;"	kind:l	line:67
+Response	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	char * Response;	$/;"	kind:m	line:11	struct:HttpResponse	access:public
+RsponseIsOK	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	BOOL RsponseIsOK;$/;"	kind:m	line:10	struct:HttpResponse	access:public
 SINGLE_PORT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	65;"	kind:d	line:65
 SPI	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	68;"	kind:d	line:68
+SendHttpDataRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char* data, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:25
+SendHttpDataRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char * data, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:22
+SendHttpJsonRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:4
+SendHttpJsonRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:21
 SensorClass	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^struct SensorClass$/;"	kind:s	line:67
 SerialPort	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^struct SerialPort$/;"	kind:s	line:12
+SocketState	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^enum SocketState$/;"	kind:g	line:14
 TIMEOUT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	75;"	kind:d	line:75
 TX_232	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	7;"	kind:d	line:7	file:
 TX_485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	5;"	kind:d	line:5	file:
@@ -228,13 +265,13 @@ attachSensorToI2CBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboa
 attachSensorToUartBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToUartBus(void *_board,int port,int speed,BYTE module,BYTE interf)$/;"	kind:f	line:273
 attachToBoard	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^int attachToBoard(void *,void *,int);$/;"	kind:p	line:61
 attachToBoard	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^int attachToBoard(void *board,void *sensor,int numb)$/;"	kind:f	line:97
-board	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	void *board = new(GroveNest);$/;"	kind:l	line:148
+board	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	void *board = new(GroveNest);$/;"	kind:l	line:140
 boardType	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	int boardType;$/;"	kind:m	line:81	struct:Board	file:	access:public
 buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:11
 buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:23
 buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:35
 buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[30];$/;"	kind:l	line:61
-button	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	void *button = new(Dig_io, IN);$/;"	kind:l	line:152
+button	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	void *button = new(Dig_io, IN);$/;"	kind:l	line:144
 bytesReady	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	int bytesReady = RS485BufferSize(Port_);$/;"	kind:l	line:48
 c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *c=cJSON_New_Item();$/;"	kind:l	line:249
 c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *c=object->child; $/;"	kind:l	line:473
@@ -344,7 +381,7 @@ class	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const str
 config	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	int (*config) (void *,va_list *);$/;"	kind:m	line:73	struct:SensorClass	access:public
 configure	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^int configure(void *,...);$/;"	kind:p	line:62
 configure	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^int configure(void *self, ...)$/;"	kind:f	line:112
-conn	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	TCP_SOCKET conn;$/;"	kind:l	line:35
+conn	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^TCP_SOCKET conn;$/;"	kind:v	line:26
 copy	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^      char* copy;$/;"	kind:l	line:58
 cp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:116
 cp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:128
@@ -354,28 +391,32 @@ create_reference	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^st
 ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*ctor) (void *,va_list *);$/;"	kind:m	line:70	struct:SensorClass	access:public
 ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*ctor) (void *,va_list *);$/;"	kind:m	line:81	struct:BoardClass	access:public
 d	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double d=item->valuedouble;$/;"	kind:l	line:117
+data	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *data = cJSON_CreateObject();			$/;"	kind:l	line:14
 data	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^			float data = va_arg(*app, const float);$/;"	kind:l	line:135
 data	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\i2c_devices.c	/^	BYTE data = I2CRead(1);$/;"	kind:l	line:75
-data	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^    cJSON *data = cJSON_CreateObject();			$/;"	kind:l	line:53
 delet_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^void delet_(void **);$/;"	kind:p	line:60
 delet_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^void delet_(void **_self)$/;"	kind:f	line:91
 delete	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	56;"	kind:d	line:56
 delete_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^void delete_(void *);$/;"	kind:p	line:59
 delete_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^void delete_(void *_self)$/;"	kind:f	line:81
-devClassData	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^    cJSON *devClassData = cJSON_CreateObject();	$/;"	kind:l	line:54
-deviceClass	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^    cJSON *deviceClass = cJSON_CreateObject();		$/;"	kind:l	line:52
+devClassData	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *devClassData = cJSON_CreateObject();	$/;"	kind:l	line:15
+deviceClass	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *deviceClass = cJSON_CreateObject();		$/;"	kind:l	line:13
 dionext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *dionext;$/;"	kind:m	line:85	struct:Board	typeref:struct:Board::Interface	file:	access:public
 diostart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *diostart;$/;"	kind:m	line:84	struct:Board	typeref:struct:Board::Interface	file:	access:public
 dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void (*dtor) (void *);$/;"	kind:m	line:71	struct:SensorClass	access:public
 dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*dtor) (void *);$/;"	kind:m	line:82	struct:BoardClass	access:public
 dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^		(*self)->dtor(self);$/;"	kind:p	line:86	file:
 ec	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	enum MODBUS_ERROR_CODES ec;$/;"	kind:m	line:147	struct:ReadRegistersResp	typeref:enum:ReadRegistersResp::MODBUS_ERROR_CODES	access:public
+end	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char* end = 0;$/;"	kind:l	line:178
+end1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^		int end1 = 0;$/;"	kind:l	line:200
 entries	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char **entries;$/;"	kind:l	line:325
 entries	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char **entries=0,**names=0;$/;"	kind:l	line:413
 ep	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *ep;$/;"	kind:v	line:35	file:
 fail	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,fail=0;$/;"	kind:l	line:416
 fail	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
 firstByteMark	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const unsigned char firstByteMark[7] = { 0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC };$/;"	kind:v	line:137	file:
+first_time	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	BOOL first_time = TRUE;$/;"	kind:l	line:63
+first_time	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	BOOL first_time = TRUE;$/;"	kind:l	line:88
 flag	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^unsigned char flag;$/;"	kind:v	line:60
 free_fn	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^      void (*free_fn)(void *ptr);$/;"	kind:m	line:55	struct:cJSON_Hooks	access:public
 gName	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	char *(*gName) (const void *);$/;"	kind:m	line:85	struct:BoardClass	access:public
@@ -407,6 +448,7 @@ i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetA
 i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:l	line:500
 i2cnext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *i2cnext;$/;"	kind:m	line:83	struct:Board	typeref:struct:Board::Interface	file:	access:public
 i2cstart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *i2cstart;$/;"	kind:m	line:82	struct:Board	typeref:struct:Board::Interface	file:	access:public
+inBuff	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^unsigned char inBuff[2000];$/;"	kind:v	line:25
 ind	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	short ind = len;$/;"	kind:l	line:36
 ind	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	unsigned short ind = len;$/;"	kind:l	line:63
 inter	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct Interface *inter;$/;"	kind:m	line:58	struct:An_i	typeref:struct:An_i::Interface	file:	access:public
@@ -421,11 +463,20 @@ item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_C
 item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNumber(double num)			{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_Number;item->valuedouble=num;item->valueint=(int)num;}return item;}$/;"	kind:l	line:507
 item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateTrue()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_True;return item;}$/;"	kind:l	line:504
 j	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+jsonStr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char *jsonStr = cJSON_Print(json);$/;"	kind:l	line:8
+jsonStr	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	char *jsonStr = cJSON_PrintUnformatted(RegRequestJson);$/;"	kind:l	line:77
 len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
 len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
 len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
 len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
 len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^      size_t len;$/;"	kind:l	line:57
+lenTemp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	int lenTemp = 0;$/;"	kind:l	line:64
+lenTemp	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	int lenTemp = 0;$/;"	kind:l	line:89
+loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[255];	$/;"	kind:l	line:60
+loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];	$/;"	kind:l	line:174
+loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];$/;"	kind:l	line:110
+loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];$/;"	kind:l	line:132
+loggBuff	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^char loggBuff[255];$/;"	kind:v	line:24
 malloc_fn	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^      void *(*malloc_fn)(size_t sz);$/;"	kind:m	line:54	struct:cJSON_Hooks	access:public
 n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
 n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
@@ -433,7 +484,7 @@ n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_Crea
 n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
 n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
 names	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char **entries=0,**names=0;$/;"	kind:l	line:413
-network	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^    cJSON *network = cJSON_CreateObject();	$/;"	kind:l	line:51
+network	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *network = cJSON_CreateObject();	$/;"	kind:l	line:12
 new	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^void *new(const void *_class, ...)$/;"	kind:f	line:63
 new_board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^static void *new_board(const void *,va_list ap);$/;"	kind:p	line:58	file:
 new_board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^static void *new_board(const void *_class,va_list ap)$/;"	kind:f	line:159	file:
@@ -473,7 +524,7 @@ parse_value	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static 
 parse_value	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_value(cJSON *item,const char *value);$/;"	kind:p	line:236	file:
 payload	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	short * payload;$/;"	kind:m	line:148	struct:ReadRegistersResp	access:public
 port	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	/^	GrovePort *port;$/;"	kind:m	line:68	struct:Interface	access:public
-port485	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const int port485 = 2;$/;"	kind:v	line:13	file:
+port485	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const int port485 = 2;$/;"	kind:v	line:16	file:
 prev	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	kind:m	line:41	struct:cJSON	typeref:struct:cJSON::	access:public
 print_array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt)$/;"	kind:f	line:323	file:
 print_array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt);$/;"	kind:p	line:239	file:
@@ -500,13 +551,17 @@ readError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^unsign
 readRes	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	BOOL readRes = FALSE;$/;"	kind:l	line:82
 read_register	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\i2c_devices.c	/^BYTE read_register(BYTE address,BYTE regist)$/;"	kind:f	line:68
 ref	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static cJSON *create_reference(cJSON *item) {cJSON *ref=cJSON_New_Item();if (!ref) return 0;memcpy(ref,item,sizeof(cJSON));ref->string=0;ref->type|=cJSON_IsReference;ref->next=ref->prev=0;return ref;}$/;"	kind:l	line:482
+res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;	$/;"	kind:l	line:173
+res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;$/;"	kind:l	line:27
+res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;$/;"	kind:l	line:6
 res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	struct ReadRegistersResp res;$/;"	kind:l	line:57
+respEnd	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char* respEnd = (char*)&BufForResp[strlen((char*)BufForResp)];$/;"	kind:l	line:179
+respLen	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	int respLen = GetHttpResponse(conn, BufForResp, timeout_sec);$/;"	kind:l	line:42
 ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	int ret = ADCVal(self->inter->port->Pin1);$/;"	kind:l	line:90
 ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
 ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
 ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	int ret = IOGet(self->inter->port->Pin1);$/;"	kind:l	line:151
-root	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	cJSON *root = cJSON_CreateObject();$/;"	kind:l	line:50
-s_out	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	char *s_out = cJSON_Print(root);$/;"	kind:l	line:80
+root	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^	cJSON *root = cJSON_CreateObject();$/;"	kind:l	line:11
 scale	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
 self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct An_i *self = _self;$/;"	kind:l	line:63
 self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct An_i *self = _self;$/;"	kind:l	line:89
@@ -535,12 +590,17 @@ size	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	si
 skip	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *skip(const char *in) {while (in && *in && (unsigned char)*in<=32) in++; return in;}$/;"	kind:f	line:244	file:
 smsRec	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char smsRec[7];$/;"	kind:l	line:52
 speed	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	/^	int speed;$/;"	kind:m	line:70	struct:Interface	access:public
+start	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char* start = 0;$/;"	kind:l	line:177
 start	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void (*start) (const void *);$/;"	kind:m	line:84	struct:BoardClass	access:public
+start1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^		int start1 = 0;$/;"	kind:l	line:188
+start2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^		int start2 = 0;$/;"	kind:l	line:208
+start_sec	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	int start_sec = TickGetDiv64K();$/;"	kind:l	line:65
 state	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	BYTE state = va_arg(*app, const BYTE);$/;"	kind:l	line:121
 str	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
 str	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *str;$/;"	kind:l	line:116
 string	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	char *string;				\/* The item's name string, if this item is the child of, or is in the list of subitems of an object. *\/$/;"	kind:m	line:50	struct:cJSON	access:public
 subscale	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
+subst	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char subst[8];$/;"	kind:l	line:176
 suffix_object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static void suffix_object(cJSON *prev,cJSON *item) {prev->next=item;item->prev=prev;}$/;"	kind:f	line:480	file:
 tim1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	DWORD tim1 = TickGet();$/;"	kind:l	line:49
 token	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
@@ -551,7 +611,7 @@ uartnext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	stru
 uartstart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *uartstart;$/;"	kind:m	line:88	struct:Board	typeref:struct:Board::Interface	file:	access:public
 uc	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
 uc2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-url	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	char url[128];url[0] = 0;$/;"	kind:l	line:92
+url	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	char url[128];url[0] = 0;$/;"	kind:l	line:58
 valuedouble	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	double valuedouble;			\/* The item's number, if type==cJSON_Number *\/$/;"	kind:m	line:48	struct:cJSON	access:public
 valueint	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	int valueint;				\/* The item's number, if type==cJSON_Number *\/$/;"	kind:m	line:47	struct:cJSON	access:public
 valuestring	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	char *valuestring;			\/* The item's string, if type==cJSON_String *\/$/;"	kind:m	line:46	struct:cJSON	access:public
