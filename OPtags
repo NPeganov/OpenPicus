@@ -4,616 +4,642 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-AN1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	64;"	kind:d	line:64
-AN2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	65;"	kind:d	line:65
-AN3	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	66;"	kind:d	line:66
-AN_PORTS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	59;"	kind:d	line:59
-AN_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	60;"	kind:d	line:60
-An_i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^const void *An_i = &_An_i;$/;"	kind:v	line:105
-An_i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^struct An_i$/;"	kind:s	line:55	file:
-An_i_attach	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^static void *An_i_attach (void * _board,void *_sensor,int portnumb)$/;"	kind:f	line:78	file:
-An_i_ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^static void *An_i_ctor (void * _self, va_list *app)$/;"	kind:f	line:61	file:
-An_i_dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^static void An_i_dtor (void * _sensor)$/;"	kind:f	line:68	file:
-An_i_getan_i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^static float An_i_getan_i (void * _self,va_list *app)$/;"	kind:f	line:87	file:
-BASICDEVICES_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	50;"	kind:d	line:50
-BOTH_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	72;"	kind:d	line:72
-BaseUrl	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * BaseUrl = "ecloud.dataart.com";\/\/\/ecapi8";$/;"	kind:v	line:6	file:
-BaseUrl	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * BaseUrl = "ecloud.dataart.com";\/\/\/ecapi8";$/;"	kind:v	line:21	file:
-Baud_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^static unsigned int Baud_ = 0;$/;"	kind:v	line:13	file:
-Board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^const void *Board = &_Board;$/;"	kind:v	line:335
-Board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Board$/;"	kind:s	line:78	file:
-BoardClass	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^struct BoardClass$/;"	kind:s	line:78
-Board_ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^static void *Board_ctor (void * _self, va_list *app)$/;"	kind:f	line:95	file:
-COMMON_UTILS_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CommonUtils.h	2;"	kind:d	line:2
-CONNECTED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	CONNECTED,$/;"	kind:e	line:16	enum:SocketState
-CRC	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	unsigned short CRC = CRC16(&ModbusBuf[MB_PLOAD_IND + 0], ModbusBuf[MB_PSIZE_IND]);$/;"	kind:l	line:73
-CRC16	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CRC16Calc.c	/^unsigned short CRC16(unsigned char * pcBlock, unsigned short len)$/;"	kind:f	line:38
-CRC16	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CRC16Calc.h	/^unsigned short CRC16(unsigned char * pcBlock, unsigned short len);$/;"	kind:p	line:4
-CTS_232	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	9;"	kind:d	line:9	file:
-Coils	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	Coils 		= FC_Read_Coils,$/;"	kind:e	line:23	enum:MODBUS_READ_TYPE
-ConnectionAtteptsNum	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	const unsigned char ConnectionAtteptsNum = 3;$/;"	kind:l	line:50
-Crc16Table	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CRC16Calc.c	/^static const unsigned short Crc16Table[256] = {$/;"	kind:v	line:3	file:
-D3VR_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	56;"	kind:d	line:56
-D3V_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	57;"	kind:d	line:57
-D5VR_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	58;"	kind:d	line:58
-D5V_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	59;"	kind:d	line:59
-DEBUG_PORTS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	61;"	kind:d	line:61
-DE_485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	3;"	kind:d	line:3	file:
-DIG1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	60;"	kind:d	line:60
-DIG2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	61;"	kind:d	line:61
-DIG3	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	62;"	kind:d	line:62
-DIG4	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	63;"	kind:d	line:63
-DIG_PORTS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	62;"	kind:d	line:62
-DInputs	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	DInputs	 	= FC_Read_Discrete_Inputs,$/;"	kind:e	line:24	enum:MODBUS_READ_TYPE
-DOUBLE_PORT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	66;"	kind:d	line:66
-DUTY	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	73;"	kind:d	line:73
-DevId	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";$/;"	kind:v	line:3	file:
-DevId	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";$/;"	kind:v	line:18	file:
-DevKey	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:4	file:
-DevKey	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:19	file:
-Dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^const void *Dig_io = &_Dig_io;$/;"	kind:v	line:166
-Dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^struct Dig_io$/;"	kind:s	line:55	file:
-Dig_io_attach	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static void* Dig_io_attach (void * _board,void *_sensor,int n)$/;"	kind:f	line:107	file:
-Dig_io_ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static void *Dig_io_ctor (void * _self, va_list *app)$/;"	kind:f	line:66	file:
-Dig_io_dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static void Dig_io_dtor (void * _sensor)$/;"	kind:f	line:91	file:
-Dig_io_get_dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static float Dig_io_get_dig_io (void * _self,va_list *app)$/;"	kind:f	line:148	file:
-Dig_io_set_dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static int Dig_io_set_dig_io (void * _self,va_list *app)$/;"	kind:f	line:118	file:
-EC_ACKNOWLEDGE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ACKNOWLEDGE = 0x05,$/;"	kind:e	line:86	enum:MODBUS_ERROR_CODES
-EC_GATEWAY_PATH_UNAVAILABLE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_GATEWAY_PATH_UNAVAILABLE = 0x0A,$/;"	kind:e	line:122	enum:MODBUS_ERROR_CODES
-EC_GATEWAY_TARGET_DEVICE_FAILED_TO_RESPOND	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_GATEWAY_TARGET_DEVICE_FAILED_TO_RESPOND = 0x0B,$/;"	kind:e	line:132	enum:MODBUS_ERROR_CODES
-EC_ILLEGAL_DATA_ADDRESS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ILLEGAL_DATA_ADDRESS = 0x02,$/;"	kind:e	line:45	enum:MODBUS_ERROR_CODES
-EC_ILLEGAL_DATA_VALUE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ILLEGAL_DATA_VALUE = 0x03,$/;"	kind:e	line:65	enum:MODBUS_ERROR_CODES
-EC_ILLEGAL_FUNCTION	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ILLEGAL_FUNCTION = 0x01,$/;"	kind:e	line:32	enum:MODBUS_ERROR_CODES
-EC_INTERBYTE_TIMEOUT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_INTERBYTE_TIMEOUT = 0x12,$/;"	kind:e	line:141	enum:MODBUS_ERROR_CODES
-EC_MEMORY_PARITY_ERROR	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_MEMORY_PARITY_ERROR = 0x08,$/;"	kind:e	line:109	enum:MODBUS_ERROR_CODES
-EC_NO_ERROR	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_NO_ERROR = 0x00,$/;"	kind:e	line:31	enum:MODBUS_ERROR_CODES
-EC_NO_RESPONSE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_NO_RESPONSE = 0x11,$/;"	kind:e	line:140	enum:MODBUS_ERROR_CODES
-EC_SLAVE_DEVICE_BUSY	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_SLAVE_DEVICE_BUSY = 0x06,$/;"	kind:e	line:99	enum:MODBUS_ERROR_CODES
-EC_SLAVE_DEVICE_FAILURE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_SLAVE_DEVICE_FAILURE = 0x04,$/;"	kind:e	line:79	enum:MODBUS_ERROR_CODES
-EC_UNEXPECTED_DATA	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_UNEXPECTED_DATA = 0x13$/;"	kind:e	line:142	enum:MODBUS_ERROR_CODES
-ERR_PORT_ALREADY_USED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	77;"	kind:d	line:77
-ERR_WRONG_PORTNUM	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	76;"	kind:d	line:76
-ERR_WRONG_PORT_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	78;"	kind:d	line:78
-EstablishHttpConnecion	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num)$/;"	kind:f	line:157
-EstablishHttpConnecion	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num);$/;"	kind:p	line:24
-FC_Read_Coils	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Coils 				= 0x01,$/;"	kind:e	line:8	enum:MODBUS_FUNCTION_CODE
-FC_Read_Discrete_Inputs	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Discrete_Inputs 	= 0x02,$/;"	kind:e	line:9	enum:MODBUS_FUNCTION_CODE
-FC_Read_Holding_Registers	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Holding_Registers 	= 0x03,$/;"	kind:e	line:10	enum:MODBUS_FUNCTION_CODE
-FC_Read_Input_Registers	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Input_Registers		= 0x04,$/;"	kind:e	line:11	enum:MODBUS_FUNCTION_CODE
-FC_Report_Slave_ID	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Report_Slave_ID 			= 0x11$/;"	kind:e	line:16	enum:MODBUS_FUNCTION_CODE
-FC_Write_Multiple_Coils	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Multiple_Coils 	= 0x0F,	$/;"	kind:e	line:14	enum:MODBUS_FUNCTION_CODE
-FC_Write_Multiple_Registers	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Multiple_Registers	= 0x10,		$/;"	kind:e	line:15	enum:MODBUS_FUNCTION_CODE
-FC_Write_Single_Coil	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Single_Coil 		= 0x05,$/;"	kind:e	line:12	enum:MODBUS_FUNCTION_CODE
-FC_Write_Single_Register	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Single_Register 	= 0x06,$/;"	kind:e	line:13	enum:MODBUS_FUNCTION_CODE
-FREQUENCY	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	72;"	kind:d	line:72
-FlyportTask	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^void FlyportTask()$/;"	kind:f	line:28
-FormRegistrationRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\Rest.h	/^cJSON * FormRegistrationRequest();$/;"	kind:p	line:8
-FormRegistrationRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^cJSON * FormRegistrationRequest()$/;"	kind:f	line:9
-GET_STATUS_FAILURE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	GET_STATUS_FAILURE		$/;"	kind:e	line:18	enum:SocketState
-GROVEBOARD_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	50;"	kind:d	line:50
-GROVEINTERFACES_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	50;"	kind:d	line:50
-GROVELIB_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	49;"	kind:d	line:49
-GetBaud	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	int (*GetBaud)();$/;"	kind:m	line:19	struct:SerialPort	access:public
-GetError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CommonUtils.c	/^void GetError()$/;"	kind:f	line:3
-GetError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CommonUtils.h	/^void GetError();$/;"	kind:p	line:6
-GetHttpResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:58
-GetHttpResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:23
-GetHttpStatus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^enum SocketState GetHttpStatus(TCP_SOCKET* conn)$/;"	kind:f	line:108
-GetHttpStatus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^enum SocketState GetHttpStatus(TCP_SOCKET* conn);$/;"	kind:p	line:25
-GroveNest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	55;"	kind:d	line:55
-GrovePort	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^}GrovePort;$/;"	kind:t	line:92	typeref:struct:__anon1
-GroveStarted	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BOOL GroveStarted = FALSE;$/;"	kind:v	line:92
-HRegisters	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	HRegisters 	= FC_Read_Holding_Registers,$/;"	kind:e	line:25	enum:MODBUS_READ_TYPE
-HTTPConnect	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port)$/;"	kind:f	line:130
-HTTPConnect	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port);$/;"	kind:p	line:26
-HTTP_UTILS_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	2;"	kind:d	line:2
-HttpResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse$/;"	kind:s	line:8
-I2C	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	67;"	kind:d	line:67
-I2C_PORTS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	60;"	kind:d	line:60
-I2C_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	61;"	kind:d	line:61
-INIT_CORRECT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	75;"	kind:d	line:75
-IRegister	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	IRegister 	= FC_Read_Input_Registers$/;"	kind:e	line:26	enum:MODBUS_READ_TYPE
-Init	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	void (*Init)(const struct SerialPort * Serial);		$/;"	kind:m	line:157	struct:ModbusMaster	access:public
-Init	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	void (*Init)(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);		$/;"	kind:m	line:15	struct:SerialPort	access:public
-InterbyteDelay_us	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^static unsigned long InterbyteDelay_us = 0;$/;"	kind:v	line:29	file:
-Interface	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	/^struct Interface$/;"	kind:s	line:65
-MBM	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^const struct ModbusMaster MBM = $/;"	kind:v	line:133	typeref:struct:ModbusMaster
-MBM_Read	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^int MBM_Read(int v);$/;"	kind:p	line:162
-MBM_Read	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^int MBM_Read(int v)$/;"	kind:f	line:128
-MB_ADDR_IND	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	15;"	kind:d	line:15	file:
-MB_ADDR_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	7;"	kind:d	line:7	file:
-MB_CRC_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	5;"	kind:d	line:5	file:
-MB_ERROR_IND	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	18;"	kind:d	line:18	file:
-MB_FCODE_IND	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	16;"	kind:d	line:16	file:
-MB_FCODE_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	8;"	kind:d	line:8	file:
-MB_HEADER_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	22;"	kind:d	line:22	file:
-MB_NON_PAYLOAD_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	25;"	kind:d	line:25	file:
-MB_PLOAD_IND	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	19;"	kind:d	line:19	file:
-MB_PSIZE_IND	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	17;"	kind:d	line:17	file:
-MB_PSIZE_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	9;"	kind:d	line:9	file:
-MB_QUANTITY_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	12;"	kind:d	line:12	file:
-MB_REGISTER_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	13;"	kind:d	line:13	file:
-MB_STARTING_ADDRESS_LEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	11;"	kind:d	line:11	file:
-MODBUS_ERROR_CODES	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^enum MODBUS_ERROR_CODES$/;"	kind:g	line:29
-MODBUS_FUNCTION_CODE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^enum MODBUS_FUNCTION_CODE$/;"	kind:g	line:6
-MODBUS_MASTER_CRC16_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CRC16Calc.h	2;"	kind:d	line:2
-MODBUS_MASTER_RTU_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	2;"	kind:d	line:2
-MODBUS_READ_TYPE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^enum MODBUS_READ_TYPE$/;"	kind:g	line:21
-MODBUS_SERIAL_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	2;"	kind:d	line:2
-ModbusBuf	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char ModbusBuf[512];$/;"	kind:v	line:27
-ModbusMaster	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ModbusMaster$/;"	kind:s	line:155
-NOT_CONNECTED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	NOT_CONNECTED,$/;"	kind:e	line:17	enum:SocketState
-NOT_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	69;"	kind:d	line:69
-NOT_USED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	64;"	kind:d	line:64
-NtwKey	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:5	file:
-NtwKey	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:20	file:
-OnBusy	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnBusy(char* phoneNumber)$/;"	kind:f	line:32
-OnError	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnError(int error, int errorNumber)$/;"	kind:f	line:70
-OnNoCarrier	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnNoCarrier(char* phoneNumber)$/;"	kind:f	line:20
-OnRegistration	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnRegistration(BYTE Status)$/;"	kind:f	line:83
-OnRing	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnRing(char* phoneNumber)$/;"	kind:f	line:8
-OnSMSReceived	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnSMSReceived(BYTE memtype, int index)$/;"	kind:f	line:43
-OnSMSSentReport	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^void OnSMSSentReport(int msgreference, int msgreport)$/;"	kind:f	line:58
-P1_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	70;"	kind:d	line:70
-P2_SHARED	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	71;"	kind:d	line:71
-PWM	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	71;"	kind:d	line:71
-ParseResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse ParseResponse(unsigned char* BufForResp)$/;"	kind:f	line:171
-ParseResponse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse ParseResponse(unsigned char* BufForResp);$/;"	kind:p	line:27
-Pin1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Pin1;			\/\/ 	Pin1 number - Association with Flyport pin number (analog channel for analog ports)$/;"	kind:m	line:87	struct:__anon1	access:public
-Pin2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Pin2;			\/\/	Pin2 number - Association with Flyport pin number (analog channel for analog ports)$/;"	kind:m	line:88	struct:__anon1	access:public
-PortNum	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	unsigned char PortNum;$/;"	kind:m	line:14	struct:SerialPort	access:public
-Port_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^static unsigned char Port_ = 0;$/;"	kind:v	line:12	file:
-ProcessComand	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CommonUtils.c	/^BOOL ProcessComand()$/;"	kind:f	line:22
-ProcessComand	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\CommonUtils.h	/^BOOL ProcessComand();$/;"	kind:p	line:7
-Qnty	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	short Qnty;$/;"	kind:m	line:149	struct:ReadRegistersResp	access:public
-REST_API_H	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\Rest.h	2;"	kind:d	line:2
-RE_485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	4;"	kind:d	line:4	file:
-RS485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^const struct SerialPort RS485 = $/;"	kind:v	line:78	typeref:struct:SerialPort
-RS485BufferSize	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^int RS485BufferSize(int port);$/;"	kind:p	line:69
-RS485BufferSize	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^int RS485BufferSize(int port)$/;"	kind:f	line:182
-RS485Flush	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Flush(int port);$/;"	kind:p	line:68
-RS485Flush	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485Flush(int port)$/;"	kind:f	line:177
-RS485Init	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Init(int port,long int baud);$/;"	kind:p	line:64
-RS485Init	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485Init(int port,long int baud)$/;"	kind:f	line:120
-RS485Off	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Off(int port);$/;"	kind:p	line:67
-RS485Off	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485Off(int port)$/;"	kind:f	line:172
-RS485On	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485On(int port);$/;"	kind:p	line:66
-RS485On	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485On(int port)$/;"	kind:f	line:167
-RS485Port	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^static struct SerialPort RS485Port;$/;"	kind:v	line:28	typeref:struct:SerialPort	file:
-RS485Read	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^int RS485Read (int port, char* towrite, int count);$/;"	kind:p	line:71
-RS485Read	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^int RS485Read (int port , char *towrite , int count)$/;"	kind:f	line:198
-RS485Remap	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Remap(int port, int TXPin, int RXPin, int writeEnPin, int readEnPin);$/;"	kind:p	line:63
-RS485Remap	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485Remap(int port, int TXPin, int RXPin, int writeEnPin, int readEnPin)$/;"	kind:f	line:73
-RS485SetParam	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485SetParam(int port, int param, int value);$/;"	kind:p	line:65
-RS485SetParam	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485SetParam(int port, int param, int value)$/;"	kind:f	line:125
-RS485Write	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Write(int port, char *buffer); $/;"	kind:p	line:70
-RS485Write	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485Write(int port, char *buffer)$/;"	kind:f	line:187
-RS485WriteCh	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485WriteCh(int port, char chr);$/;"	kind:p	line:72
-RS485WriteCh	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^void RS485WriteCh(int port, char chr)$/;"	kind:f	line:203
-RS485_8BITS_PARITY_EVEN	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	58;"	kind:d	line:58
-RS485_8BITS_PARITY_NONE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	60;"	kind:d	line:60
-RS485_8BITS_PARITY_ODD	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	59;"	kind:d	line:59
-RS485_9BITS_PARITY_NONE	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	61;"	kind:d	line:61
-RS485_DATA_PARITY	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	53;"	kind:d	line:53
-RS485_ONE_STOP	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	55;"	kind:d	line:55
-RS485_STOP_BITS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	52;"	kind:d	line:52
-RS485_TWO_STOP	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\RS485Helper.h	56;"	kind:d	line:56
-RTS_232	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	10;"	kind:d	line:10	file:
-RX_232	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	8;"	kind:d	line:8	file:
-RX_485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	6;"	kind:d	line:6	file:
-Read	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	BOOL (*Read)(unsigned char* Dest, unsigned short len, unsigned long long timeout_us);	$/;"	kind:m	line:18	struct:SerialPort	access:public
-ReadByte	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	BOOL (*ReadByte)(unsigned char* Dest, unsigned long timeout_us);		$/;"	kind:m	line:17	struct:SerialPort	access:public
-ReadHRegisters	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	struct ReadRegistersResp (*ReadHRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);	$/;"	kind:m	line:158	struct:ModbusMaster	typeref:struct:ModbusMaster::ReadHRegisters	access:public
-ReadRegistersResp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ReadRegistersResp$/;"	kind:s	line:145
-RecievedCRC	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char RecievedCRC[2] = {0, 0};$/;"	kind:l	line:123
-RegRequestJson	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	cJSON * RegRequestJson = FormRegistrationRequest();	$/;"	kind:l	line:67
-Response	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	char * Response;	$/;"	kind:m	line:11	struct:HttpResponse	access:public
-RsponseIsOK	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^	BOOL RsponseIsOK;$/;"	kind:m	line:10	struct:HttpResponse	access:public
-SINGLE_PORT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	65;"	kind:d	line:65
-SPI	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	68;"	kind:d	line:68
-SendHttpDataRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char* data, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:25
-SendHttpDataRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char * data, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:22
-SendHttpJsonRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:4
-SendHttpJsonRequest	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:21
-SensorClass	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^struct SensorClass$/;"	kind:s	line:67
-SerialPort	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^struct SerialPort$/;"	kind:s	line:12
-SocketState	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\HTTPUtils.h	/^enum SocketState$/;"	kind:g	line:14
-TIMEOUT	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\basicdevices.h	75;"	kind:d	line:75
-TX_232	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	7;"	kind:d	line:7	file:
-TX_485	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	5;"	kind:d	line:5	file:
-Type	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Type;			\/\/	Port type - Type of the port, as in the upper defines$/;"	kind:m	line:90	struct:__anon1	access:public
-Use	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Use;			\/\/	Port usage - Indicates if it's used as single or double sensor, or not used$/;"	kind:m	line:89	struct:__anon1	access:public
-Write	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^	void (*Write)(const unsigned char* Data, short len);	$/;"	kind:m	line:16	struct:SerialPort	access:public
-Write	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	RS485Port.Write(ModbusBuf, total_len);$/;"	kind:p	line:80	file:
-_An_i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^static const struct SensorClass _An_i =$/;"	kind:v	line:94	typeref:struct:SensorClass	file:
-_Board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^static const struct BoardClass _Board =$/;"	kind:v	line:327	typeref:struct:BoardClass	file:
-_Dig_io	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^static const struct SensorClass _Dig_io =$/;"	kind:v	line:155	typeref:struct:SensorClass	file:
-_GetBaud	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^int _GetBaud();$/;"	kind:p	line:10
-_GetBaud	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^int _GetBaud()$/;"	kind:f	line:73
-_MBMInit	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^void _MBMInit(const struct SerialPort * Serial);	$/;"	kind:p	line:152
-_MBMInit	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^void _MBMInit(const struct SerialPort * Serial)$/;"	kind:f	line:31
-_ReadHRegisters	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);$/;"	kind:p	line:153
-_ReadHRegisters	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty)$/;"	kind:f	line:55
-_RegHi	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char _RegHi(unsigned short source)$/;"	kind:f	line:44
-_RegLow	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char _RegLow(unsigned short source)$/;"	kind:f	line:49
-_SerialPortInit	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);	$/;"	kind:p	line:6
-_SerialPortInit	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity)$/;"	kind:f	line:18
-_SerialRead	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^BOOL _SerialRead(unsigned char* Dest, unsigned short len, unsigned long long timeout_us);$/;"	kind:p	line:9
-_SerialRead	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^BOOL _SerialRead(unsigned char* Dest, unsigned short len, unsigned long long timeout_us)$/;"	kind:f	line:61
-_SerialReadByte	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us);	$/;"	kind:p	line:8
-_SerialReadByte	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us)$/;"	kind:f	line:46
-_SerialWrite	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusSerial.h	/^void _SerialWrite(const unsigned char* Data, short len);	$/;"	kind:p	line:7
-_SerialWrite	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^void _SerialWrite(const unsigned char* Data, short len)$/;"	kind:f	line:31
-__RS485_HELPER_LIB_C	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	49;"	kind:d	line:49	file:
-a	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
-a	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
-a	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
-a	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
-aninext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *aninext;$/;"	kind:m	line:87	struct:Board	typeref:struct:Board::Interface	file:	access:public
-anistart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *anistart;$/;"	kind:m	line:86	struct:Board	typeref:struct:Board::Interface	file:	access:public
-ap	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:114
-ap	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:126
-ap	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:136
-ap	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:65
-attach	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	int (*attach)  (void *,void *,int,int);$/;"	kind:m	line:83	struct:BoardClass	access:public
-attach	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*attach) (void *,void *,int);$/;"	kind:m	line:72	struct:SensorClass	access:public
-attachSensorToAnBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^struct Interface *	attachSensorToAnBus (void *,int);$/;"	kind:p	line:53	file:
-attachSensorToAnBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Interface *	attachSensorToAnBus (void *_board,int n)$/;"	kind:f	line:226
-attachSensorToDigioBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^struct Interface *attachSensorToDigioBus(void *,int,int);$/;"	kind:p	line:53	file:
-attachSensorToDigioBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToDigioBus(void *_board,int n,int type)$/;"	kind:f	line:168
-attachSensorToI2CBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToI2CBus(void *_board,int i2cbus,int add)$/;"	kind:f	line:130
-attachSensorToUartBus	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToUartBus(void *_board,int port,int speed,BYTE module,BYTE interf)$/;"	kind:f	line:273
-attachToBoard	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^int attachToBoard(void *,void *,int);$/;"	kind:p	line:61
-attachToBoard	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^int attachToBoard(void *board,void *sensor,int numb)$/;"	kind:f	line:97
-board	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	void *board = new(GroveNest);$/;"	kind:l	line:140
-boardType	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	int boardType;$/;"	kind:m	line:81	struct:Board	file:	access:public
-buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:11
-buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:23
-buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:35
-buf	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char buf[30];$/;"	kind:l	line:61
-button	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	void *button = new(Dig_io, IN);$/;"	kind:l	line:144
-bytesReady	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	int bytesReady = RS485BufferSize(Port_);$/;"	kind:l	line:48
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *c=cJSON_New_Item();$/;"	kind:l	line:249
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *c=object->child; $/;"	kind:l	line:473
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromArray(cJSON *array,int which)			{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return 0;$/;"	kind:l	line:490
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	kind:l	line:493
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_GetArrayItem(cJSON *array,int item)				{cJSON *c=array->child;  while (c && item>0) item--,c=c->next; return c;}$/;"	kind:l	line:470
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	kind:l	line:469
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_AddItemToArray(cJSON *array, cJSON *item)						{cJSON *c=array->child;if (!item) return; if (!c) {array->child=item;} else {while (c && c->next) c=c->next; suffix_object(c,item);}}$/;"	kind:l	line:485
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem)		{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return;$/;"	kind:l	line:497
-c	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:l	line:500
-cJSON	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^typedef struct cJSON {$/;"	kind:s	line:40
-cJSON	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^} cJSON;$/;"	kind:t	line:51	typeref:struct:cJSON
-cJSON_AddFalseToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	118;"	kind:d	line:118
-cJSON_AddItemReferenceToArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item);$/;"	kind:p	line:103
-cJSON_AddItemReferenceToArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void	cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item)						{cJSON_AddItemToArray(array,create_reference(item));}$/;"	kind:f	line:487
-cJSON_AddItemReferenceToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void	cJSON_AddItemReferenceToObject(cJSON *object,const char *string,cJSON *item);$/;"	kind:p	line:104
-cJSON_AddItemReferenceToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void	cJSON_AddItemReferenceToObject(cJSON *object,const char *string,cJSON *item)	{cJSON_AddItemToObject(object,string,create_reference(item));}$/;"	kind:f	line:488
-cJSON_AddItemToArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_AddItemToArray(cJSON *array, cJSON *item);$/;"	kind:p	line:100
-cJSON_AddItemToArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_AddItemToArray(cJSON *array, cJSON *item)						{cJSON *c=array->child;if (!item) return; if (!c) {array->child=item;} else {while (c && c->next) c=c->next; suffix_object(c,item);}}$/;"	kind:f	line:485
-cJSON_AddItemToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void	cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item);$/;"	kind:p	line:101
-cJSON_AddItemToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item)	{if (!item) return; if (item->string) cJSON_free(item->string);item->string=cJSON_strdup(string);cJSON_AddItemToArray(object,item);}$/;"	kind:f	line:486
-cJSON_AddNullToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	116;"	kind:d	line:116
-cJSON_AddNumberToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	119;"	kind:d	line:119
-cJSON_AddStringToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	120;"	kind:d	line:120
-cJSON_AddTrueToObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	117;"	kind:d	line:117
-cJSON_Array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	34;"	kind:d	line:34
-cJSON_CreateArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateArray();$/;"	kind:p	line:90
-cJSON_CreateArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateArray()						$/;"	kind:f	line:519
-cJSON_CreateBool	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateBool(int b);$/;"	kind:p	line:87
-cJSON_CreateBool	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateBool(int b)					{cJSON *item=cJSON_New_Item();if(item)item->type=b?cJSON_True:cJSON_False;return item;}$/;"	kind:f	line:506
-cJSON_CreateDoubleArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateDoubleArray(double *numbers,int count);$/;"	kind:p	line:96
-cJSON_CreateDoubleArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:536
-cJSON_CreateFalse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateFalse();$/;"	kind:p	line:86
-cJSON_CreateFalse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFalse()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_False;return item;}$/;"	kind:f	line:505
-cJSON_CreateFloatArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateFloatArray(float *numbers,int count);$/;"	kind:p	line:95
-cJSON_CreateFloatArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:535
-cJSON_CreateIntArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateIntArray(int *numbers,int count);$/;"	kind:p	line:94
-cJSON_CreateIntArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:534
-cJSON_CreateNull	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateNull();$/;"	kind:p	line:84
-cJSON_CreateNull	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNull()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_NULL;return item;}$/;"	kind:f	line:503
-cJSON_CreateNumber	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateNumber(double num);$/;"	kind:p	line:88
-cJSON_CreateNumber	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNumber(double num)			{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_Number;item->valuedouble=num;item->valueint=(int)num;}return item;}$/;"	kind:f	line:507
-cJSON_CreateObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateObject();$/;"	kind:p	line:91
-cJSON_CreateObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateObject()						$/;"	kind:f	line:526
-cJSON_CreateString	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateString(const char *string);$/;"	kind:p	line:89
-cJSON_CreateString	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateString(const char *string)	$/;"	kind:f	line:508
-cJSON_CreateStringArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateStringArray(const char **strings,int count);$/;"	kind:p	line:97
-cJSON_CreateStringArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:537
-cJSON_CreateTrue	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateTrue();$/;"	kind:p	line:85
-cJSON_CreateTrue	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateTrue()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_True;return item;}$/;"	kind:f	line:504
-cJSON_Delete	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void   cJSON_Delete(cJSON *c);$/;"	kind:p	line:69
-cJSON_Delete	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void cJSON_Delete(cJSON *c)$/;"	kind:f	line:76
-cJSON_DeleteItemFromArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void   cJSON_DeleteItemFromArray(cJSON *array,int which);$/;"	kind:p	line:108
-cJSON_DeleteItemFromArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromArray(cJSON *array,int which)			{cJSON_Delete(cJSON_DetachItemFromArray(array,which));}$/;"	kind:f	line:492
-cJSON_DeleteItemFromObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void   cJSON_DeleteItemFromObject(cJSON *object,const char *string);$/;"	kind:p	line:110
-cJSON_DeleteItemFromObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromObject(cJSON *object,const char *string) {cJSON_Delete(cJSON_DetachItemFromObject(object,string));}$/;"	kind:f	line:494
-cJSON_DetachItemFromArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_DetachItemFromArray(cJSON *array,int which);$/;"	kind:p	line:107
-cJSON_DetachItemFromArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromArray(cJSON *array,int which)			{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return 0;$/;"	kind:f	line:490
-cJSON_DetachItemFromArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromArray(cJSON *array,int which)			{cJSON_Delete(cJSON_DetachItemFromArray(array,which));}$/;"	kind:p	line:492	file:
-cJSON_DetachItemFromObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string);$/;"	kind:p	line:109
-cJSON_DetachItemFromObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	kind:f	line:493
-cJSON_DetachItemFromObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromObject(cJSON *object,const char *string) {cJSON_Delete(cJSON_DetachItemFromObject(object,string));}$/;"	kind:p	line:494	file:
-cJSON_False	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	29;"	kind:d	line:29
-cJSON_GetArrayItem	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_GetArrayItem(cJSON *array,int item);$/;"	kind:p	line:74
-cJSON_GetArrayItem	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_GetArrayItem(cJSON *array,int item)				{cJSON *c=array->child;  while (c && item>0) item--,c=c->next; return c;}$/;"	kind:f	line:470
-cJSON_GetArraySize	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern int	  cJSON_GetArraySize(cJSON *array);$/;"	kind:p	line:72
-cJSON_GetArraySize	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	kind:f	line:469
-cJSON_GetErrorPtr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern const char *cJSON_GetErrorPtr();$/;"	kind:p	line:81
-cJSON_GetErrorPtr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^const char *cJSON_GetErrorPtr() {return ep;}$/;"	kind:f	line:37
-cJSON_GetObjectItem	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_GetObjectItem(cJSON *object,const char *string);$/;"	kind:p	line:76
-cJSON_GetObjectItem	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_GetObjectItem(cJSON *object,const char *string)	$/;"	kind:f	line:471
-cJSON_Hooks	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^typedef struct cJSON_Hooks {$/;"	kind:s	line:53
-cJSON_Hooks	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^} cJSON_Hooks;$/;"	kind:t	line:56	typeref:struct:cJSON_Hooks
-cJSON_InitHooks	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_InitHooks(cJSON_Hooks* hooks);$/;"	kind:p	line:59
-cJSON_IsReference	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	37;"	kind:d	line:37
-cJSON_NULL	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	31;"	kind:d	line:31
-cJSON_New_Item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static cJSON *cJSON_New_Item()$/;"	kind:f	line:68	file:
-cJSON_Number	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	32;"	kind:d	line:32
-cJSON_Object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	35;"	kind:d	line:35
-cJSON_Parse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_Parse(const char *value);$/;"	kind:p	line:63
-cJSON_Parse	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_Parse(const char *value)$/;"	kind:f	line:247
-cJSON_Print	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern char  *cJSON_Print(cJSON *item);$/;"	kind:p	line:65
-cJSON_Print	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^char *cJSON_Print(cJSON *item)				{return print_value(item,0,1);}$/;"	kind:f	line:258
-cJSON_PrintUnformatted	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern char  *cJSON_PrintUnformatted(cJSON *item);$/;"	kind:p	line:67
-cJSON_PrintUnformatted	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^char *cJSON_PrintUnformatted(cJSON *item)	{return print_value(item,0,0);}$/;"	kind:f	line:259
-cJSON_ReplaceItemInArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem);$/;"	kind:p	line:113
-cJSON_ReplaceItemInArray	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem)		{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return;$/;"	kind:f	line:497
-cJSON_ReplaceItemInObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem);$/;"	kind:p	line:114
-cJSON_ReplaceItemInObject	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:f	line:500
-cJSON_String	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	33;"	kind:d	line:33
-cJSON_True	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	30;"	kind:d	line:30
-cJSON__h	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	24;"	kind:d	line:24
-cJSON_free	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static void (*cJSON_free)(void *ptr) = free;$/;"	kind:v	line:53	file:
-cJSON_malloc	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static void *(*cJSON_malloc)(size_t sz) = malloc;$/;"	kind:v	line:52	file:
-cJSON_strcasecmp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static int cJSON_strcasecmp(const char *s1,const char *s2)$/;"	kind:f	line:39	file:
-cJSON_strdup	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char* cJSON_strdup(const char* str)$/;"	kind:f	line:55	file:
-child	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *child;		\/* An array or object item will have a child pointer pointing to a chain of the items in the array\/object. *\/$/;"	kind:m	line:42	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
-child	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *child;$/;"	kind:l	line:297
-child	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *child;$/;"	kind:l	line:376
-child	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *child=item->child;$/;"	kind:l	line:327
-child	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *child=item->child;$/;"	kind:l	line:415
-class	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	const void *class;$/;"	kind:m	line:57	struct:An_i	file:	access:public
-class	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	const void *class;$/;"	kind:m	line:57	struct:Dig_io	file:	access:public
-class	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	const void *class;$/;"	kind:m	line:80	struct:Board	file:	access:public
-class	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct BoardClass *class = _class;$/;"	kind:l	line:161
-class	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass *class = _class;$/;"	kind:l	line:183
-config	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	int (*config) (void *,va_list *);$/;"	kind:m	line:73	struct:SensorClass	access:public
-configure	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^int configure(void *,...);$/;"	kind:p	line:62
-configure	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^int configure(void *self, ...)$/;"	kind:f	line:112
-conn	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^TCP_SOCKET conn;$/;"	kind:v	line:26
-copy	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^      char* copy;$/;"	kind:l	line:58
-cp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:116
-cp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:128
-cp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:138
-crc	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\CRC16Calc.c	/^    unsigned short crc = 0xFFFF;$/;"	kind:l	line:40
-create_reference	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static cJSON *create_reference(cJSON *item) {cJSON *ref=cJSON_New_Item();if (!ref) return 0;memcpy(ref,item,sizeof(cJSON));ref->string=0;ref->type|=cJSON_IsReference;ref->next=ref->prev=0;return ref;}$/;"	kind:f	line:482	file:
-ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*ctor) (void *,va_list *);$/;"	kind:m	line:70	struct:SensorClass	access:public
-ctor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*ctor) (void *,va_list *);$/;"	kind:m	line:81	struct:BoardClass	access:public
-d	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double d=item->valuedouble;$/;"	kind:l	line:117
-data	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *data = cJSON_CreateObject();			$/;"	kind:l	line:14
-data	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^			float data = va_arg(*app, const float);$/;"	kind:l	line:135
-data	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\i2c_devices.c	/^	BYTE data = I2CRead(1);$/;"	kind:l	line:75
-delet_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^void delet_(void **);$/;"	kind:p	line:60
-delet_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^void delet_(void **_self)$/;"	kind:f	line:91
-delete	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	56;"	kind:d	line:56
-delete_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^void delete_(void *);$/;"	kind:p	line:59
-delete_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^void delete_(void *_self)$/;"	kind:f	line:81
-devClassData	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *devClassData = cJSON_CreateObject();	$/;"	kind:l	line:15
-deviceClass	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *deviceClass = cJSON_CreateObject();		$/;"	kind:l	line:13
-dionext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *dionext;$/;"	kind:m	line:85	struct:Board	typeref:struct:Board::Interface	file:	access:public
-diostart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *diostart;$/;"	kind:m	line:84	struct:Board	typeref:struct:Board::Interface	file:	access:public
-dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void (*dtor) (void *);$/;"	kind:m	line:71	struct:SensorClass	access:public
-dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void *(*dtor) (void *);$/;"	kind:m	line:82	struct:BoardClass	access:public
-dtor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^		(*self)->dtor(self);$/;"	kind:p	line:86	file:
-ec	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	enum MODBUS_ERROR_CODES ec;$/;"	kind:m	line:147	struct:ReadRegistersResp	typeref:enum:ReadRegistersResp::MODBUS_ERROR_CODES	access:public
-end	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char* end = 0;$/;"	kind:l	line:178
-end1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^		int end1 = 0;$/;"	kind:l	line:200
-entries	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char **entries;$/;"	kind:l	line:325
-entries	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char **entries=0,**names=0;$/;"	kind:l	line:413
-ep	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *ep;$/;"	kind:v	line:35	file:
-fail	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,fail=0;$/;"	kind:l	line:416
-fail	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
-firstByteMark	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const unsigned char firstByteMark[7] = { 0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC };$/;"	kind:v	line:137	file:
-first_time	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	BOOL first_time = TRUE;$/;"	kind:l	line:63
-first_time	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	BOOL first_time = TRUE;$/;"	kind:l	line:88
-flag	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^unsigned char flag;$/;"	kind:v	line:60
-free_fn	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^      void (*free_fn)(void *ptr);$/;"	kind:m	line:55	struct:cJSON_Hooks	access:public
-gName	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	char *(*gName) (const void *);$/;"	kind:m	line:85	struct:BoardClass	access:public
-g_I2CSCL	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_I2CSCL[] = { p1 };$/;"	kind:v	line:70
-g_I2CSDA	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_I2CSDA[] ={ p3 }; $/;"	kind:v	line:71
-g_MISO	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_MISO[] ={ p7}; $/;"	kind:v	line:66
-g_MOSI	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_MOSI[] = { p17 };$/;"	kind:v	line:67
-g_SCK	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_SCK[] = { p18 }; $/;"	kind:v	line:65
-g_SPI_CS	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_SPI_CS[] ={ p8 }; $/;"	kind:v	line:68
-g_an	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_an[] ={ 1, 2, 3 }; $/;"	kind:v	line:73
-g_ashared	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_ashared[] = { NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED};$/;"	kind:v	line:75
-g_atype	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_atype[] = {AN_TYPE, AN_TYPE, AN_TYPE, AN_TYPE};$/;"	kind:v	line:74
-g_d1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_d1[] = { p2, p5, p10, p12};$/;"	kind:v	line:60
-g_d2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_d2[] = { p4, p6, p11, p14};	$/;"	kind:v	line:61
-g_dshared	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_dshared[] = { NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED};$/;"	kind:v	line:63
-g_dtype	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^BYTE g_dtype[] = { D5VR_TYPE, D5VR_TYPE, D5VR_TYPE, D5VR_TYPE, D5VR_TYPE, D3VR_TYPE};$/;"	kind:v	line:62
-get	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^float get(void *, ...);$/;"	kind:p	line:64
-get	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^float get(void *self, ...)$/;"	kind:f	line:134
-getLen	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^extern unsigned int getLen(void);$/;"	kind:p	line:79
-get_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	float (*get_)(void *,va_list *);$/;"	kind:m	line:75	struct:SensorClass	access:public
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	kind:l	line:493
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	kind:l	line:469
-i	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:l	line:500
-i2cnext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *i2cnext;$/;"	kind:m	line:83	struct:Board	typeref:struct:Board::Interface	file:	access:public
-i2cstart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *i2cstart;$/;"	kind:m	line:82	struct:Board	typeref:struct:Board::Interface	file:	access:public
-inBuff	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^unsigned char inBuff[2000];$/;"	kind:v	line:25
-ind	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	short ind = len;$/;"	kind:l	line:36
-ind	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	unsigned short ind = len;$/;"	kind:l	line:63
-inter	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct Interface *inter;$/;"	kind:m	line:58	struct:An_i	typeref:struct:An_i::Interface	file:	access:public
-inter	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	struct Interface *inter;$/;"	kind:m	line:58	struct:Dig_io	typeref:struct:Dig_io::Interface	file:	access:public
-isShared	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE isShared;		\/\/	Pin sharing - Indicates if the pins of the ports are shared with other ports, like in Arduino UNO Grove shield$/;"	kind:m	line:91	struct:__anon1	access:public
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *item=cJSON_New_Item();$/;"	kind:l	line:510
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *item=cJSON_New_Item();$/;"	kind:l	line:521
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *item=cJSON_New_Item();$/;"	kind:l	line:528
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateBool(int b)					{cJSON *item=cJSON_New_Item();if(item)item->type=b?cJSON_True:cJSON_False;return item;}$/;"	kind:l	line:506
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFalse()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_False;return item;}$/;"	kind:l	line:505
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNull()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_NULL;return item;}$/;"	kind:l	line:503
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNumber(double num)			{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_Number;item->valuedouble=num;item->valueint=(int)num;}return item;}$/;"	kind:l	line:507
-item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateTrue()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_True;return item;}$/;"	kind:l	line:504
-j	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-jsonStr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char *jsonStr = cJSON_Print(json);$/;"	kind:l	line:8
-jsonStr	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	char *jsonStr = cJSON_PrintUnformatted(RegRequestJson);$/;"	kind:l	line:77
-len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
-len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
-len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^      size_t len;$/;"	kind:l	line:57
-lenTemp	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	int lenTemp = 0;$/;"	kind:l	line:64
-lenTemp	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	int lenTemp = 0;$/;"	kind:l	line:89
-loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[255];	$/;"	kind:l	line:60
-loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];	$/;"	kind:l	line:174
-loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];$/;"	kind:l	line:110
-loggBuff	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];$/;"	kind:l	line:132
-loggBuff	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^char loggBuff[255];$/;"	kind:v	line:24
-malloc_fn	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^      void *(*malloc_fn)(size_t sz);$/;"	kind:m	line:54	struct:cJSON_Hooks	access:public
-n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
-n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
-n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
-n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
-n	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
-names	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char **entries=0,**names=0;$/;"	kind:l	line:413
-network	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^    cJSON *network = cJSON_CreateObject();	$/;"	kind:l	line:12
-new	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^void *new(const void *_class, ...)$/;"	kind:f	line:63
-new_board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^static void *new_board(const void *,va_list ap);$/;"	kind:p	line:58	file:
-new_board	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^static void *new_board(const void *_class,va_list ap)$/;"	kind:f	line:159	file:
-new_item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^		cJSON *new_item;$/;"	kind:l	line:311
-new_item	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^		cJSON *new_item;$/;"	kind:l	line:395
-new_sensor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^static void *new_sensor(const void *,va_list ap);$/;"	kind:p	line:57	file:
-new_sensor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^static void *new_sensor(const void *_class,va_list ap)$/;"	kind:f	line:181	file:
-next	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	kind:m	line:41	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
-next	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	/^	struct Interface *next;$/;"	kind:m	line:69	struct:Interface	typeref:struct:Interface::Interface	access:public
-next	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON *next;$/;"	kind:l	line:78
-node	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	cJSON* node = (cJSON*)cJSON_malloc(sizeof(cJSON));$/;"	kind:l	line:70
-numErr	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char numErr[10];$/;"	kind:l	line:73
-numentries	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,fail=0;$/;"	kind:l	line:416
-numentries	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
-out	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-out	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
-out	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0;$/;"	kind:l	line:279
-out	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
-out	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:133
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:171
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:229
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:276
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	void *p = calloc(1, class->size);$/;"	kind:l	line:162
-p	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	void *p = calloc(1, class->size);$/;"	kind:l	line:184
-parse_array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_array(cJSON *item,const char *value)$/;"	kind:f	line:295	file:
-parse_array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_array(cJSON *item,const char *value);$/;"	kind:p	line:238	file:
-parse_number	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_number(cJSON *item,const char *num)$/;"	kind:f	line:91	file:
-parse_object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_object(cJSON *item,const char *value)$/;"	kind:f	line:374	file:
-parse_object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_object(cJSON *item,const char *value);$/;"	kind:p	line:240	file:
-parse_string	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_string(cJSON *item,const char *str)$/;"	kind:f	line:138	file:
-parse_value	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_value(cJSON *item,const char *value)$/;"	kind:f	line:262	file:
-parse_value	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *parse_value(cJSON *item,const char *value);$/;"	kind:p	line:236	file:
-payload	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	short * payload;$/;"	kind:m	line:148	struct:ReadRegistersResp	access:public
-port	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	/^	GrovePort *port;$/;"	kind:m	line:68	struct:Interface	access:public
-port485	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^static const int port485 = 2;$/;"	kind:v	line:16	file:
-prev	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	kind:m	line:41	struct:cJSON	typeref:struct:cJSON::	access:public
-print_array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt)$/;"	kind:f	line:323	file:
-print_array	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt);$/;"	kind:p	line:239	file:
-print_number	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_number(cJSON *item)$/;"	kind:f	line:114	file:
-print_object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_object(cJSON *item,int depth,int fmt)$/;"	kind:f	line:411	file:
-print_object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_object(cJSON *item,int depth,int fmt);$/;"	kind:p	line:241	file:
-print_string	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_string(cJSON *item)	{return print_string_ptr(item->valuestring);}$/;"	kind:f	line:233	file:
-print_string_ptr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_string_ptr(const char *str)$/;"	kind:f	line:198	file:
-print_value	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_value(cJSON *item,int depth,int fmt)$/;"	kind:f	line:277	file:
-print_value	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static char *print_value(cJSON *item,int depth,int fmt);$/;"	kind:p	line:237	file:
-ptr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-ptr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
-ptr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
-ptr	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-ptr2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
-ptr2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-pwm_duty	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	float* pwm_duty;$/;"	kind:m	line:62	struct:Dig_io	file:	access:public
-pwm_frequency	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	float* pwm_frequency;$/;"	kind:m	line:61	struct:Dig_io	file:	access:public
-pwm_num	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	BYTE pwm_num;$/;"	kind:m	line:60	struct:Dig_io	file:	access:public
-rEnP	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^static int rEnP[4] = {0,0,0,0};$/;"	kind:v	line:16	file:
-rEnPin	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^static int rEnPin[4] = {0,0,0,0};$/;"	kind:v	line:62	file:
-readError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^unsigned char readError(void);$/;"	kind:p	line:65
-readError	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^unsigned char readError(void)$/;"	kind:f	line:152
-readRes	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	BOOL readRes = FALSE;$/;"	kind:l	line:82
-read_register	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\i2c_devices.c	/^BYTE read_register(BYTE address,BYTE regist)$/;"	kind:f	line:68
-ref	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static cJSON *create_reference(cJSON *item) {cJSON *ref=cJSON_New_Item();if (!ref) return 0;memcpy(ref,item,sizeof(cJSON));ref->string=0;ref->type|=cJSON_IsReference;ref->next=ref->prev=0;return ref;}$/;"	kind:l	line:482
-res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;	$/;"	kind:l	line:173
-res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;$/;"	kind:l	line:27
-res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;$/;"	kind:l	line:6
-res	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	struct ReadRegistersResp res;$/;"	kind:l	line:57
-respEnd	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char* respEnd = (char*)&BufForResp[strlen((char*)BufForResp)];$/;"	kind:l	line:179
-respLen	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	int respLen = GetHttpResponse(conn, BufForResp, timeout_sec);$/;"	kind:l	line:42
-ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	int ret = ADCVal(self->inter->port->Pin1);$/;"	kind:l	line:90
-ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
-ret	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	int ret = IOGet(self->inter->port->Pin1);$/;"	kind:l	line:151
-root	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Rest.c	/^	cJSON *root = cJSON_CreateObject();$/;"	kind:l	line:11
-scale	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct An_i *self = _self;$/;"	kind:l	line:63
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct An_i *self = _self;$/;"	kind:l	line:89
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *self = _self;$/;"	kind:l	line:120
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *self = _self;$/;"	kind:l	line:150
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *self = _self;$/;"	kind:l	line:68
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:132
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:170
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:228
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:275
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _self;$/;"	kind:l	line:119
-self	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	struct SensorClass **self = _self;$/;"	kind:l	line:83
-sen	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **sen = sensor;$/;"	kind:l	line:100
-sensor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct An_i *sensor = _sensor;$/;"	kind:l	line:70
-sensor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\analog_in.c	/^	struct An_i *sensor = _sensor;$/;"	kind:l	line:80
-sensor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *sensor = _sensor;$/;"	kind:l	line:109
-sensor	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *sensor = _sensor;$/;"	kind:l	line:93
-set	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^int set(void *,...);$/;"	kind:p	line:63
-set	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\grovelib.c	/^int set(void *self,...)$/;"	kind:f	line:124
-set_	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	int (*set_)(void *,va_list *);$/;"	kind:m	line:74	struct:SensorClass	access:public
-set_register	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\i2c_devices.c	/^int set_register(BYTE address,BYTE regist, BYTE data)$/;"	kind:f	line:51
-sign	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
-signsubscale	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
-size	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	size_t size; $/;"	kind:m	line:69	struct:SensorClass	access:public
-size	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	size_t size; $/;"	kind:m	line:80	struct:BoardClass	access:public
-skip	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static const char *skip(const char *in) {while (in && *in && (unsigned char)*in<=32) in++; return in;}$/;"	kind:f	line:244	file:
-smsRec	D:\Work\openpicus\ModbusMusterDev\GSM_Events.c	/^	char smsRec[7];$/;"	kind:l	line:52
-speed	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\groveboard.h	/^	int speed;$/;"	kind:m	line:70	struct:Interface	access:public
-start	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char* start = 0;$/;"	kind:l	line:177
-start	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\grovelib.h	/^	void (*start) (const void *);$/;"	kind:m	line:84	struct:BoardClass	access:public
-start1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^		int start1 = 0;$/;"	kind:l	line:188
-start2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^		int start2 = 0;$/;"	kind:l	line:208
-start_sec	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	int start_sec = TickGetDiv64K();$/;"	kind:l	line:65
-state	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	BYTE state = va_arg(*app, const BYTE);$/;"	kind:l	line:121
-str	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
-str	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	char *str;$/;"	kind:l	line:116
-string	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	char *string;				\/* The item's name string, if this item is the child of, or is in the list of subitems of an object. *\/$/;"	kind:m	line:50	struct:cJSON	access:public
-subscale	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
-subst	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\HTTPUtils.c	/^	char subst[8];$/;"	kind:l	line:176
-suffix_object	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^static void suffix_object(cJSON *prev,cJSON *item) {prev->next=item;item->prev=prev;}$/;"	kind:f	line:480	file:
-tim1	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^	DWORD tim1 = TickGet();$/;"	kind:l	line:49
-token	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
-total_len	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\ModbusMasterRTU.c	/^	unsigned char total_len = 0;$/;"	kind:l	line:61
-type	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	int type;					\/* The type of the item, as above. *\/$/;"	kind:m	line:44	struct:cJSON	access:public
-type	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\digital_io.c	/^	BYTE type;$/;"	kind:m	line:59	struct:Dig_io	file:	access:public
-uartnext	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *uartnext;$/;"	kind:m	line:89	struct:Board	typeref:struct:Board::Interface	file:	access:public
-uartstart	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\groveboard.c	/^	struct Interface *uartstart;$/;"	kind:m	line:88	struct:Board	typeref:struct:Board::Interface	file:	access:public
-uc	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-uc2	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
-url	D:\Work\openpicus\ModbusMusterDev\taskFlyport.c	/^	char url[128];url[0] = 0;$/;"	kind:l	line:58
-valuedouble	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	double valuedouble;			\/* The item's number, if type==cJSON_Number *\/$/;"	kind:m	line:48	struct:cJSON	access:public
-valueint	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	int valueint;				\/* The item's number, if type==cJSON_Number *\/$/;"	kind:m	line:47	struct:cJSON	access:public
-valuestring	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\Include\cJSON.h	/^	char *valuestring;			\/* The item's string, if type==cJSON_String *\/$/;"	kind:m	line:46	struct:cJSON	access:public
-wEnP	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\MudbusSerial.c	/^static int wEnP[4] = {0,0,0,0};$/;"	kind:v	line:15	file:
-wEnPin	D:\Work\openpicus\ModbusMusterDev\Libs\ExternalLib\RS485Helper.c	/^static int wEnPin[4] = {0,0,0,0};$/;"	kind:v	line:61	file:
+AN1	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	64;"	kind:d	line:64
+AN2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	65;"	kind:d	line:65
+AN3	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	66;"	kind:d	line:66
+AN_PORTS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	59;"	kind:d	line:59
+AN_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	60;"	kind:d	line:60
+An_i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^const void *An_i = &_An_i;$/;"	kind:v	line:105
+An_i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^struct An_i$/;"	kind:s	line:55	file:
+An_i_attach	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^static void *An_i_attach (void * _board,void *_sensor,int portnumb)$/;"	kind:f	line:78	file:
+An_i_ctor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^static void *An_i_ctor (void * _self, va_list *app)$/;"	kind:f	line:61	file:
+An_i_dtor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^static void An_i_dtor (void * _sensor)$/;"	kind:f	line:68	file:
+An_i_getan_i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^static float An_i_getan_i (void * _self,va_list *app)$/;"	kind:f	line:87	file:
+AuthInfo	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^static const char * AuthInfo = "Authorization: Basic ZGhhZG1pbjpkaGFkbWluXyM5MTE=";$/;"	kind:v	line:6	file:
+BASICDEVICES_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	50;"	kind:d	line:50
+BOTH_SHARED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	72;"	kind:d	line:72
+BaseUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^static const char * BaseUrl = "ecloud.dataart.com";\/\/\/ecapi8";$/;"	kind:v	line:6	file:
+BaseUrl	J:\Work\OpenPicus\trunk\taskFlyport.c	/^static const char * BaseUrl = "ecloud.dataart.com";\/\/\/ecapi8";$/;"	kind:v	line:19	file:
+Baud_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^static unsigned int Baud_ = 0;$/;"	kind:v	line:13	file:
+Board	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^const void *Board = &_Board;$/;"	kind:v	line:335
+Board	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^struct Board$/;"	kind:s	line:78	file:
+BoardClass	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^struct BoardClass$/;"	kind:s	line:78
+Board_ctor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^static void *Board_ctor (void * _self, va_list *app)$/;"	kind:f	line:95	file:
+COMMON_UTILS_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CommonUtils.h	2;"	kind:d	line:2
+CONNECTED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^	CONNECTED,$/;"	kind:e	line:16	enum:SocketState
+CRC	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^	unsigned short CRC = CRC16(&ModbusBuf[MB_PLOAD_IND + 0], ModbusBuf[MB_PSIZE_IND]);$/;"	kind:l	line:73
+CRC16	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CRC16Calc.c	/^unsigned short CRC16(unsigned char * pcBlock, unsigned short len)$/;"	kind:f	line:38
+CRC16	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CRC16Calc.h	/^unsigned short CRC16(unsigned char * pcBlock, unsigned short len);$/;"	kind:p	line:4
+CTS_232	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	9;"	kind:d	line:9	file:
+Coils	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	Coils 		= FC_Read_Coils,$/;"	kind:e	line:23	enum:MODBUS_READ_TYPE
+ConnectionAtteptsNum	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^			unsigned char ConnectionAtteptsNum = 2;$/;"	kind:l	line:69
+ConnectionAtteptsNum	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	const unsigned char ConnectionAtteptsNum = 3;$/;"	kind:l	line:48
+Crc16Table	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CRC16Calc.c	/^static const unsigned short Crc16Table[256] = {$/;"	kind:v	line:3	file:
+D3VR_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	56;"	kind:d	line:56
+D3V_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	57;"	kind:d	line:57
+D5VR_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	58;"	kind:d	line:58
+D5V_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	59;"	kind:d	line:59
+DEBUG_PORTS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	61;"	kind:d	line:61
+DE_485	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	3;"	kind:d	line:3	file:
+DIG1	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	60;"	kind:d	line:60
+DIG2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	61;"	kind:d	line:61
+DIG3	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	62;"	kind:d	line:62
+DIG4	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	63;"	kind:d	line:63
+DIG_PORTS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	62;"	kind:d	line:62
+DInputs	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	DInputs	 	= FC_Read_Discrete_Inputs,$/;"	kind:e	line:24	enum:MODBUS_READ_TYPE
+DOUBLE_PORT	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	66;"	kind:d	line:66
+DUTY	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	73;"	kind:d	line:73
+DevId	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";$/;"	kind:v	line:3	file:
+DevId	J:\Work\OpenPicus\trunk\taskFlyport.c	/^static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";$/;"	kind:v	line:18	file:
+DevKey	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:4	file:
+Dig_io	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^const void *Dig_io = &_Dig_io;$/;"	kind:v	line:166
+Dig_io	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^struct Dig_io$/;"	kind:s	line:55	file:
+Dig_io_attach	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^static void* Dig_io_attach (void * _board,void *_sensor,int n)$/;"	kind:f	line:107	file:
+Dig_io_ctor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^static void *Dig_io_ctor (void * _self, va_list *app)$/;"	kind:f	line:66	file:
+Dig_io_dtor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^static void Dig_io_dtor (void * _sensor)$/;"	kind:f	line:91	file:
+Dig_io_get_dig_io	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^static float Dig_io_get_dig_io (void * _self,va_list *app)$/;"	kind:f	line:148	file:
+Dig_io_set_dig_io	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^static int Dig_io_set_dig_io (void * _self,va_list *app)$/;"	kind:f	line:118	file:
+EC_ACKNOWLEDGE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ACKNOWLEDGE = 0x05,$/;"	kind:e	line:86	enum:MODBUS_ERROR_CODES
+EC_GATEWAY_PATH_UNAVAILABLE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_GATEWAY_PATH_UNAVAILABLE = 0x0A,$/;"	kind:e	line:122	enum:MODBUS_ERROR_CODES
+EC_GATEWAY_TARGET_DEVICE_FAILED_TO_RESPOND	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_GATEWAY_TARGET_DEVICE_FAILED_TO_RESPOND = 0x0B,$/;"	kind:e	line:132	enum:MODBUS_ERROR_CODES
+EC_ILLEGAL_DATA_ADDRESS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ILLEGAL_DATA_ADDRESS = 0x02,$/;"	kind:e	line:45	enum:MODBUS_ERROR_CODES
+EC_ILLEGAL_DATA_VALUE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ILLEGAL_DATA_VALUE = 0x03,$/;"	kind:e	line:65	enum:MODBUS_ERROR_CODES
+EC_ILLEGAL_FUNCTION	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_ILLEGAL_FUNCTION = 0x01,$/;"	kind:e	line:32	enum:MODBUS_ERROR_CODES
+EC_INTERBYTE_TIMEOUT	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_INTERBYTE_TIMEOUT = 0x12,$/;"	kind:e	line:141	enum:MODBUS_ERROR_CODES
+EC_MEMORY_PARITY_ERROR	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_MEMORY_PARITY_ERROR = 0x08,$/;"	kind:e	line:109	enum:MODBUS_ERROR_CODES
+EC_NO_ERROR	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_NO_ERROR = 0x00,$/;"	kind:e	line:31	enum:MODBUS_ERROR_CODES
+EC_NO_RESPONSE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_NO_RESPONSE = 0x11,$/;"	kind:e	line:140	enum:MODBUS_ERROR_CODES
+EC_SLAVE_DEVICE_BUSY	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_SLAVE_DEVICE_BUSY = 0x06,$/;"	kind:e	line:99	enum:MODBUS_ERROR_CODES
+EC_SLAVE_DEVICE_FAILURE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_SLAVE_DEVICE_FAILURE = 0x04,$/;"	kind:e	line:79	enum:MODBUS_ERROR_CODES
+EC_UNEXPECTED_DATA	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	EC_UNEXPECTED_DATA = 0x13$/;"	kind:e	line:142	enum:MODBUS_ERROR_CODES
+ERR_PORT_ALREADY_USED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	77;"	kind:d	line:77
+ERR_WRONG_PORTNUM	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	76;"	kind:d	line:76
+ERR_WRONG_PORT_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	78;"	kind:d	line:78
+EstablishHttpConnecion	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num)$/;"	kind:f	line:213
+EstablishHttpConnecion	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num);$/;"	kind:p	line:24
+FC_Read_Coils	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Coils 				= 0x01,$/;"	kind:e	line:8	enum:MODBUS_FUNCTION_CODE
+FC_Read_Discrete_Inputs	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Discrete_Inputs 	= 0x02,$/;"	kind:e	line:9	enum:MODBUS_FUNCTION_CODE
+FC_Read_Holding_Registers	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Holding_Registers 	= 0x03,$/;"	kind:e	line:10	enum:MODBUS_FUNCTION_CODE
+FC_Read_Input_Registers	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Read_Input_Registers		= 0x04,$/;"	kind:e	line:11	enum:MODBUS_FUNCTION_CODE
+FC_Report_Slave_ID	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Report_Slave_ID 			= 0x11$/;"	kind:e	line:16	enum:MODBUS_FUNCTION_CODE
+FC_Write_Multiple_Coils	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Multiple_Coils 	= 0x0F,	$/;"	kind:e	line:14	enum:MODBUS_FUNCTION_CODE
+FC_Write_Multiple_Registers	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Multiple_Registers	= 0x10,		$/;"	kind:e	line:15	enum:MODBUS_FUNCTION_CODE
+FC_Write_Single_Coil	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Single_Coil 		= 0x05,$/;"	kind:e	line:12	enum:MODBUS_FUNCTION_CODE
+FC_Write_Single_Register	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	FC_Write_Single_Register 	= 0x06,$/;"	kind:e	line:13	enum:MODBUS_FUNCTION_CODE
+FREQUENCY	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	72;"	kind:d	line:72
+FlyportTask	J:\Work\OpenPicus\trunk\taskFlyport.c	/^void FlyportTask()$/;"	kind:f	line:26
+FormRegistrationRequest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\Rest.h	/^cJSON * FormRegistrationRequest();$/;"	kind:p	line:8
+FormRegistrationRequest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^cJSON* FormRegistrationRequest()$/;"	kind:f	line:12
+FormatCommandPollUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\Rest.h	/^char* FormatCommandPollUrl(char* Buffer);$/;"	kind:p	line:11
+FormatCommandPollUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^char* FormatCommandPollUrl(char* Buffer)$/;"	kind:f	line:62
+FormatInfoUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\Rest.h	/^char* FormatInfoUrl(char* Buffer);$/;"	kind:p	line:10
+FormatInfoUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^char* FormatInfoUrl(char* Buffer)$/;"	kind:f	line:54
+FormatRegistrationUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\Rest.h	/^char* FormatRegistrationUrl(char* Buffer);$/;"	kind:p	line:9
+FormatRegistrationUrl	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^char* FormatRegistrationUrl(char* Buffer)$/;"	kind:f	line:45
+GET_STATUS_FAILURE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^	GET_STATUS_FAILURE		$/;"	kind:e	line:18	enum:SocketState
+GROVEBOARD_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	50;"	kind:d	line:50
+GROVEINTERFACES_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	50;"	kind:d	line:50
+GROVELIB_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	49;"	kind:d	line:49
+GetBaud	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^	int (*GetBaud)();$/;"	kind:m	line:19	struct:SerialPort	access:public
+GetClockValue	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^void GetClockValue(const char * TimestampDest)$/;"	kind:f	line:68
+GetClockValue	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CommonUtils.h	/^void GetClockValue(const char * TimestampDest);$/;"	kind:p	line:9
+GetError	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^void GetError()$/;"	kind:f	line:3
+GetError	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CommonUtils.h	/^void GetError();$/;"	kind:p	line:6
+GetHttpResponse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:105
+GetHttpResponse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:23
+GetHttpStatus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^enum SocketState GetHttpStatus(TCP_SOCKET* conn)$/;"	kind:f	line:160
+GetHttpStatus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^enum SocketState GetHttpStatus(TCP_SOCKET* conn);$/;"	kind:p	line:25
+GroveNest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	55;"	kind:d	line:55
+GrovePort	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	/^}GrovePort;$/;"	kind:t	line:92	typeref:struct:__anon1
+GroveStarted	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BOOL GroveStarted = FALSE;$/;"	kind:v	line:92
+HRegisters	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	HRegisters 	= FC_Read_Holding_Registers,$/;"	kind:e	line:25	enum:MODBUS_READ_TYPE
+HTTPConnect	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port)$/;"	kind:f	line:183
+HTTPConnect	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port);$/;"	kind:p	line:26
+HTTP_UTILS_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	2;"	kind:d	line:2
+HandleServerInfo	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\Rest.h	/^char* HandleServerInfo(cJSON* RawResponse);$/;"	kind:p	line:12
+HandleServerInfo	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^char* HandleServerInfo(cJSON* json)$/;"	kind:f	line:74
+HttpResponse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse$/;"	kind:s	line:8
+I2C	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	67;"	kind:d	line:67
+I2C_PORTS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	60;"	kind:d	line:60
+I2C_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	61;"	kind:d	line:61
+INIT_CORRECT	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	75;"	kind:d	line:75
+IRegister	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	IRegister 	= FC_Read_Input_Registers$/;"	kind:e	line:26	enum:MODBUS_READ_TYPE
+Init	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	void (*Init)(const struct SerialPort * Serial);		$/;"	kind:m	line:157	struct:ModbusMaster	access:public
+Init	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^	void (*Init)(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);		$/;"	kind:m	line:15	struct:SerialPort	access:public
+InterbyteDelay_us	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^static unsigned long InterbyteDelay_us = 0;$/;"	kind:v	line:29	file:
+Interface	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	/^struct Interface$/;"	kind:s	line:65
+MBM	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^const struct ModbusMaster MBM = $/;"	kind:v	line:133	typeref:struct:ModbusMaster
+MBM_Read	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^int MBM_Read(int v);$/;"	kind:p	line:162
+MBM_Read	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^int MBM_Read(int v)$/;"	kind:f	line:128
+MB_ADDR_IND	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	15;"	kind:d	line:15	file:
+MB_ADDR_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	7;"	kind:d	line:7	file:
+MB_CRC_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	5;"	kind:d	line:5	file:
+MB_ERROR_IND	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	18;"	kind:d	line:18	file:
+MB_FCODE_IND	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	16;"	kind:d	line:16	file:
+MB_FCODE_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	8;"	kind:d	line:8	file:
+MB_HEADER_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	22;"	kind:d	line:22	file:
+MB_NON_PAYLOAD_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	25;"	kind:d	line:25	file:
+MB_PLOAD_IND	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	19;"	kind:d	line:19	file:
+MB_PSIZE_IND	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	17;"	kind:d	line:17	file:
+MB_PSIZE_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	9;"	kind:d	line:9	file:
+MB_QUANTITY_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	12;"	kind:d	line:12	file:
+MB_REGISTER_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	13;"	kind:d	line:13	file:
+MB_STARTING_ADDRESS_LEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	11;"	kind:d	line:11	file:
+MODBUS_ERROR_CODES	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^enum MODBUS_ERROR_CODES$/;"	kind:g	line:29
+MODBUS_FUNCTION_CODE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^enum MODBUS_FUNCTION_CODE$/;"	kind:g	line:6
+MODBUS_MASTER_CRC16_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CRC16Calc.h	2;"	kind:d	line:2
+MODBUS_MASTER_RTU_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	2;"	kind:d	line:2
+MODBUS_READ_TYPE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^enum MODBUS_READ_TYPE$/;"	kind:g	line:21
+MODBUS_SERIAL_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	2;"	kind:d	line:2
+ModbusBuf	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char ModbusBuf[512];$/;"	kind:v	line:27
+ModbusMaster	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ModbusMaster$/;"	kind:s	line:155
+NOT_CONNECTED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^	NOT_CONNECTED,$/;"	kind:e	line:17	enum:SocketState
+NOT_SHARED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	69;"	kind:d	line:69
+NOT_USED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	64;"	kind:d	line:64
+NtwKey	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";$/;"	kind:v	line:5	file:
+OnBusy	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnBusy(char* phoneNumber)$/;"	kind:f	line:32
+OnError	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnError(int error, int errorNumber)$/;"	kind:f	line:70
+OnNoCarrier	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnNoCarrier(char* phoneNumber)$/;"	kind:f	line:20
+OnRegistration	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnRegistration(BYTE Status)$/;"	kind:f	line:83
+OnRing	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnRing(char* phoneNumber)$/;"	kind:f	line:8
+OnSMSReceived	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnSMSReceived(BYTE memtype, int index)$/;"	kind:f	line:43
+OnSMSSentReport	J:\Work\OpenPicus\trunk\GSM_Events.c	/^void OnSMSSentReport(int msgreference, int msgreport)$/;"	kind:f	line:58
+P1_SHARED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	70;"	kind:d	line:70
+P2_SHARED	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	71;"	kind:d	line:71
+PWM	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	71;"	kind:d	line:71
+ParseResponse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse ParseResponse(unsigned char* BufForResp)$/;"	kind:f	line:230
+ParseResponse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse ParseResponse(unsigned char* BufForResp);$/;"	kind:p	line:27
+Pin1	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Pin1;			\/\/ 	Pin1 number - Association with Flyport pin number (analog channel for analog ports)$/;"	kind:m	line:87	struct:__anon1	access:public
+Pin2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Pin2;			\/\/	Pin2 number - Association with Flyport pin number (analog channel for analog ports)$/;"	kind:m	line:88	struct:__anon1	access:public
+PortNum	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^	unsigned char PortNum;$/;"	kind:m	line:14	struct:SerialPort	access:public
+Port_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^static unsigned char Port_ = 0;$/;"	kind:v	line:12	file:
+Prefix	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^static const char * Prefix = "\/ecapi8\/";$/;"	kind:v	line:7	file:
+ProcessComand	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^BOOL ProcessComand()$/;"	kind:f	line:22
+ProcessComand	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CommonUtils.h	/^BOOL ProcessComand();$/;"	kind:p	line:7
+Qnty	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	short Qnty;$/;"	kind:m	line:149	struct:ReadRegistersResp	access:public
+REST_API_H	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\Rest.h	2;"	kind:d	line:2
+RE_485	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	4;"	kind:d	line:4	file:
+RS485	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^const struct SerialPort RS485 = $/;"	kind:v	line:78	typeref:struct:SerialPort
+RS485BufferSize	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^int RS485BufferSize(int port);$/;"	kind:p	line:69
+RS485BufferSize	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^int RS485BufferSize(int port)$/;"	kind:f	line:182
+RS485Flush	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Flush(int port);$/;"	kind:p	line:68
+RS485Flush	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485Flush(int port)$/;"	kind:f	line:177
+RS485Init	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Init(int port,long int baud);$/;"	kind:p	line:64
+RS485Init	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485Init(int port,long int baud)$/;"	kind:f	line:120
+RS485Off	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Off(int port);$/;"	kind:p	line:67
+RS485Off	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485Off(int port)$/;"	kind:f	line:172
+RS485On	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485On(int port);$/;"	kind:p	line:66
+RS485On	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485On(int port)$/;"	kind:f	line:167
+RS485Port	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^static struct SerialPort RS485Port;$/;"	kind:v	line:28	typeref:struct:SerialPort	file:
+RS485Read	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^int RS485Read (int port, char* towrite, int count);$/;"	kind:p	line:71
+RS485Read	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^int RS485Read (int port , char *towrite , int count)$/;"	kind:f	line:198
+RS485Remap	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Remap(int port, int TXPin, int RXPin, int writeEnPin, int readEnPin);$/;"	kind:p	line:63
+RS485Remap	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485Remap(int port, int TXPin, int RXPin, int writeEnPin, int readEnPin)$/;"	kind:f	line:73
+RS485SetParam	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485SetParam(int port, int param, int value);$/;"	kind:p	line:65
+RS485SetParam	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485SetParam(int port, int param, int value)$/;"	kind:f	line:125
+RS485Write	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485Write(int port, char *buffer); $/;"	kind:p	line:70
+RS485Write	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485Write(int port, char *buffer)$/;"	kind:f	line:187
+RS485WriteCh	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	/^void RS485WriteCh(int port, char chr);$/;"	kind:p	line:72
+RS485WriteCh	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^void RS485WriteCh(int port, char chr)$/;"	kind:f	line:203
+RS485_8BITS_PARITY_EVEN	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	58;"	kind:d	line:58
+RS485_8BITS_PARITY_NONE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	60;"	kind:d	line:60
+RS485_8BITS_PARITY_ODD	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	59;"	kind:d	line:59
+RS485_9BITS_PARITY_NONE	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	61;"	kind:d	line:61
+RS485_DATA_PARITY	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	53;"	kind:d	line:53
+RS485_ONE_STOP	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	55;"	kind:d	line:55
+RS485_STOP_BITS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	52;"	kind:d	line:52
+RS485_TWO_STOP	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\RS485Helper.h	56;"	kind:d	line:56
+RTS_232	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	10;"	kind:d	line:10	file:
+RX_232	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	8;"	kind:d	line:8	file:
+RX_485	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	6;"	kind:d	line:6	file:
+Read	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^	BOOL (*Read)(unsigned char* Dest, unsigned short len, unsigned long long timeout_us);	$/;"	kind:m	line:18	struct:SerialPort	access:public
+ReadByte	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^	BOOL (*ReadByte)(unsigned char* Dest, unsigned long timeout_us);		$/;"	kind:m	line:17	struct:SerialPort	access:public
+ReadHRegisters	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	struct ReadRegistersResp (*ReadHRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);	$/;"	kind:m	line:158	struct:ModbusMaster	typeref:struct:ModbusMaster::ReadHRegisters	access:public
+ReadRegistersResp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ReadRegistersResp$/;"	kind:s	line:145
+RecievedCRC	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^	unsigned char RecievedCRC[2] = {0, 0};$/;"	kind:l	line:123
+RegRequestJson	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	cJSON * RegRequestJson = FormRegistrationRequest();	$/;"	kind:l	line:74
+Response	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^	char * Response;	$/;"	kind:m	line:11	struct:HttpResponse	access:public
+RsponseIsOK	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^	BOOL RsponseIsOK;$/;"	kind:m	line:10	struct:HttpResponse	access:public
+RunClock	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^BOOL RunClock(const char * TimestampString)$/;"	kind:f	line:44
+RunClock	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\CommonUtils.h	/^BOOL RunClock(const char * TimestampString);$/;"	kind:p	line:8
+SINGLE_PORT	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	65;"	kind:d	line:65
+SPI	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	68;"	kind:d	line:68
+SendHttpDataRequest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char* data, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:36
+SendHttpDataRequest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char * data, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:22
+SendHttpJsonRequest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec)$/;"	kind:f	line:8
+SendHttpJsonRequest	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec);$/;"	kind:p	line:21
+SensorClass	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^struct SensorClass$/;"	kind:s	line:67
+SerialPort	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^struct SerialPort$/;"	kind:s	line:12
+SocketState	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\HTTPUtils.h	/^enum SocketState$/;"	kind:g	line:14
+TIMEOUT	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\basicdevices.h	75;"	kind:d	line:75
+TX_232	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	7;"	kind:d	line:7	file:
+TX_485	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	5;"	kind:d	line:5	file:
+Timestamp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^static char Timestamp[28];$/;"	kind:v	line:9	file:
+Type	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Type;			\/\/	Port type - Type of the port, as in the upper defines$/;"	kind:m	line:90	struct:__anon1	access:public
+Use	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE Use;			\/\/	Port usage - Indicates if it's used as single or double sensor, or not used$/;"	kind:m	line:89	struct:__anon1	access:public
+Write	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^	void (*Write)(const unsigned char* Data, short len);	$/;"	kind:m	line:16	struct:SerialPort	access:public
+Write	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^	RS485Port.Write(ModbusBuf, total_len);$/;"	kind:p	line:80	file:
+_An_i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^static const struct SensorClass _An_i =$/;"	kind:v	line:94	typeref:struct:SensorClass	file:
+_Board	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^static const struct BoardClass _Board =$/;"	kind:v	line:327	typeref:struct:BoardClass	file:
+_Dig_io	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^static const struct SensorClass _Dig_io =$/;"	kind:v	line:155	typeref:struct:SensorClass	file:
+_GetBaud	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^int _GetBaud();$/;"	kind:p	line:10
+_GetBaud	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^int _GetBaud()$/;"	kind:f	line:73
+_MBMInit	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^void _MBMInit(const struct SerialPort * Serial);	$/;"	kind:p	line:152
+_MBMInit	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^void _MBMInit(const struct SerialPort * Serial)$/;"	kind:f	line:31
+_ReadHRegisters	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);$/;"	kind:p	line:153
+_ReadHRegisters	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty)$/;"	kind:f	line:55
+_RegHi	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char _RegHi(unsigned short source)$/;"	kind:f	line:44
+_RegLow	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^unsigned char _RegLow(unsigned short source)$/;"	kind:f	line:49
+_SerialPortInit	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);	$/;"	kind:p	line:6
+_SerialPortInit	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity)$/;"	kind:f	line:18
+_SerialRead	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^BOOL _SerialRead(unsigned char* Dest, unsigned short len, unsigned long long timeout_us);$/;"	kind:p	line:9
+_SerialRead	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^BOOL _SerialRead(unsigned char* Dest, unsigned short len, unsigned long long timeout_us)$/;"	kind:f	line:61
+_SerialReadByte	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us);	$/;"	kind:p	line:8
+_SerialReadByte	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us)$/;"	kind:f	line:46
+_SerialWrite	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusSerial.h	/^void _SerialWrite(const unsigned char* Data, short len);	$/;"	kind:p	line:7
+_SerialWrite	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^void _SerialWrite(const unsigned char* Data, short len)$/;"	kind:f	line:31
+__RS485_HELPER_LIB_C	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	49;"	kind:d	line:49	file:
+_host	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^char _host[128];$/;"	kind:v	line:4
+_port	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^char _port[8];$/;"	kind:v	line:5
+a	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
+a	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
+a	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
+a	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
+aninext	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *aninext;$/;"	kind:m	line:87	struct:Board	typeref:struct:Board::Interface	file:	access:public
+anistart	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *anistart;$/;"	kind:m	line:86	struct:Board	typeref:struct:Board::Interface	file:	access:public
+ap	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:114
+ap	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:126
+ap	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:136
+ap	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	va_list ap;$/;"	kind:l	line:65
+attach	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	int (*attach)  (void *,void *,int,int);$/;"	kind:m	line:83	struct:BoardClass	access:public
+attach	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	void *(*attach) (void *,void *,int);$/;"	kind:m	line:72	struct:SensorClass	access:public
+attachSensorToAnBus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^struct Interface *	attachSensorToAnBus (void *,int);$/;"	kind:p	line:53	file:
+attachSensorToAnBus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^struct Interface *	attachSensorToAnBus (void *_board,int n)$/;"	kind:f	line:226
+attachSensorToDigioBus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^struct Interface *attachSensorToDigioBus(void *,int,int);$/;"	kind:p	line:53	file:
+attachSensorToDigioBus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToDigioBus(void *_board,int n,int type)$/;"	kind:f	line:168
+attachSensorToI2CBus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToI2CBus(void *_board,int i2cbus,int add)$/;"	kind:f	line:130
+attachSensorToUartBus	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^struct Interface *attachSensorToUartBus(void *_board,int port,int speed,BYTE module,BYTE interf)$/;"	kind:f	line:273
+attachToBoard	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^int attachToBoard(void *,void *,int);$/;"	kind:p	line:61
+attachToBoard	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^int attachToBoard(void *board,void *sensor,int numb)$/;"	kind:f	line:97
+board	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	void *board = new(GroveNest);$/;"	kind:l	line:159
+boardType	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	int boardType;$/;"	kind:m	line:81	struct:Board	file:	access:public
+buf	J:\Work\OpenPicus\trunk\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:11
+buf	J:\Work\OpenPicus\trunk\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:23
+buf	J:\Work\OpenPicus\trunk\GSM_Events.c	/^	char buf[20];$/;"	kind:l	line:35
+buf	J:\Work\OpenPicus\trunk\GSM_Events.c	/^	char buf[30];$/;"	kind:l	line:61
+button	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	void *button = new(Dig_io, IN);$/;"	kind:l	line:163
+bytesReady	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^	int bytesReady = RS485BufferSize(Port_);$/;"	kind:l	line:48
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *c=cJSON_New_Item();$/;"	kind:l	line:249
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *c=object->child; $/;"	kind:l	line:473
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromArray(cJSON *array,int which)			{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return 0;$/;"	kind:l	line:490
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	kind:l	line:493
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_GetArrayItem(cJSON *array,int item)				{cJSON *c=array->child;  while (c && item>0) item--,c=c->next; return c;}$/;"	kind:l	line:470
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	kind:l	line:469
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_AddItemToArray(cJSON *array, cJSON *item)						{cJSON *c=array->child;if (!item) return; if (!c) {array->child=item;} else {while (c && c->next) c=c->next; suffix_object(c,item);}}$/;"	kind:l	line:485
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem)		{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return;$/;"	kind:l	line:497
+c	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:l	line:500
+cJSON	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^typedef struct cJSON {$/;"	kind:s	line:40
+cJSON	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^} cJSON;$/;"	kind:t	line:51	typeref:struct:cJSON
+cJSON_AddFalseToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	118;"	kind:d	line:118
+cJSON_AddItemReferenceToArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item);$/;"	kind:p	line:103
+cJSON_AddItemReferenceToArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void	cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item)						{cJSON_AddItemToArray(array,create_reference(item));}$/;"	kind:f	line:487
+cJSON_AddItemReferenceToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void	cJSON_AddItemReferenceToObject(cJSON *object,const char *string,cJSON *item);$/;"	kind:p	line:104
+cJSON_AddItemReferenceToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void	cJSON_AddItemReferenceToObject(cJSON *object,const char *string,cJSON *item)	{cJSON_AddItemToObject(object,string,create_reference(item));}$/;"	kind:f	line:488
+cJSON_AddItemToArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_AddItemToArray(cJSON *array, cJSON *item);$/;"	kind:p	line:100
+cJSON_AddItemToArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_AddItemToArray(cJSON *array, cJSON *item)						{cJSON *c=array->child;if (!item) return; if (!c) {array->child=item;} else {while (c && c->next) c=c->next; suffix_object(c,item);}}$/;"	kind:f	line:485
+cJSON_AddItemToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void	cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item);$/;"	kind:p	line:101
+cJSON_AddItemToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_AddItemToObject(cJSON *object,const char *string,cJSON *item)	{if (!item) return; if (item->string) cJSON_free(item->string);item->string=cJSON_strdup(string);cJSON_AddItemToArray(object,item);}$/;"	kind:f	line:486
+cJSON_AddNullToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	116;"	kind:d	line:116
+cJSON_AddNumberToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	119;"	kind:d	line:119
+cJSON_AddStringToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	120;"	kind:d	line:120
+cJSON_AddTrueToObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	117;"	kind:d	line:117
+cJSON_Array	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	34;"	kind:d	line:34
+cJSON_CreateArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateArray();$/;"	kind:p	line:90
+cJSON_CreateArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateArray()						$/;"	kind:f	line:519
+cJSON_CreateBool	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateBool(int b);$/;"	kind:p	line:87
+cJSON_CreateBool	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateBool(int b)					{cJSON *item=cJSON_New_Item();if(item)item->type=b?cJSON_True:cJSON_False;return item;}$/;"	kind:f	line:506
+cJSON_CreateDoubleArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateDoubleArray(double *numbers,int count);$/;"	kind:p	line:96
+cJSON_CreateDoubleArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:536
+cJSON_CreateFalse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateFalse();$/;"	kind:p	line:86
+cJSON_CreateFalse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFalse()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_False;return item;}$/;"	kind:f	line:505
+cJSON_CreateFloatArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateFloatArray(float *numbers,int count);$/;"	kind:p	line:95
+cJSON_CreateFloatArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:535
+cJSON_CreateIntArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateIntArray(int *numbers,int count);$/;"	kind:p	line:94
+cJSON_CreateIntArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:534
+cJSON_CreateNull	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateNull();$/;"	kind:p	line:84
+cJSON_CreateNull	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNull()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_NULL;return item;}$/;"	kind:f	line:503
+cJSON_CreateNumber	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateNumber(double num);$/;"	kind:p	line:88
+cJSON_CreateNumber	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNumber(double num)			{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_Number;item->valuedouble=num;item->valueint=(int)num;}return item;}$/;"	kind:f	line:507
+cJSON_CreateObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateObject();$/;"	kind:p	line:91
+cJSON_CreateObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateObject()						$/;"	kind:f	line:526
+cJSON_CreateString	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateString(const char *string);$/;"	kind:p	line:89
+cJSON_CreateString	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateString(const char *string)	$/;"	kind:f	line:508
+cJSON_CreateStringArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateStringArray(const char **strings,int count);$/;"	kind:p	line:97
+cJSON_CreateStringArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:f	line:537
+cJSON_CreateTrue	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_CreateTrue();$/;"	kind:p	line:85
+cJSON_CreateTrue	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateTrue()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_True;return item;}$/;"	kind:f	line:504
+cJSON_Delete	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void   cJSON_Delete(cJSON *c);$/;"	kind:p	line:69
+cJSON_Delete	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void cJSON_Delete(cJSON *c)$/;"	kind:f	line:76
+cJSON_DeleteItemFromArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void   cJSON_DeleteItemFromArray(cJSON *array,int which);$/;"	kind:p	line:108
+cJSON_DeleteItemFromArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromArray(cJSON *array,int which)			{cJSON_Delete(cJSON_DetachItemFromArray(array,which));}$/;"	kind:f	line:492
+cJSON_DeleteItemFromObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void   cJSON_DeleteItemFromObject(cJSON *object,const char *string);$/;"	kind:p	line:110
+cJSON_DeleteItemFromObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromObject(cJSON *object,const char *string) {cJSON_Delete(cJSON_DetachItemFromObject(object,string));}$/;"	kind:f	line:494
+cJSON_DetachItemFromArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_DetachItemFromArray(cJSON *array,int which);$/;"	kind:p	line:107
+cJSON_DetachItemFromArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromArray(cJSON *array,int which)			{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return 0;$/;"	kind:f	line:490
+cJSON_DetachItemFromArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromArray(cJSON *array,int which)			{cJSON_Delete(cJSON_DetachItemFromArray(array,which));}$/;"	kind:p	line:492	file:
+cJSON_DetachItemFromObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string);$/;"	kind:p	line:109
+cJSON_DetachItemFromObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	kind:f	line:493
+cJSON_DetachItemFromObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_DeleteItemFromObject(cJSON *object,const char *string) {cJSON_Delete(cJSON_DetachItemFromObject(object,string));}$/;"	kind:p	line:494	file:
+cJSON_False	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	29;"	kind:d	line:29
+cJSON_GetArrayItem	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_GetArrayItem(cJSON *array,int item);$/;"	kind:p	line:74
+cJSON_GetArrayItem	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_GetArrayItem(cJSON *array,int item)				{cJSON *c=array->child;  while (c && item>0) item--,c=c->next; return c;}$/;"	kind:f	line:470
+cJSON_GetArraySize	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern int	  cJSON_GetArraySize(cJSON *array);$/;"	kind:p	line:72
+cJSON_GetArraySize	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	kind:f	line:469
+cJSON_GetErrorPtr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern const char *cJSON_GetErrorPtr();$/;"	kind:p	line:81
+cJSON_GetErrorPtr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^const char *cJSON_GetErrorPtr() {return ep;}$/;"	kind:f	line:37
+cJSON_GetObjectItem	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_GetObjectItem(cJSON *object,const char *string);$/;"	kind:p	line:76
+cJSON_GetObjectItem	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_GetObjectItem(cJSON *object,const char *string)	$/;"	kind:f	line:471
+cJSON_Hooks	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^typedef struct cJSON_Hooks {$/;"	kind:s	line:53
+cJSON_Hooks	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^} cJSON_Hooks;$/;"	kind:t	line:56	typeref:struct:cJSON_Hooks
+cJSON_InitHooks	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_InitHooks(cJSON_Hooks* hooks);$/;"	kind:p	line:59
+cJSON_IsReference	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	37;"	kind:d	line:37
+cJSON_NULL	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	31;"	kind:d	line:31
+cJSON_New_Item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static cJSON *cJSON_New_Item()$/;"	kind:f	line:68	file:
+cJSON_Number	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	32;"	kind:d	line:32
+cJSON_Object	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	35;"	kind:d	line:35
+cJSON_Parse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern cJSON *cJSON_Parse(const char *value);$/;"	kind:p	line:63
+cJSON_Parse	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_Parse(const char *value)$/;"	kind:f	line:247
+cJSON_Print	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern char  *cJSON_Print(cJSON *item);$/;"	kind:p	line:65
+cJSON_Print	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^char *cJSON_Print(cJSON *item)				{return print_value(item,0,1);}$/;"	kind:f	line:258
+cJSON_PrintUnformatted	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern char  *cJSON_PrintUnformatted(cJSON *item);$/;"	kind:p	line:67
+cJSON_PrintUnformatted	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^char *cJSON_PrintUnformatted(cJSON *item)	{return print_value(item,0,0);}$/;"	kind:f	line:259
+cJSON_ReplaceItemInArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem);$/;"	kind:p	line:113
+cJSON_ReplaceItemInArray	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInArray(cJSON *array,int which,cJSON *newitem)		{cJSON *c=array->child;while (c && which>0) c=c->next,which--;if (!c) return;$/;"	kind:f	line:497
+cJSON_ReplaceItemInObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern void cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem);$/;"	kind:p	line:114
+cJSON_ReplaceItemInObject	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:f	line:500
+cJSON_String	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	33;"	kind:d	line:33
+cJSON_True	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	30;"	kind:d	line:30
+cJSON__h	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	24;"	kind:d	line:24
+cJSON_free	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static void (*cJSON_free)(void *ptr) = free;$/;"	kind:v	line:53	file:
+cJSON_malloc	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static void *(*cJSON_malloc)(size_t sz) = malloc;$/;"	kind:v	line:52	file:
+cJSON_strcasecmp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static int cJSON_strcasecmp(const char *s1,const char *s2)$/;"	kind:f	line:39	file:
+cJSON_strdup	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char* cJSON_strdup(const char* str)$/;"	kind:f	line:55	file:
+child	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *child;		\/* An array or object item will have a child pointer pointing to a chain of the items in the array\/object. *\/$/;"	kind:m	line:42	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
+child	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *child;$/;"	kind:l	line:297
+child	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *child;$/;"	kind:l	line:376
+child	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *child=item->child;$/;"	kind:l	line:327
+child	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *child=item->child;$/;"	kind:l	line:415
+class	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	const void *class;$/;"	kind:m	line:57	struct:An_i	file:	access:public
+class	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	const void *class;$/;"	kind:m	line:57	struct:Dig_io	file:	access:public
+class	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	const void *class;$/;"	kind:m	line:80	struct:Board	file:	access:public
+class	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	const struct BoardClass *class = _class;$/;"	kind:l	line:161
+class	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass *class = _class;$/;"	kind:l	line:183
+config	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	int (*config) (void *,va_list *);$/;"	kind:m	line:73	struct:SensorClass	access:public
+configure	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^int configure(void *,...);$/;"	kind:p	line:62
+configure	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^int configure(void *self, ...)$/;"	kind:f	line:112
+conn	J:\Work\OpenPicus\trunk\taskFlyport.c	/^TCP_SOCKET conn;$/;"	kind:v	line:24
+contentlength	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char contentlength[5];$/;"	kind:l	line:55
+copy	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^      char* copy;$/;"	kind:l	line:58
+cp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:116
+cp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:128
+cp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **cp = self;$/;"	kind:l	line:138
+crc	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CRC16Calc.c	/^    unsigned short crc = 0xFFFF;$/;"	kind:l	line:40
+create_reference	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static cJSON *create_reference(cJSON *item) {cJSON *ref=cJSON_New_Item();if (!ref) return 0;memcpy(ref,item,sizeof(cJSON));ref->string=0;ref->type|=cJSON_IsReference;ref->next=ref->prev=0;return ref;}$/;"	kind:f	line:482	file:
+ctor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	void *(*ctor) (void *,va_list *);$/;"	kind:m	line:70	struct:SensorClass	access:public
+ctor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	void *(*ctor) (void *,va_list *);$/;"	kind:m	line:81	struct:BoardClass	access:public
+d	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	double d=item->valuedouble;$/;"	kind:l	line:117
+data	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^    cJSON *data = cJSON_CreateObject();			$/;"	kind:l	line:17
+data	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^			float data = va_arg(*app, const float);$/;"	kind:l	line:135
+data	J:\Work\OpenPicus\trunk\Libs\ExternalLib\i2c_devices.c	/^	BYTE data = I2CRead(1);$/;"	kind:l	line:75
+delet_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^void delet_(void **);$/;"	kind:p	line:60
+delet_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^void delet_(void **_self)$/;"	kind:f	line:91
+delete	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	56;"	kind:d	line:56
+delete_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^void delete_(void *);$/;"	kind:p	line:59
+delete_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^void delete_(void *_self)$/;"	kind:f	line:81
+devClassData	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^    cJSON *devClassData = cJSON_CreateObject();	$/;"	kind:l	line:18
+deviceClass	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^    cJSON *deviceClass = cJSON_CreateObject();		$/;"	kind:l	line:16
+dionext	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *dionext;$/;"	kind:m	line:85	struct:Board	typeref:struct:Board::Interface	file:	access:public
+diostart	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *diostart;$/;"	kind:m	line:84	struct:Board	typeref:struct:Board::Interface	file:	access:public
+dtor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	void (*dtor) (void *);$/;"	kind:m	line:71	struct:SensorClass	access:public
+dtor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	void *(*dtor) (void *);$/;"	kind:m	line:82	struct:BoardClass	access:public
+dtor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^		(*self)->dtor(self);$/;"	kind:p	line:86	file:
+ec	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	enum MODBUS_ERROR_CODES ec;$/;"	kind:m	line:147	struct:ReadRegistersResp	typeref:enum:ReadRegistersResp::MODBUS_ERROR_CODES	access:public
+end	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char* end = 0;$/;"	kind:l	line:237
+entries	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char **entries;$/;"	kind:l	line:325
+entries	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char **entries=0,**names=0;$/;"	kind:l	line:413
+ep	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *ep;$/;"	kind:v	line:35	file:
+error	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^			char *error = (char*)cJSON_GetErrorPtr();$/;"	kind:l	line:97
+error	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^		char *error = (char*)cJSON_GetErrorPtr();$/;"	kind:l	line:78
+fail	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	int numentries=0,fail=0;$/;"	kind:l	line:416
+fail	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
+firstByteMark	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const unsigned char firstByteMark[7] = { 0x00, 0x00, 0xC0, 0xE0, 0xF0, 0xF8, 0xFC };$/;"	kind:v	line:137	file:
+first_time	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	BOOL first_time = TRUE;$/;"	kind:l	line:110
+first_time	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	BOOL first_time = TRUE;$/;"	kind:l	line:107
+flag	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^unsigned char flag;$/;"	kind:v	line:60
+free_fn	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^      void (*free_fn)(void *ptr);$/;"	kind:m	line:55	struct:cJSON_Hooks	access:public
+gName	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	char *(*gName) (const void *);$/;"	kind:m	line:85	struct:BoardClass	access:public
+g_I2CSCL	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_I2CSCL[] = { p1 };$/;"	kind:v	line:70
+g_I2CSDA	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_I2CSDA[] ={ p3 }; $/;"	kind:v	line:71
+g_MISO	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_MISO[] ={ p7}; $/;"	kind:v	line:66
+g_MOSI	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_MOSI[] = { p17 };$/;"	kind:v	line:67
+g_SCK	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_SCK[] = { p18 }; $/;"	kind:v	line:65
+g_SPI_CS	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_SPI_CS[] ={ p8 }; $/;"	kind:v	line:68
+g_an	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_an[] ={ 1, 2, 3 }; $/;"	kind:v	line:73
+g_ashared	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_ashared[] = { NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED};$/;"	kind:v	line:75
+g_atype	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_atype[] = {AN_TYPE, AN_TYPE, AN_TYPE, AN_TYPE};$/;"	kind:v	line:74
+g_d1	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_d1[] = { p2, p5, p10, p12};$/;"	kind:v	line:60
+g_d2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_d2[] = { p4, p6, p11, p14};	$/;"	kind:v	line:61
+g_dshared	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_dshared[] = { NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED, NOT_SHARED};$/;"	kind:v	line:63
+g_dtype	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^BYTE g_dtype[] = { D5VR_TYPE, D5VR_TYPE, D5VR_TYPE, D5VR_TYPE, D5VR_TYPE, D3VR_TYPE};$/;"	kind:v	line:62
+get	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^float get(void *, ...);$/;"	kind:p	line:64
+get	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^float get(void *self, ...)$/;"	kind:f	line:134
+getLen	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^extern unsigned int getLen(void);$/;"	kind:p	line:79
+get_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	float (*get_)(void *,va_list *);$/;"	kind:m	line:75	struct:SensorClass	access:public
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_DetachItemFromObject(cJSON *object,const char *string) {int i=0;cJSON *c=object->child;while (c && cJSON_strcasecmp(c->string,string)) i++,c=c->next;if (c) return cJSON_DetachItemFromArray(object,i);return 0;}$/;"	kind:l	line:493
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^int    cJSON_GetArraySize(cJSON *array)							{cJSON *c=array->child;int i=0;while(c)i++,c=c->next;return i;}$/;"	kind:l	line:469
+i	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^void   cJSON_ReplaceItemInObject(cJSON *object,const char *string,cJSON *newitem){int i=0;cJSON *c=object->child;while(c && cJSON_strcasecmp(c->string,string))i++,c=c->next;if(c){newitem->string=cJSON_strdup(string);cJSON_ReplaceItemInArray(object,i,newitem);}}$/;"	kind:l	line:500
+i2cnext	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *i2cnext;$/;"	kind:m	line:83	struct:Board	typeref:struct:Board::Interface	file:	access:public
+i2cstart	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *i2cstart;$/;"	kind:m	line:82	struct:Board	typeref:struct:Board::Interface	file:	access:public
+inBuff	J:\Work\OpenPicus\trunk\taskFlyport.c	/^unsigned char inBuff[2000];$/;"	kind:v	line:23
+ind	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^	short ind = len;$/;"	kind:l	line:36
+ind	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^	unsigned short ind = len;$/;"	kind:l	line:63
+inter	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	struct Interface *inter;$/;"	kind:m	line:58	struct:An_i	typeref:struct:An_i::Interface	file:	access:public
+inter	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	struct Interface *inter;$/;"	kind:m	line:58	struct:Dig_io	typeref:struct:Dig_io::Interface	file:	access:public
+isShared	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveinterfaces.h	/^	BYTE isShared;		\/\/	Pin sharing - Indicates if the pins of the ports are shared with other ports, like in Arduino UNO Grove shield$/;"	kind:m	line:91	struct:__anon1	access:public
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *item=cJSON_New_Item();$/;"	kind:l	line:510
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *item=cJSON_New_Item();$/;"	kind:l	line:521
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *item=cJSON_New_Item();$/;"	kind:l	line:528
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateBool(int b)					{cJSON *item=cJSON_New_Item();if(item)item->type=b?cJSON_True:cJSON_False;return item;}$/;"	kind:l	line:506
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFalse()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_False;return item;}$/;"	kind:l	line:505
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNull()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_NULL;return item;}$/;"	kind:l	line:503
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateNumber(double num)			{cJSON *item=cJSON_New_Item();if(item){item->type=cJSON_Number;item->valuedouble=num;item->valueint=(int)num;}return item;}$/;"	kind:l	line:507
+item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateTrue()						{cJSON *item=cJSON_New_Item();if(item)item->type=cJSON_True;return item;}$/;"	kind:l	line:504
+j	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+jsonStr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char *jsonStr = 0;$/;"	kind:l	line:11
+jsonStr	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	char *jsonStr = cJSON_PrintUnformatted(RegRequestJson);$/;"	kind:l	line:96
+len	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+len	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
+len	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
+len	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
+len	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^      size_t len;$/;"	kind:l	line:57
+lenTemp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	int lenTemp = 0;$/;"	kind:l	line:111
+lenTemp	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	int lenTemp = 0;$/;"	kind:l	line:108
+loggBuff	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^		char loggBuff[64];$/;"	kind:l	line:60
+loggBuff	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[255];			$/;"	kind:l	line:38
+loggBuff	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[255];	$/;"	kind:l	line:107
+loggBuff	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];	$/;"	kind:l	line:233
+loggBuff	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];$/;"	kind:l	line:163
+loggBuff	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char loggBuff[32];$/;"	kind:l	line:186
+loggBuff	J:\Work\OpenPicus\trunk\taskFlyport.c	/^char loggBuff[255];$/;"	kind:v	line:22
+malloc_fn	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^      void *(*malloc_fn)(size_t sz);$/;"	kind:m	line:54	struct:cJSON_Hooks	access:public
+n	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
+n	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
+n	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
+n	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
+n	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
+names	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char **entries=0,**names=0;$/;"	kind:l	line:413
+network	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^    cJSON *network = cJSON_CreateObject();	$/;"	kind:l	line:15
+new	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^void *new(const void *_class, ...)$/;"	kind:f	line:63
+new_board	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^static void *new_board(const void *,va_list ap);$/;"	kind:p	line:58	file:
+new_board	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^static void *new_board(const void *_class,va_list ap)$/;"	kind:f	line:159	file:
+new_item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^		cJSON *new_item;$/;"	kind:l	line:311
+new_item	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^		cJSON *new_item;$/;"	kind:l	line:395
+new_sensor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^static void *new_sensor(const void *,va_list ap);$/;"	kind:p	line:57	file:
+new_sensor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^static void *new_sensor(const void *_class,va_list ap)$/;"	kind:f	line:181	file:
+next	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	kind:m	line:41	struct:cJSON	typeref:struct:cJSON::cJSON	access:public
+next	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	/^	struct Interface *next;$/;"	kind:m	line:69	struct:Interface	typeref:struct:Interface::Interface	access:public
+next	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON *next;$/;"	kind:l	line:78
+node	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	cJSON* node = (cJSON*)cJSON_malloc(sizeof(cJSON));$/;"	kind:l	line:70
+numErr	J:\Work\OpenPicus\trunk\GSM_Events.c	/^	char numErr[10];$/;"	kind:l	line:73
+numentries	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	int numentries=0,fail=0;$/;"	kind:l	line:416
+numentries	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	int numentries=0,i=0,fail=0;$/;"	kind:l	line:328
+out	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+out	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
+out	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0;$/;"	kind:l	line:279
+out	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
+out	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateDoubleArray(double *numbers,int count)		{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:536
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateFloatArray(float *numbers,int count)			{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:535
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateIntArray(int *numbers,int count)				{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateNumber(numbers[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:534
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^cJSON *cJSON_CreateStringArray(const char **strings,int count)	{int i;cJSON *n=0,*p=0,*a=cJSON_CreateArray();for(i=0;a && i<count;i++){n=cJSON_CreateString(strings[i]);if(!i)a->child=n;else suffix_object(p,n);p=n;}return a;}$/;"	kind:l	line:537
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:133
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:171
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:229
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *p;$/;"	kind:l	line:276
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	void *p = calloc(1, class->size);$/;"	kind:l	line:162
+p	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	void *p = calloc(1, class->size);$/;"	kind:l	line:184
+pTimeStamp	J:\Work\OpenPicus\trunk\taskFlyport.c	/^		char* pTimeStamp = 0;$/;"	kind:l	line:64
+parse_array	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_array(cJSON *item,const char *value)$/;"	kind:f	line:295	file:
+parse_array	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_array(cJSON *item,const char *value);$/;"	kind:p	line:238	file:
+parse_number	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_number(cJSON *item,const char *num)$/;"	kind:f	line:91	file:
+parse_object	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_object(cJSON *item,const char *value)$/;"	kind:f	line:374	file:
+parse_object	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_object(cJSON *item,const char *value);$/;"	kind:p	line:240	file:
+parse_string	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_string(cJSON *item,const char *str)$/;"	kind:f	line:138	file:
+parse_value	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_value(cJSON *item,const char *value)$/;"	kind:f	line:262	file:
+parse_value	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *parse_value(cJSON *item,const char *value);$/;"	kind:p	line:236	file:
+payload	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\ModbusMasterRTU.h	/^	short * payload;$/;"	kind:m	line:148	struct:ReadRegistersResp	access:public
+port	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	/^	GrovePort *port;$/;"	kind:m	line:68	struct:Interface	access:public
+port485	J:\Work\OpenPicus\trunk\taskFlyport.c	/^static const int port485 = 2;$/;"	kind:v	line:16	file:
+prev	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	struct cJSON *next,*prev;	\/* next\/prev allow you to walk array\/object chains. Alternatively, use GetArraySize\/GetArrayItem\/GetObjectItem *\/$/;"	kind:m	line:41	struct:cJSON	typeref:struct:cJSON::	access:public
+print_array	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt)$/;"	kind:f	line:323	file:
+print_array	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_array(cJSON *item,int depth,int fmt);$/;"	kind:p	line:239	file:
+print_number	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_number(cJSON *item)$/;"	kind:f	line:114	file:
+print_object	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_object(cJSON *item,int depth,int fmt)$/;"	kind:f	line:411	file:
+print_object	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_object(cJSON *item,int depth,int fmt);$/;"	kind:p	line:241	file:
+print_string	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_string(cJSON *item)	{return print_string_ptr(item->valuestring);}$/;"	kind:f	line:233	file:
+print_string_ptr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_string_ptr(const char *str)$/;"	kind:f	line:198	file:
+print_value	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_value(cJSON *item,int depth,int fmt)$/;"	kind:f	line:277	file:
+print_value	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static char *print_value(cJSON *item,int depth,int fmt);$/;"	kind:p	line:237	file:
+ptr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+ptr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
+ptr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
+ptr	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
+ptr2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
+ptr2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
+pwm_duty	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	float* pwm_duty;$/;"	kind:m	line:62	struct:Dig_io	file:	access:public
+pwm_frequency	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	float* pwm_frequency;$/;"	kind:m	line:61	struct:Dig_io	file:	access:public
+pwm_num	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	BYTE pwm_num;$/;"	kind:m	line:60	struct:Dig_io	file:	access:public
+rEnP	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^static int rEnP[4] = {0,0,0,0};$/;"	kind:v	line:16	file:
+rEnPin	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^static int rEnPin[4] = {0,0,0,0};$/;"	kind:v	line:62	file:
+readError	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^unsigned char readError(void);$/;"	kind:p	line:65
+readError	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^unsigned char readError(void)$/;"	kind:f	line:152
+readRes	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^	BOOL readRes = FALSE;$/;"	kind:l	line:82
+read_register	J:\Work\OpenPicus\trunk\Libs\ExternalLib\i2c_devices.c	/^BYTE read_register(BYTE address,BYTE regist)$/;"	kind:f	line:68
+ref	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static cJSON *create_reference(cJSON *item) {cJSON *ref=cJSON_New_Item();if (!ref) return 0;memcpy(ref,item,sizeof(cJSON));ref->string=0;ref->type|=cJSON_IsReference;ref->next=ref->prev=0;return ref;}$/;"	kind:l	line:482
+res	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^	int res = sscanf(TimestampString, "%04d-%02d-%02dT%02d:%02d:%02d",$/;"	kind:l	line:48
+res	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;	$/;"	kind:l	line:232
+res	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;$/;"	kind:l	line:10
+res	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	struct HttpResponse res;$/;"	kind:l	line:39
+res	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^	struct ReadRegistersResp res;$/;"	kind:l	line:57
+respEnd	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char* respEnd = (char*)&BufForResp[strlen((char*)BufForResp)];$/;"	kind:l	line:238
+respLen	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	int respLen = 0;$/;"	kind:l	line:64
+result	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	struct HttpResponse result;	$/;"	kind:l	line:57
+ret	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	int ret = ADCVal(self->inter->port->Pin1);$/;"	kind:l	line:90
+ret	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+ret	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret;int len=5;$/;"	kind:l	line:326
+ret	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	int ret = IOGet(self->inter->port->Pin1);$/;"	kind:l	line:151
+root	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^	cJSON *root = cJSON_CreateObject();$/;"	kind:l	line:14
+scale	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	struct An_i *self = _self;$/;"	kind:l	line:63
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	struct An_i *self = _self;$/;"	kind:l	line:89
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *self = _self;$/;"	kind:l	line:120
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *self = _self;$/;"	kind:l	line:150
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *self = _self;$/;"	kind:l	line:68
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:132
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:170
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:228
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _board;$/;"	kind:l	line:275
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Board *self = _self;$/;"	kind:l	line:119
+self	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	struct SensorClass **self = _self;$/;"	kind:l	line:83
+sen	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^	const struct SensorClass **sen = sensor;$/;"	kind:l	line:100
+sensor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	struct An_i *sensor = _sensor;$/;"	kind:l	line:70
+sensor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\analog_in.c	/^	struct An_i *sensor = _sensor;$/;"	kind:l	line:80
+sensor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *sensor = _sensor;$/;"	kind:l	line:109
+sensor	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	struct Dig_io *sensor = _sensor;$/;"	kind:l	line:93
+set	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^int set(void *,...);$/;"	kind:p	line:63
+set	J:\Work\OpenPicus\trunk\Libs\ExternalLib\grovelib.c	/^int set(void *self,...)$/;"	kind:f	line:124
+set_	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	int (*set_)(void *,va_list *);$/;"	kind:m	line:74	struct:SensorClass	access:public
+set_register	J:\Work\OpenPicus\trunk\Libs\ExternalLib\i2c_devices.c	/^int set_register(BYTE address,BYTE regist, BYTE data)$/;"	kind:f	line:51
+sign	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
+signsubscale	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
+size	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	size_t size; $/;"	kind:m	line:69	struct:SensorClass	access:public
+size	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	size_t size; $/;"	kind:m	line:80	struct:BoardClass	access:public
+skip	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static const char *skip(const char *in) {while (in && *in && (unsigned char)*in<=32) in++; return in;}$/;"	kind:f	line:244	file:
+smsRec	J:\Work\OpenPicus\trunk\GSM_Events.c	/^	char smsRec[7];$/;"	kind:l	line:52
+speed	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\groveboard.h	/^	int speed;$/;"	kind:m	line:70	struct:Interface	access:public
+start	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char* start = 0;$/;"	kind:l	line:236
+start	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\grovelib.h	/^	void (*start) (const void *);$/;"	kind:m	line:84	struct:BoardClass	access:public
+start_sec	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	int start_sec = TickGetDiv64K();$/;"	kind:l	line:112
+state	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	BYTE state = va_arg(*app, const BYTE);$/;"	kind:l	line:121
+str	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *out=0,*ptr,*ret,*str;int len=7,i=0,j;$/;"	kind:l	line:414
+str	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	char *str;$/;"	kind:l	line:116
+string	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	char *string;				\/* The item's name string, if this item is the child of, or is in the list of subitems of an object. *\/$/;"	kind:m	line:50	struct:cJSON	access:public
+subscale	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	double n=0,sign=1,scale=0;int subscale=0,signsubscale=1;$/;"	kind:l	line:93
+subst	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^	char subst[8];$/;"	kind:l	line:235
+suffix_object	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^static void suffix_object(cJSON *prev,cJSON *item) {prev->next=item;item->prev=prev;}$/;"	kind:f	line:480	file:
+tim1	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^	DWORD tim1 = TickGet();$/;"	kind:l	line:49
+time	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^	struct tm time;$/;"	kind:l	line:46
+time	J:\Work\OpenPicus\trunk\Libs\ExternalLib\CommonUtils.c	/^	struct tm time;$/;"	kind:l	line:70
+time	J:\Work\OpenPicus\trunk\taskFlyport.c	/^		char time[32];$/;"	kind:l	line:83
+timestampJSON	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Rest.c	/^		cJSON *timestampJSON = cJSON_GetObjectItem(json, "serverTimestamp");$/;"	kind:l	line:85
+tmp	J:\Work\OpenPicus\trunk\Libs\ExternalLib\HTTPUtils.c	/^		char tmp = *end;$/;"	kind:l	line:248
+token	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr;char *ptr2,*out;int len=0;unsigned char token;$/;"	kind:l	line:200
+total_len	J:\Work\OpenPicus\trunk\Libs\ExternalLib\ModbusMasterRTU.c	/^	unsigned char total_len = 0;$/;"	kind:l	line:61
+type	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	int type;					\/* The type of the item, as above. *\/$/;"	kind:m	line:44	struct:cJSON	access:public
+type	J:\Work\OpenPicus\trunk\Libs\ExternalLib\digital_io.c	/^	BYTE type;$/;"	kind:m	line:59	struct:Dig_io	file:	access:public
+uartnext	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *uartnext;$/;"	kind:m	line:89	struct:Board	typeref:struct:Board::Interface	file:	access:public
+uartstart	J:\Work\OpenPicus\trunk\Libs\ExternalLib\groveboard.c	/^	struct Interface *uartstart;$/;"	kind:m	line:88	struct:Board	typeref:struct:Board::Interface	file:	access:public
+uc	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
+uc2	J:\Work\OpenPicus\trunk\Libs\ExternalLib\cJSON.c	/^	const char *ptr=str+1;char *ptr2;char *out;int len=0;unsigned long int uc,uc2;$/;"	kind:l	line:140
+url	J:\Work\OpenPicus\trunk\taskFlyport.c	/^	char url[128];url[0] = 0;$/;"	kind:l	line:56
+valuedouble	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	double valuedouble;			\/* The item's number, if type==cJSON_Number *\/$/;"	kind:m	line:48	struct:cJSON	access:public
+valueint	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	int valueint;				\/* The item's number, if type==cJSON_Number *\/$/;"	kind:m	line:47	struct:cJSON	access:public
+valuestring	J:\Work\OpenPicus\trunk\Libs\ExternalLib\Include\cJSON.h	/^	char *valuestring;			\/* The item's string, if type==cJSON_String *\/$/;"	kind:m	line:46	struct:cJSON	access:public
+wEnP	J:\Work\OpenPicus\trunk\Libs\ExternalLib\MudbusSerial.c	/^static int wEnP[4] = {0,0,0,0};$/;"	kind:v	line:15	file:
+wEnPin	J:\Work\OpenPicus\trunk\Libs\ExternalLib\RS485Helper.c	/^static int wEnPin[4] = {0,0,0,0};$/;"	kind:v	line:61	file:

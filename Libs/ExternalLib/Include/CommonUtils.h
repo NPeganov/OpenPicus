@@ -5,5 +5,8 @@
 
 void GetError();
 BOOL ProcessComand();
+BOOL RunClock(const char * TimestampString);
+void GetClockValue(const char * TimestampDest);
 
 #endif
+

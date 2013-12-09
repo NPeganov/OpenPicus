@@ -21,6 +21,7 @@ void GetError()
 
 BOOL ProcessComand()
 {
+	UARTWrite(1, "\r\n\r\nProcessComand...\r\n"); 		
 	do 
 	{
 		vTaskDelay(20);		
@@ -39,3 +40,41 @@ BOOL ProcessComand()
 		return FALSE;		
 	}		
 }
+
+BOOL RunClock(const char * TimestampString)
+{
+	struct tm time;
+	memset(&time, 0, sizeof(struct tm));
+	int res = sscanf(TimestampString, "%04d-%02d-%02dT%02d:%02d:%02d",
+		&time.tm_year, &time.tm_mon, &time.tm_mday, &time.tm_hour, &time.tm_min, &time.tm_sec);	
+	if(res == 6)
+	{
+		UARTWrite(1,"\n\r GOT DATE AND TIME\n\r");				
+		time.tm_year -= 1900;
+		time.tm_mon -= 1;
+		RTCCSet(&time);				
+		return TRUE;
+	}		
+	else
+	{
+		char loggBuff[64];
+		sprintf(loggBuff, "FAILED TO GET DATE AND TIME: %d", res);
+		UARTWrite(1, loggBuff);					
+		return FALSE;
+	}
+	return FALSE;	
+}
+
+void GetClockValue(const char * TimestampDest)
+{
+	struct tm time;
+	memset(&time, 0, sizeof(struct tm));
+	
+	RTCCGet(&time);
+	sprintf(TimestampDest, "%04d-%02d-%02dT%02d:%02d:%02d.000000",
+	time.tm_year + 1900, time.tm_mon + 1, time.tm_mday, time.tm_hour, time.tm_min, time.tm_sec);
+	UARTWrite(1, "\r\n");
+	UARTWrite(1, TimestampDest);
+	UARTWrite(1, "\r\n");			
+}
+

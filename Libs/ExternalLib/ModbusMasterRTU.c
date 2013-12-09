@@ -120,7 +120,7 @@ struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short Star
 		return res;
 	}
 	
-unsigned char RecievedCRC[2] = {0, 0};
+	unsigned char RecievedCRC[2] = {0, 0};
 		
 	return res;
 }
@@ -135,6 +135,7 @@ const struct ModbusMaster MBM =
 	_MBMInit,
 	_ReadHRegisters
 };
+
 
 
 

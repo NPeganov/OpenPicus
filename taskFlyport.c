@@ -16,8 +16,6 @@ extern const struct ModbusMaster MBM;
 static const int port485 = 2;
 
 static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";
-static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";
-static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";
 static const char * BaseUrl = "ecloud.dataart.com";///ecapi8";
 //static const char * BaseUrl = "www.google.com";
 
@@ -56,16 +54,37 @@ void FlyportTask()
 	}
 
 	char url[128];url[0] = 0;
-	strcat(url, BaseUrl);
-	strcat(url, "/ecapi8");	
-	strcat(url, "/device/");	
-	strcat(url, DevId);	
-	UARTWrite(1, url);		
-	UARTWrite(1, "\r\n");			
+	struct HttpResponse result;	
 
+	FormatInfoUrl(url);	
+	UARTWrite(1, "Getting server info... ");	
+	result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, inBuff, 100);	
+	if(result.RsponseIsOK && result.Response)
+	{
+		char* pTimeStamp = 0;
+		pTimeStamp = HandleServerInfo(cJSON_Parse(result.Response));
+		if(pTimeStamp)
+		{
+			RunClock(pTimeStamp);		
+		}
+	}
+	
+	FormatRegistrationUrl(url);
 	UARTWrite(1, "Sending registration request... ");		
 	cJSON * RegRequestJson = FormRegistrationRequest();	
 	SendHttpJsonRequest(&conn, url, HTTP_PUT, RegRequestJson, inBuff, 100);
+	
+	while(TRUE)
+	{
+		FormatCommandPollUrl(url);
+		UARTWrite(1, "Getting commands for the device... ");	
+		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, inBuff, 100);	
+		
+		char time[32];
+		GetClockValue(time);
+		vTaskDelay(200);
+	}
+	
 	
 	for(;;)vTaskDelay(20);
 	
@@ -159,6 +178,7 @@ void FlyportTask()
 		}
 	}
 }
+
 
 
 
