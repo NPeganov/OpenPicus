@@ -139,7 +139,8 @@ not present on the network.
 
 	EC_NO_RESPONSE = 0x11,
 	EC_INTERBYTE_TIMEOUT = 0x12,
-	EC_UNEXPECTED_DATA = 0x13
+	EC_UNEXPECTED_DATA = 0x13,
+	EC_CRC_MISMATCH = 0x14
 };
 
 struct ReadRegistersResp
@@ -162,6 +163,7 @@ struct ModbusMaster
 int MBM_Read(int v);
 
 #endif
+
 
 
 

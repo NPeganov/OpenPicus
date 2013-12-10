@@ -35,21 +35,9 @@ struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsig
 
 struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char* data, unsigned char* BufForResp, int timeout_sec)
 {
-	char loggBuff[255];			
 	struct HttpResponse res;
 	res.RsponseIsOK = FALSE;
-	res.Response = 0;
-
-	if(data)
-	{
-		UARTWrite(1, "\r\nSending raw data\r\n");    
-		UARTWrite(1, (char*)data);
-		UARTWrite(1, "\r\n");
-	}
-	
-	UARTWrite(1, "\r\nto URL\r\n");    	
-	UARTWrite(1, (char*)url);    		
-	UARTWrite(1, "... ");    	
+	res.Response = 0; 	
 
 	strcpy(BufForResp, "Content-Length: ");
 	char contentlength[5];
@@ -62,6 +50,8 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 	strcat(BufForResp, (char*)data);
 	
 	int respLen = 0;
+	unsigned char attempts_counter = 0;
+	const unsigned char attempts_failure_limit = 20;
 	do
 	{
 		if(conn->number == INVALID_SOCKET || GetHttpStatus(conn) != CONNECTED)
@@ -73,10 +63,25 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 				vTaskDelay(300);
 				Reset();		
 			}		
-		}		
+		}	
+		
+		if(data)
+		{
+			UARTWrite(1, "\r\nSending raw data\r\n");    
+			UARTWrite(1, (char*)data);
+			UARTWrite(1, "\r\n");
+		}
+		else
+		{
+			UARTWrite(1, "\r\nSending empty request");    
+		}
+			
+		UARTWrite(1, "\r\nto URL\r\n");    	
+		UARTWrite(1, (char*)url);    		
+		UARTWrite(1, "... "); 		
 		
 		HTTPRequest(conn, type, url, NULL, (char*)BufForResp);	
-		ProcessComand();
+		ProcessCommand();
 	
 		memset(BufForResp, 0, 2000);	
 		respLen = GetHttpResponse(conn, BufForResp, timeout_sec);
@@ -95,9 +100,15 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 	
 		UARTWrite(1, "\r\nClosing socket... "); 			
 		HTTPClose(conn);
-		ProcessComand();
+		ProcessCommand();
 		conn->number = INVALID_SOCKET;	
-	}while(respLen <= 0);
+	
+		if(++attempts_counter > attempts_failure_limit)	
+		{
+			UARTWrite(1, "\r\n\r\nToo many attempts for a transimission!\r\nResetting the device!\r\n\r\n"); 				
+			Reset();			
+		}		
+	}while(respLen < 0);
 	
 	return res;
 }
@@ -164,7 +175,7 @@ enum SocketState GetHttpStatus(TCP_SOCKET* conn)
 	
 	UARTWrite(1, "\r\nGetting HttpStatus... ");	
 	HTTPStatus(conn);
-	if(ProcessComand())
+	if(ProcessCommand())
 	{
 		UARTWrite(1, "TCP Socket Status:\r\n");
 		sprintf(loggBuff, " - Status: %d\r\n", conn->status);
@@ -196,7 +207,7 @@ BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port)
 	UARTWrite(1, "... ");
 	conn->number = INVALID_SOCKET;
 	HTTPOpen(conn, host, port);   
-	if(ProcessComand())
+	if(ProcessCommand())
 	{
 		UARTWrite(1, "\r\n HTTPOpen OK \r\n");
 		UARTWrite(1, "Socket Number: ");
@@ -230,7 +241,6 @@ BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port
 struct HttpResponse ParseResponse(unsigned char* BufForResp)
 {
 	struct HttpResponse res;	
-	char loggBuff[32];	
 	
 	char subst[8];
 	char* start = 0;
@@ -252,7 +262,7 @@ struct HttpResponse ParseResponse(unsigned char* BufForResp)
 		UARTWrite(1, start);				
 		UARTWrite(1, "\r\n");		
 		
-		if(!strcmp(start, "200") || !strcmp(start, "204"))
+		if(!strcmp(start, "200") || !strcmp(start, "201") || !strcmp(start, "204"))
 			res.RsponseIsOK = TRUE;	
 		
 		*end = tmp;
@@ -282,4 +292,5 @@ struct HttpResponse ParseResponse(unsigned char* BufForResp)
 	
 	return res;
 }
+
 

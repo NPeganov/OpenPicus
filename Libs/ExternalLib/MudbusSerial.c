@@ -12,8 +12,15 @@
 static unsigned char Port_ = 0;
 static unsigned int Baud_ = 0;
 
-static int wEnP[4] = {0,0,0,0};
-static int rEnP[4] = {0,0,0,0};
+static int readEnPin_ = 0;
+static int readWnPin_ = 0;
+
+//static int wEnP[4] = {0,0,0,0};
+//static int rEnP[4] = {0,0,0,0};
+/*
+extern static int wEnPin[4];
+extern static int rEnPin[4];
+*/
 
 void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity)
 {
@@ -30,17 +37,37 @@ void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsig
 
 void _SerialWrite(const unsigned char* Data, short len)
 {
-	IOPut((int)wEnP[Port_-1], on);
-	IOPut((int)rEnP[Port_-1], on);
+	char loggBuff[256];		
+	sprintf(loggBuff, "\r\n_SerialWrite... going to write %d bytes to port # %d", (int)len, (int)Port_);		
+    UARTWrite(1, loggBuff);		
+	
+	IOPut((int)DE_485, on);
+	IOPut((int)RE_485, on);
+/*
+	IOPut((int)wEnPin[Port_-1], on);
+	IOPut((int)rEnPin[Port_-1], on);
+*/	
 	vTaskDelay(1);
 	short ind = len;
 	do
 	{
+		sprintf(loggBuff, "\r\n_SerialWrite... writing byte %d.", (int)(ind - len));	
+		UARTWrite(1, loggBuff);			
 		UARTWriteCh(Port_, Data[ind - len]);		
 	}while(--len);
 	vTaskDelay(1);
-	IOPut((int)wEnP[Port_-1], off);
-	IOPut((int)rEnP[Port_-1], off);		
+	
+	UARTWrite(1, "\r\n_SerialWrite... enabling reciever");	
+	
+	/*
+	IOPut((int)wEnPin[Port_-1], off);
+	IOPut((int)rEnPin[Port_-1], off);	
+	*/
+	
+	IOPut((int)DE_485, off);
+	IOPut((int)RE_485, off);	
+	
+	UARTWrite(1, "\r\n..._SerialWrite");		
 }
 
 BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us)
@@ -84,4 +111,5 @@ const struct SerialPort RS485 =
 	_SerialRead,
 	_GetBaud
 };
+
 

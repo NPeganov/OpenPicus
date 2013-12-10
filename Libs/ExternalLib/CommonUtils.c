@@ -19,9 +19,9 @@ void GetError()
 }
 
 
-BOOL ProcessComand()
+BOOL ProcessCommand()
 {
-	UARTWrite(1, "\r\n\r\nProcessComand...\r\n"); 		
+	UARTWrite(1, "\r\n\r\nProcessCommand...\r\n"); 		
 	do 
 	{
 		vTaskDelay(20);		
@@ -77,4 +77,5 @@ void GetClockValue(const char * TimestampDest)
 	UARTWrite(1, TimestampDest);
 	UARTWrite(1, "\r\n");			
 }
+
 

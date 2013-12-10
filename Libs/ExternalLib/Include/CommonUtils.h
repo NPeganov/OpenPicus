@@ -4,9 +4,10 @@
 #include "taskFlyport.h"
 
 void GetError();
-BOOL ProcessComand();
+BOOL ProcessCommand();
 BOOL RunClock(const char * TimestampString);
 void GetClockValue(const char * TimestampDest);
 
 #endif
+
 

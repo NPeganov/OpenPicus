@@ -39,10 +39,28 @@ void FlyportTask()
 		IOPut(p21, toggle);
 	}	
     UARTWrite(1,"Registered successfully!\r\n");		
-		
+
+    UARTWrite(1,"Configuring RS485 interface...\r\n");	
+	// GROVE board
+	void *board = new(GroveNest);
+	
+	// GROVE devices	
+	// Digital Input
+	void *button = new(Dig_io, IN);
+	attachToBoard(board, button, DIG1);	
+	
+	RS485.Init(port485, 19200, RS485_TWO_STOP, RS485_8BITS_PARITY_NONE);
+	MBM.Init(&RS485);
+	
+	MBM.ReadHRegisters(1, 0, 1);	
+	for(;;)vTaskDelay(20);
+	
+	
+	
+	
     UARTWrite(1, "calling APNConfig... ");		
 	APNConfig("internet.beeline.ru", "beeline", "beeline", DYNAMIC_IP, DYNAMIC_IP, DYNAMIC_IP);
-	ProcessComand();
+	ProcessCommand();
 
 	UARTWrite(1,"\r\nConnecting to a server... ");
 	const unsigned char ConnectionAtteptsNum = 3;
@@ -79,105 +97,23 @@ void FlyportTask()
 		FormatCommandPollUrl(url);
 		UARTWrite(1, "Getting commands for the device... ");	
 		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, inBuff, 100);	
+		if(result.RsponseIsOK && result.Response)
+		{	
+			struct HiveCommand Command = HandleServerCommand(cJSON_Parse(result.Response));
+		}
 		
-		char time[32];
-		GetClockValue(time);
+		MBM.ReadHRegisters(1, 0, 1);			
+		
+
+		FormatNotificationUrl(url);
+		UARTWrite(1, "Sending device notification... ");	
+		cJSON * NoifyRequestJson = FormNotificationRequest(3.1416);			
+		result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, inBuff, 100);			
+		
 		vTaskDelay(200);
 	}
-	
-	
-	for(;;)vTaskDelay(20);
-	
-	
-	//char requestURL[] = "www.google.com/index.html";
-	//char data1[] = "";
- 
-	//HTTPRequest(&conn, HTTP_GET, requestURL, data1, HTTP_NO_PARAM);	
-	char *jsonStr = cJSON_PrintUnformatted(RegRequestJson);
-	
-	UARTWrite(1, "\r\nuformatted JSON\r\n");    
-	UARTWrite(1, jsonStr);
-	UARTWrite(1, "\r\n");	
-	
-	HTTPRequest(&conn, HTTP_PUT, url, jsonStr, HTTP_NO_PARAM);
-	free(jsonStr);	
-	ProcessComand();
-	
-	UARTWrite(1, "\r\n READING Socket:\r\n");	
-	BOOL first_time = TRUE;
-	int lenTemp = 0;
-	do
-	{
-		do
-		{		
-			HTTPStatus(&conn);
-			if(ProcessComand())
-			{
-				UARTWrite(1, "\r\n TCP Socket Status:\r\n");
-				sprintf(loggBuff, "Status: %d\r\n", conn.status);
-				UARTWrite(1, loggBuff);
-				sprintf(loggBuff, "RxLen: %d\r\n", conn.rxLen);
-				UARTWrite(1, loggBuff);			
-			}
-			if(!first_time)break;
-		}while(conn.rxLen == 0);
-
-		first_time = FALSE;
-		
-		if(conn.rxLen == 0)
-		{
-		    UARTWrite(1, (char*)inBuff);			
-			break;
-		}
-		else
-		{
-			UARTWrite(1, "\r\n READING REAL DATA:\r\n");			
-			HTTPReadData(&conn, (char*)&inBuff[lenTemp], conn.rxLen);
-			lenTemp += conn.rxLen;
-			sprintf(loggBuff, "lenTemp: %d\r\n", lenTemp);		
-			UARTWrite(1, loggBuff);				
-			sprintf(loggBuff, "rxLen: %d\r\n", conn.rxLen);						
-			UARTWrite(1, loggBuff);				
-		}
-	}while(1);
-	
-	//sprintf(temp, "State machine: IDLE, Error type: %d\r\n", errorType);	
-	vTaskDelay(20);		
-		
-	for(;;)vTaskDelay(20);
-	
-    while((LastConnStatus() != REG_SUCCESS) && (LastConnStatus() != ROAMING))
-    {
-    	vTaskDelay(20);
-    	IOPut(p21, toggle);
-    }
-    IOPut(p21, on);
-	vTaskDelay(20);
-    UARTWrite(1,"Flyport registered on network!\r\n");
-	
-	// GROVE board
-	void *board = new(GroveNest);
-	
-	// GROVE devices	
-	// Digital Input
-	void *button = new(Dig_io, IN);
-	attachToBoard(board, button, DIG1);	
-	
-	RS485.Init(port485, 19200, RS485_TWO_STOP, RS485_8BITS_PARITY_NONE);
-	MBM.Init(&RS485);
-	MBM.ReadHRegisters(1,2,2);
-	
-    while(1)
-    {
-		MBM_Read(1);
- 		// Check pressure of button
-		if(get(button) != 0)
-		{
-			UARTWrite(1, "button pressed!\r\n");
-			vTaskDelay(20);
-		}
-	}
 }
+
 
 
 
