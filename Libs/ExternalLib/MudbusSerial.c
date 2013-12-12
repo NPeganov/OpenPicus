@@ -4,23 +4,9 @@
 #define		RE_485		p17
 #define		TX_485		p5
 #define		RX_485		p7
-#define		TX_232		p4
-#define		RX_232		p6
-#define		CTS_232		p11
-#define		RTS_232		p9
 
 static unsigned char Port_ = 0;
 static unsigned int Baud_ = 0;
-
-static int readEnPin_ = 0;
-static int readWnPin_ = 0;
-
-//static int wEnP[4] = {0,0,0,0};
-//static int rEnP[4] = {0,0,0,0};
-/*
-extern static int wEnPin[4];
-extern static int rEnPin[4];
-*/
 
 void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity)
 {
@@ -33,6 +19,7 @@ void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsig
 	RS485SetParam(Port_, RS485_STOP_BITS, stopBits);
 	RS485SetParam(Port_, RS485_DATA_PARITY, Parity);
 	RS485On(Port_);	
+	vTaskDelay(100);	
 }
 
 void _SerialWrite(const unsigned char* Data, short len)
@@ -43,26 +30,19 @@ void _SerialWrite(const unsigned char* Data, short len)
 	
 	IOPut((int)DE_485, on);
 	IOPut((int)RE_485, on);
-/*
-	IOPut((int)wEnPin[Port_-1], on);
-	IOPut((int)rEnPin[Port_-1], on);
-*/	
+
 	vTaskDelay(1);
 	short ind = len;
 	do
 	{
-		sprintf(loggBuff, "\r\n_SerialWrite... writing byte %d.", (int)(ind - len));	
-		UARTWrite(1, loggBuff);			
+		//sprintf(loggBuff, "\r\n_SerialWrite... writing byte %d.", (int)(ind - len));	
+		//UARTWrite(1, loggBuff);			
 		UARTWriteCh(Port_, Data[ind - len]);		
 	}while(--len);
+	RS485Flush(Port_);	
 	vTaskDelay(1);
 	
 	UARTWrite(1, "\r\n_SerialWrite... enabling reciever");	
-	
-	/*
-	IOPut((int)wEnPin[Port_-1], off);
-	IOPut((int)rEnPin[Port_-1], off);	
-	*/
 	
 	IOPut((int)DE_485, off);
 	IOPut((int)RE_485, off);	
@@ -72,13 +52,18 @@ void _SerialWrite(const unsigned char* Data, short len)
 
 BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us)
 {
-	int bytesReady = RS485BufferSize(Port_);
+	char loggBuff[256];		
+	int bytesReady = 0;
 	DWORD tim1 = TickGet();
 	
 	do
 	{
 		if( ((TickGet() - tim1) * 16) > timeout_us)
 			return FALSE;		
+			
+		bytesReady = RS485BufferSize(Port_);			
+		sprintf(loggBuff, "\r\n_SerialReadByte... bytes ready: %d, time: %d", bytesReady, (int)(((TickGet() - tim1) * 16)));	
+		UARTWrite(1, loggBuff);			
 	}while(bytesReady < 1);
 
 	RS485Read(Port_, (char *)Dest, 1);	

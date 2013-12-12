@@ -13,7 +13,8 @@
 
 extern const struct SerialPort RS485;	
 extern const struct ModbusMaster MBM;	
-static const int port485 = 2;
+//static const int port485 = 2;
+static const int port485 = 3;
 
 static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";
 static const char * BaseUrl = "ecloud.dataart.com";///ecapi8";
@@ -49,7 +50,7 @@ void FlyportTask()
 	void *button = new(Dig_io, IN);
 	attachToBoard(board, button, DIG1);	
 	
-	RS485.Init(port485, 19200, RS485_TWO_STOP, RS485_8BITS_PARITY_NONE);
+	RS485.Init(port485, 9600, RS485_TWO_STOP, RS485_8BITS_PARITY_NONE);
 	MBM.Init(&RS485);
 	
 	MBM.ReadHRegisters(1, 0, 1);	

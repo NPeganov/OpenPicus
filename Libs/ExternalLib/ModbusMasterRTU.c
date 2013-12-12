@@ -82,8 +82,9 @@ struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short Star
 	
 	total_len += MB_NON_PAYLOAD_LEN;
 	
-	UARTWrite(1, "\r\nSending request...");			
+	UARTWrite(1, "\r\nSending request...");		
 	RS485Port.Write(ModbusBuf, total_len);
+	//RS485Flush(3);
 	
 	BOOL readRes = FALSE;
 	
