@@ -71,3 +71,4 @@ void RS485Write(int port, char *buffer);
 int RS485Read (int port, char* towrite, int count);
 void RS485WriteCh(int port, char chr);
 
+

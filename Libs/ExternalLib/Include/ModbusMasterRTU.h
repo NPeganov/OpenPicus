@@ -26,7 +26,7 @@ enum MODBUS_READ_TYPE
 	IRegister 	= FC_Read_Input_Registers
 };
 
-enum MODBUS_ERROR_CODES
+enum MODBUS_ERROR_CODE
 {
 	EC_NO_ERROR = 0x00,
 	EC_ILLEGAL_FUNCTION = 0x01,
@@ -145,24 +145,35 @@ not present on the network.
 
 struct ReadRegistersResp
 {
-	enum MODBUS_ERROR_CODES ec;
+	enum MODBUS_ERROR_CODE ec;
 	short * payload;
 	short Qnty;
 };
 
 void _MBMInit(const struct SerialPort * Serial);	
 struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);
+struct ReadRegistersResp _ReadIRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);
+void dump(const unsigned char* buf, unsigned char len);	
+unsigned short CRC16(unsigned char * pcBlock, unsigned short len);
+
+void _SendRegistersReq(unsigned char SlaveID, unsigned char ReqType, const short StartAddr, const short RequestedQnty);
+enum MODBUS_ERROR_CODE _ReadModbusResponse(unsigned char SlaveID, unsigned char ReqType, unsigned char** PayloadPointer, unsigned char* PayloadSize);
+enum MODBUS_ERROR_CODE _ReadResponseHeader(unsigned char* PayloadLen, unsigned char SlaveID, unsigned char ReqType);
+enum MODBUS_ERROR_CODE _ReadAndCheckCRC(unsigned char PayloadLen);
 
 struct ModbusMaster
 {
 	void (*Init)(const struct SerialPort * Serial);		
-	struct ReadRegistersResp (*ReadHRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);	
+	struct ReadRegistersResp (*ReadHoldingRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);	
+	struct ReadRegistersResp (*ReadInputRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);		
 };
 
 
 int MBM_Read(int v);
 
 #endif
+
+
 
 
 

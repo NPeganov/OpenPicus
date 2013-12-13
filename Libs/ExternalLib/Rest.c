@@ -43,17 +43,40 @@ cJSON* FormRegistrationRequest()
 	return root;	
 }
 
-cJSON* FormNotificationRequest(double mesured_value)
+cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters)
 {
+	UARTWrite(1, "\r\nFormNotificationRequest...");
 	cJSON *root = cJSON_CreateObject();
-	cJSON *parameters = cJSON_CreateObject();	
+	cJSON *emptyParams = cJSON_CreateObject();
 	cJSON_AddItemToObject(root, "id", cJSON_CreateNumber(TickGet()));
 	char time_dest[32];
 	GetClockValue(time_dest);	
 	cJSON_AddItemToObject(root, "datetime", cJSON_CreateString(time_dest));	
-	cJSON_AddItemToObject(root, "notification", cJSON_CreateString("MODBUS Slave Report"));	
-	cJSON_AddItemToObject(parameters, "mesured_value", cJSON_CreateNumber(mesured_value));	
-	cJSON_AddItemToObject(root, "parameters", parameters);
+	cJSON_AddItemToObject(root, "notification", cJSON_CreateString(Name));
+	if(Parameters)
+		cJSON_AddItemToObject(root, "parameters", Parameters);
+	else
+		cJSON_AddItemToObject(root, "parameters", emptyParams);
+		
+	char *s_print = cJSON_Print(root);
+	UARTWrite(1, "\r\nNOTIFICATION CREATED:\r\n");		
+	UARTWrite(1, s_print);			
+	free(s_print);
+		
+	UARTWrite(1, "\r\n...FormNotificationRequest");		
+	return root;	
+}
+
+cJSON* FormParameter(const char* Name, double value)
+{
+	UARTWrite(1, "\r\nFormParameter...");	
+	cJSON *root = cJSON_CreateObject();
+	if(Name)
+	{
+		cJSON_AddItemToObject(root, Name, cJSON_CreateNumber(value));
+	}
+	
+	UARTWrite(1, "\r\n...FormParameter");			
 	return root;	
 }
 
@@ -194,3 +217,5 @@ struct HiveCommand HandleServerCommand(cJSON* json)
 
 	return res;
 }
+
+

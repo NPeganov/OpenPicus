@@ -1,6 +1,9 @@
 #include "taskFlyport.h"
 #include "grovelib.h"
 #include "RS485Helper.h"
+
+#include "RS232Helper.h"
+
 #include "ModbusSerial.h"
 #include "ModbusMasterRTU.h"
 #include "CommonUtils.h"
@@ -11,9 +14,22 @@
 
 #include "cJSON.h"
 
+
+#define		TX_232		p4
+#define		RX_232		p6
+#define		CTS_232		p11
+#define		RTS_232		p9
+
+#define		DE_485		p2
+#define		RE_485		p17
+
+#define		TX_485		p5
+#define		RX_485		p7
+
+extern const struct SerialPort RS232;
 extern const struct SerialPort RS485;	
 extern const struct ModbusMaster MBM;	
-//static const int port485 = 2;
+static const int port232 = 2;
 static const int port485 = 3;
 
 static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";
@@ -39,7 +55,7 @@ void FlyportTask()
 		vTaskDelay(20);
 		IOPut(p21, toggle);
 	}	
-    UARTWrite(1,"Registered successfully!\r\n");		
+    UARTWrite(1,"Registered successfully!\r\n");	
 
     UARTWrite(1,"Configuring RS485 interface...\r\n");	
 	// GROVE board
@@ -49,15 +65,11 @@ void FlyportTask()
 	// Digital Input
 	void *button = new(Dig_io, IN);
 	attachToBoard(board, button, DIG1);	
-	
-	RS485.Init(port485, 9600, RS485_TWO_STOP, RS485_8BITS_PARITY_NONE);
-	MBM.Init(&RS485);
-	
-	MBM.ReadHRegisters(1, 0, 1);	
-	for(;;)vTaskDelay(20);
-	
-	
-	
+
+	//RS485.Init(port485, 19200, RS485_ONE_STOP, RS485_8BITS_PARITY_NONE);		
+	//MBM.Init(&RS485);	
+	RS232.Init(port232, 19200, RS232_ONE_STOP, RS232_8BITS_PARITY_NONE);
+	MBM.Init(&RS232);
 	
     UARTWrite(1, "calling APNConfig... ");		
 	APNConfig("internet.beeline.ru", "beeline", "beeline", DYNAMIC_IP, DYNAMIC_IP, DYNAMIC_IP);
@@ -93,6 +105,11 @@ void FlyportTask()
 	cJSON * RegRequestJson = FormRegistrationRequest();	
 	SendHttpJsonRequest(&conn, url, HTTP_PUT, RegRequestJson, inBuff, 100);
 	
+	const unsigned char SlaveAddr = 1;
+	unsigned short StartAddress = 1;
+	unsigned short RegQnty = 1;	
+	unsigned char RegType = FC_Read_Holding_Registers;		
+	
 	while(TRUE)
 	{
 		FormatCommandPollUrl(url);
@@ -101,19 +118,84 @@ void FlyportTask()
 		if(result.RsponseIsOK && result.Response)
 		{	
 			struct HiveCommand Command = HandleServerCommand(cJSON_Parse(result.Response));
+			if(Command.Name 
+			&& Command.Name->type == cJSON_String 
+			&& Command.Parameters 
+			&& !strcmp(Command.Name->valuestring, "set"))
+			{
+				UARTWrite(1, "\r\nGot command to set new parameters.");					
+				cJSON* jRegType = cJSON_GetObjectItem(Command.Parameters, "RegType");				
+				cJSON* jStartAddress = cJSON_GetObjectItem(Command.Parameters, "StartAddress");
+				cJSON* jRegQnty = cJSON_GetObjectItem(Command.Parameters, "RegQnty");	
+				
+				
+				if(jRegType && jRegType->type == cJSON_Number)
+				{
+					RegType = jRegType->valueint;					
+					UARTWrite(1, "Sending \"Request type changed\" notification... ");
+					cJSON * ChangedNotificationJson = 0;					
+					ChangedNotificationJson = FormNotificationRequest("Request type changed", FormParameter("New value", RegType));
+					FormatNotificationUrl(url);	
+					result = SendHttpJsonRequest(&conn, url, HTTP_POST, ChangedNotificationJson, inBuff, 100);						
+				}
+				
+				if(jStartAddress && jStartAddress->type == cJSON_Number)
+				{
+					StartAddress = jStartAddress->valueint;
+					UARTWrite(1, "Sending \"Start address changed\" notification... ");
+					cJSON * ChangedNotificationJson = 0;										
+					ChangedNotificationJson = FormNotificationRequest("Start address changed", FormParameter("New value", StartAddress));					
+					FormatNotificationUrl(url);	
+					result = SendHttpJsonRequest(&conn, url, HTTP_POST, ChangedNotificationJson, inBuff, 100);						
+				}	
+
+				if(jRegQnty && jRegQnty->type == cJSON_Number)
+				{
+					RegQnty = jRegQnty->valueint;
+					cJSON * ChangedNotificationJson = 0;										
+					UARTWrite(1, "Sending \"Registers quantity changed\" notification... ");
+					ChangedNotificationJson = FormNotificationRequest("Registers quantity changed", FormParameter("New value", RegQnty));					
+					FormatNotificationUrl(url);	
+					result = SendHttpJsonRequest(&conn, url, HTTP_POST, ChangedNotificationJson, inBuff, 100);						
+					
+				}			
+			}
 		}
 		
-		MBM.ReadHRegisters(1, 0, 1);			
+		struct ReadRegistersResp mb_res; mb_res.ec = EC_NO_ERROR;
+		switch(RegType)
+		{
+			case FC_Read_Holding_Registers: {
+				mb_res = MBM.ReadHoldingRegisters(SlaveAddr, StartAddress, RegQnty);				
+			}break;
+			
+			case FC_Read_Input_Registers: {
+				mb_res = MBM.ReadInputRegisters(SlaveAddr, StartAddress, RegQnty);				
+			}break;
+		}
 		
-
-		FormatNotificationUrl(url);
-		UARTWrite(1, "Sending device notification... ");	
-		cJSON * NoifyRequestJson = FormNotificationRequest(3.1416);			
-		result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, inBuff, 100);			
+		if(mb_res.ec == EC_NO_ERROR && mb_res.payload != NULL && mb_res.Qnty > 0)
+		{
+			FormatNotificationUrl(url);
+			unsigned char i = 0;
+			for(i = 0; i < mb_res.Qnty; ++i)
+			{	
+				char textBuf[128];
+				sprintf(textBuf, "Value of register 0x%02hhX", i + 1);
+				cJSON* jNumericParam = FormParameter(textBuf, (double)mb_res.payload[i]);				
+				cJSON * NoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jNumericParam);
+				result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, inBuff, 100);			
+			}
+			
+			free(mb_res.payload);			
+		}
 		
 		vTaskDelay(200);
 	}
 }
+
+
+
 
 
 

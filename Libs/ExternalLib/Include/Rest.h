@@ -22,8 +22,10 @@ void SetLastTimeStamp(const char* NewTimeStamp);
 const char* GetLastTimeStamp();
 struct HiveCommand HandleServerCommand(cJSON* json);
 char* FetchTimeStamp(cJSON * TimestampFromServer);
-cJSON* FormNotificationRequest(double mesured_value);
+cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters);
+cJSON* FormParameter(const char * Name, double value);
 
 #endif
+
 
 

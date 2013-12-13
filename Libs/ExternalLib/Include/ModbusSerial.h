@@ -2,21 +2,24 @@
 #define MODBUS_SERIAL_H
 
 #include "RS485Helper.h"
+#include "RS232Helper.h"
 
-void _SerialPortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);	
-void _SerialWrite(const unsigned char* Data, short len);	
-BOOL _SerialReadByte(unsigned char* Dest, unsigned long timeout_us);	
-BOOL _SerialRead(unsigned char* Dest, unsigned short len, unsigned long long timeout_us);
+void _232PortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);	
+void _485PortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);	
+void _232Write(const unsigned char* Data, short len);	
+void _485Write(const unsigned char* Data, short len);	
+BOOL _SerialReadByte(unsigned char* Dest, DWORD timeout_us);	
+BOOL _SerialRead(unsigned char* Dest, unsigned short len, DWORD timeout_us);
 int _GetBaud();
 
 struct SerialPort
 {
-	unsigned char PortNum;
 	void (*Init)(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity);		
 	void (*Write)(const unsigned char* Data, short len);	
-	BOOL (*ReadByte)(unsigned char* Dest, unsigned long timeout_us);		
-	BOOL (*Read)(unsigned char* Dest, unsigned short len, unsigned long long timeout_us);	
+	BOOL (*ReadByte)(unsigned char* Dest, DWORD timeout_us);		
+	BOOL (*Read)(unsigned char* Dest, unsigned short len, DWORD timeout_us);	
 	int (*GetBaud)();
 };
 
 #endif
+
