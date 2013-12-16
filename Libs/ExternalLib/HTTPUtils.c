@@ -20,7 +20,7 @@ struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsig
 	}
 	
 	UARTWrite(1, "\r\nto URL\r\n");    	
-	UARTWrite(1, (char*)url);    		
+	UARTWrite(1, url);    		
 	UARTWrite(1, "... ");    	
 
 	if(json)
@@ -75,16 +75,21 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 		{
 			UARTWrite(1, "\r\nSending empty request");    
 		}
+		
+		char* urlToSend = (char*)malloc(sizeof(char) * (strlen(url) + 1));	
+		strcpy(urlToSend, url); // there is a need to make a copy of an url, since the call to HTTPRequest will modify it.
 			
 		UARTWrite(1, "\r\nto URL\r\n");    	
-		UARTWrite(1, (char*)url);    		
+		UARTWrite(1, urlToSend);    		
 		UARTWrite(1, "... "); 		
 		
-		HTTPRequest(conn, type, url, NULL, (char*)BufForResp);	
+		HTTPRequest(conn, type, urlToSend, NULL, (char*)BufForResp);	
 		ProcessCommand();
+		free(urlToSend);
 	
 		memset(BufForResp, 0, 2000);	
 		respLen = GetHttpResponse(conn, BufForResp, timeout_sec);
+		
 		if(respLen > 0)
 		{
 			UARTWrite(1, "Raw response arrived:\r\n");    
@@ -161,6 +166,7 @@ int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec
 			UARTWrite(1, "DATA READ: \r\n");	
 			UARTWrite(1, (char*)BufForResp);				
 			*/
+			
 		}
 	}while(1);
 	
@@ -292,5 +298,6 @@ struct HttpResponse ParseResponse(unsigned char* BufForResp)
 	
 	return res;
 }
+
 
 

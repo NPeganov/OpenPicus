@@ -60,10 +60,32 @@ cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters)
 		
 	char *s_print = cJSON_Print(root);
 	UARTWrite(1, "\r\nNOTIFICATION CREATED:\r\n");		
-	UARTWrite(1, s_print);			
+	UARTWrite(1, s_print);	
+	char loggBuff[128];		
+	sprintf(loggBuff, "\r\nNOTIFICATION SIZE: %d", strlen(s_print));	
+	UARTWrite(1, loggBuff);			
+	if (!strlen(s_print))  
+	{
+		char *error = (char*)cJSON_GetErrorPtr();
+		UARTWrite(1,"\n\r An error was encountered\n\r");
+		UARTWrite(1,error);
+		return NULL;
+	}	
+	
 	free(s_print);
 		
 	UARTWrite(1, "\r\n...FormNotificationRequest");		
+	return root;	
+}
+
+cJSON* FormAckRequest(cJSON* Result)
+{
+	UARTWrite(1, "\r\nFormAckRequest...");
+	cJSON *root = cJSON_CreateObject();
+	cJSON_AddItemToObject(root, "status", cJSON_CreateString("success"));
+	cJSON_AddItemToObject(root, "result", Result);	
+		
+	UARTWrite(1, "\r\n...FormAckRequest");		
 	return root;	
 }
 
@@ -116,6 +138,21 @@ char* FormatNotificationUrl(char* Buffer)
 	strcat(Buffer, "device/");
 	strcat(Buffer, DevId);		
 	strcat(Buffer, "/notification");		
+	return Buffer;
+}
+
+char* FormatAckUrl(char* Buffer, cJSON* jID)
+{
+	strcpy(Buffer, BaseUrl);
+	strcat(Buffer, Prefix);	
+	strcat(Buffer, "device/");
+	strcat(Buffer, DevId);		
+	strcat(Buffer, "/command/");
+	
+	char* sID = cJSON_Print(jID);	
+	strcat(Buffer, sID);			
+	free(sID);
+	
 	return Buffer;
 }
 
@@ -210,6 +247,15 @@ struct HiveCommand HandleServerCommand(cJSON* json)
 					char * s_out = cJSON_Print(res.Parameters);
 					UARTWrite(1, s_out);
 					free(s_out);					
+				}	
+				
+				res.ID = cJSON_DetachItemFromObject(Command, "id");
+				if(res.ID)
+				{
+					UARTWrite(1, "\r\nCommand ID is: ");
+					char * s_out = cJSON_Print(res.ID);
+					UARTWrite(1, s_out);
+					free(s_out);					
 				}				
 			}				
 		}
@@ -217,5 +263,6 @@ struct HiveCommand HandleServerCommand(cJSON* json)
 
 	return res;
 }
+
 
 

@@ -37,7 +37,7 @@ static const char * BaseUrl = "ecloud.dataart.com";///ecapi8";
 //static const char * BaseUrl = "www.google.com";
 
 char loggBuff[255];
-unsigned char inBuff[2000];
+unsigned char inBuff[1000];
 TCP_SOCKET conn;
 
 void FlyportTask()
@@ -93,7 +93,9 @@ void FlyportTask()
 	if(result.RsponseIsOK && result.Response)
 	{
 		char* pTimeStamp = 0;
-		pTimeStamp = HandleServerInfo(cJSON_Parse(result.Response));
+		cJSON* jServerInfo = cJSON_Parse(result.Response);
+		pTimeStamp = HandleServerInfo(jServerInfo);
+		cJSON_Delete(jServerInfo);		
 		if(pTimeStamp)
 		{
 			RunClock(pTimeStamp);		
@@ -104,6 +106,7 @@ void FlyportTask()
 	UARTWrite(1, "Sending registration request... ");		
 	cJSON * RegRequestJson = FormRegistrationRequest();	
 	SendHttpJsonRequest(&conn, url, HTTP_PUT, RegRequestJson, inBuff, 100);
+	cJSON_Delete(RegRequestJson);
 	
 	const unsigned char SlaveAddr = 1;
 	unsigned short StartAddress = 1;
@@ -116,10 +119,13 @@ void FlyportTask()
 		UARTWrite(1, "Getting commands for the device... ");	
 		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, inBuff, 100);	
 		if(result.RsponseIsOK && result.Response)
-		{	
-			struct HiveCommand Command = HandleServerCommand(cJSON_Parse(result.Response));
+		{	cJSON* jResponse = cJSON_Parse(result.Response);
+			struct HiveCommand Command = HandleServerCommand(jResponse);
+			cJSON_Delete(jResponse);			
 			if(Command.Name 
 			&& Command.Name->type == cJSON_String 
+			&& Command.ID 
+			&& Command.ID->type == cJSON_Number 			
 			&& Command.Parameters 
 			&& !strcmp(Command.Name->valuestring, "set"))
 			{
@@ -127,38 +133,49 @@ void FlyportTask()
 				cJSON* jRegType = cJSON_GetObjectItem(Command.Parameters, "RegType");				
 				cJSON* jStartAddress = cJSON_GetObjectItem(Command.Parameters, "StartAddress");
 				cJSON* jRegQnty = cJSON_GetObjectItem(Command.Parameters, "RegQnty");	
+				cJSON* jResultObj = cJSON_CreateObject();
 				
+				BOOL sendACK = FALSE;
 				
+				FormatNotificationUrl(url);					
 				if(jRegType && jRegType->type == cJSON_Number)
 				{
-					RegType = jRegType->valueint;					
-					UARTWrite(1, "Sending \"Request type changed\" notification... ");
-					cJSON * ChangedNotificationJson = 0;					
-					ChangedNotificationJson = FormNotificationRequest("Request type changed", FormParameter("New value", RegType));
-					FormatNotificationUrl(url);	
-					result = SendHttpJsonRequest(&conn, url, HTTP_POST, ChangedNotificationJson, inBuff, 100);						
+					RegType = jRegType->valueint;		
+					cJSON_Delete(jRegType);						
+					UARTWrite(1, "\r\nRequest type changed.");
+					cJSON_AddItemToObject(jResultObj, "NewRequestType", cJSON_CreateNumber((double)RegType));	
+					sendACK = TRUE;
 				}
 				
 				if(jStartAddress && jStartAddress->type == cJSON_Number)
 				{
 					StartAddress = jStartAddress->valueint;
-					UARTWrite(1, "Sending \"Start address changed\" notification... ");
-					cJSON * ChangedNotificationJson = 0;										
-					ChangedNotificationJson = FormNotificationRequest("Start address changed", FormParameter("New value", StartAddress));					
-					FormatNotificationUrl(url);	
-					result = SendHttpJsonRequest(&conn, url, HTTP_POST, ChangedNotificationJson, inBuff, 100);						
+					cJSON_Delete(jStartAddress);						
+					UARTWrite(1, "\r\nStart address changed.");
+					cJSON_AddItemToObject(jResultObj, "NewStartAddress", cJSON_CreateNumber((double)StartAddress));	
+					sendACK = TRUE;						
 				}	
 
 				if(jRegQnty && jRegQnty->type == cJSON_Number)
 				{
 					RegQnty = jRegQnty->valueint;
-					cJSON * ChangedNotificationJson = 0;										
-					UARTWrite(1, "Sending \"Registers quantity changed\" notification... ");
-					ChangedNotificationJson = FormNotificationRequest("Registers quantity changed", FormParameter("New value", RegQnty));					
-					FormatNotificationUrl(url);	
-					result = SendHttpJsonRequest(&conn, url, HTTP_POST, ChangedNotificationJson, inBuff, 100);						
-					
-				}			
+					cJSON_Delete(jRegQnty);					
+					UARTWrite(1, "\r\nRegisters quantity changed.");
+					cJSON_AddItemToObject(jResultObj, "NewRegistersQnty", cJSON_CreateNumber((double)RegQnty));	
+					sendACK = TRUE;						
+				}
+				
+				if(sendACK)
+				{
+					FormatAckUrl(url, Command.ID);
+					cJSON* jAck = FormAckRequest(jResultObj);
+					result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, inBuff, 100);	
+					cJSON_Delete(jResultObj);
+					cJSON_Delete(jAck);					
+					cJSON_Delete(Command.ID);
+					cJSON_Delete(Command.Name);				
+					cJSON_Delete(Command.Parameters);	
+				}
 			}
 		}
 		
@@ -183,8 +200,10 @@ void FlyportTask()
 				char textBuf[128];
 				sprintf(textBuf, "Value of register 0x%02hhX", i + 1);
 				cJSON* jNumericParam = FormParameter(textBuf, (double)mb_res.payload[i]);				
-				cJSON * NoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jNumericParam);
-				result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, inBuff, 100);			
+				cJSON* NoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jNumericParam);
+				result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, inBuff, 100);	
+				cJSON_Delete(jNumericParam);
+				cJSON_Delete(NoifyRequestJson);
 			}
 			
 			free(mb_res.payload);			
@@ -193,6 +212,8 @@ void FlyportTask()
 		vTaskDelay(200);
 	}
 }
+
+
 
 
 

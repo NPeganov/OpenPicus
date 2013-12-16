@@ -9,6 +9,7 @@ struct HiveCommand
 {
 	cJSON* Name;
 	cJSON* Parameters;	
+	cJSON* ID;
 };
 
 cJSON * FormRegistrationRequest();
@@ -16,6 +17,7 @@ char* FormatRegistrationUrl(char* Buffer);
 char* FormatInfoUrl(char* Buffer);
 char* FormatCommandPollUrl(char* Buffer);
 char* FormatNotificationUrl(char* Buffer);
+char* FormatAckUrl(char* Buffer, cJSON* jID);
 
 char* HandleServerInfo(cJSON* RawResponse);
 void SetLastTimeStamp(const char* NewTimeStamp);
@@ -24,8 +26,10 @@ struct HiveCommand HandleServerCommand(cJSON* json);
 char* FetchTimeStamp(cJSON * TimestampFromServer);
 cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters);
 cJSON* FormParameter(const char * Name, double value);
+cJSON* FormAckRequest(cJSON* Result);
 
 #endif
+
 
 
 
