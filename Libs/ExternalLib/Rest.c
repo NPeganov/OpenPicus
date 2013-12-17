@@ -3,7 +3,7 @@
 
 static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";
 static const char * DevKey = "b55cf00a-ffff-kkkk-bbbb-8af2a112cb57";
-static const char * NtwKey = "b55cf00a-nnnn-kkkk-bbbb-8af2a112cb57";
+
 static const char * BaseUrl = "ecloud.dataart.com";///ecapi8";
 static const char * Prefix = "/ecapi8/";
 
@@ -45,60 +45,41 @@ cJSON* FormRegistrationRequest()
 
 cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters)
 {
-	UARTWrite(1, "\r\nFormNotificationRequest...");
+	//UARTWrite(1, "\r\nFormNotificationRequest...");
 	cJSON *root = cJSON_CreateObject();
-	cJSON *emptyParams = cJSON_CreateObject();
 	cJSON_AddItemToObject(root, "id", cJSON_CreateNumber(TickGet()));
 	char time_dest[32];
 	GetClockValue(time_dest);	
 	cJSON_AddItemToObject(root, "datetime", cJSON_CreateString(time_dest));	
 	cJSON_AddItemToObject(root, "notification", cJSON_CreateString(Name));
-	if(Parameters)
-		cJSON_AddItemToObject(root, "parameters", Parameters);
-	else
-		cJSON_AddItemToObject(root, "parameters", emptyParams);
-		
+	cJSON_AddItemToObject(root, "parameters", Parameters);
 	char *s_print = cJSON_Print(root);
 	UARTWrite(1, "\r\nNOTIFICATION CREATED:\r\n");		
 	UARTWrite(1, s_print);	
-	char loggBuff[128];		
-	sprintf(loggBuff, "\r\nNOTIFICATION SIZE: %d", strlen(s_print));	
-	UARTWrite(1, loggBuff);			
-	if (!strlen(s_print))  
-	{
-		char *error = (char*)cJSON_GetErrorPtr();
-		UARTWrite(1,"\n\r An error was encountered\n\r");
-		UARTWrite(1,error);
-		return NULL;
-	}	
-	
 	free(s_print);
 		
-	UARTWrite(1, "\r\n...FormNotificationRequest");		
+	//UARTWrite(1, "\r\n...FormNotificationRequest");		
 	return root;	
 }
 
 cJSON* FormAckRequest(cJSON* Result)
 {
-	UARTWrite(1, "\r\nFormAckRequest...");
+	//UARTWrite(1, "\r\nFormAckRequest...");
 	cJSON *root = cJSON_CreateObject();
 	cJSON_AddItemToObject(root, "status", cJSON_CreateString("success"));
 	cJSON_AddItemToObject(root, "result", Result);	
 		
-	UARTWrite(1, "\r\n...FormAckRequest");		
+	//UARTWrite(1, "\r\n...FormAckRequest");		
 	return root;	
 }
 
 cJSON* FormParameter(const char* Name, double value)
 {
-	UARTWrite(1, "\r\nFormParameter...");	
+	//UARTWrite(1, "\r\nFormParameter...");	
 	cJSON *root = cJSON_CreateObject();
-	if(Name)
-	{
-		cJSON_AddItemToObject(root, Name, cJSON_CreateNumber(value));
-	}
+	cJSON_AddItemToObject(root, Name, cJSON_CreateNumber(value));
 	
-	UARTWrite(1, "\r\n...FormParameter");			
+	//UARTWrite(1, "\r\n...FormParameter");			
 	return root;	
 }
 
@@ -263,6 +244,7 @@ struct HiveCommand HandleServerCommand(cJSON* json)
 
 	return res;
 }
+
 
 
 

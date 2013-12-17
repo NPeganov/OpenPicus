@@ -32,12 +32,10 @@ extern const struct ModbusMaster MBM;
 static const int port232 = 2;
 static const int port485 = 3;
 
-static const char * DevId = "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57";
 static const char * BaseUrl = "ecloud.dataart.com";///ecapi8";
 //static const char * BaseUrl = "www.google.com";
 
 char loggBuff[255];
-unsigned char inBuff[1000];
 TCP_SOCKET conn;
 
 void FlyportTask()
@@ -57,7 +55,7 @@ void FlyportTask()
 	}	
     UARTWrite(1,"Registered successfully!\r\n");	
 
-    UARTWrite(1,"Configuring RS485 interface...\r\n");	
+/*	
 	// GROVE board
 	void *board = new(GroveNest);
 	
@@ -65,9 +63,12 @@ void FlyportTask()
 	// Digital Input
 	void *button = new(Dig_io, IN);
 	attachToBoard(board, button, DIG1);	
+*/	
 
+    //UARTWrite(1,"Configuring RS485 interface...\r\n");		
 	//RS485.Init(port485, 19200, RS485_ONE_STOP, RS485_8BITS_PARITY_NONE);		
 	//MBM.Init(&RS485);	
+	UARTWrite(1,"Configuring RS232 interface...\r\n");		
 	RS232.Init(port232, 19200, RS232_ONE_STOP, RS232_8BITS_PARITY_NONE);
 	MBM.Init(&RS232);
 	
@@ -79,7 +80,7 @@ void FlyportTask()
 	const unsigned char ConnectionAtteptsNum = 3;
 	if(!EstablishHttpConnecion(&conn, BaseUrl, "80", ConnectionAtteptsNum))
 	{
-		UARTWrite(1, "Cannot connect to a server.\r\n Sleep and reset...");	
+		UARTWrite(1, "Cannot connect to a server.\r\n Sleep and reset...\r\n");	
 		vTaskDelay(300);
 		Reset();		
 	}
@@ -89,7 +90,7 @@ void FlyportTask()
 
 	FormatInfoUrl(url);	
 	UARTWrite(1, "Getting server info... ");	
-	result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, inBuff, 100);	
+	result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, 100);	
 	if(result.RsponseIsOK && result.Response)
 	{
 		char* pTimeStamp = 0;
@@ -105,7 +106,7 @@ void FlyportTask()
 	FormatRegistrationUrl(url);
 	UARTWrite(1, "Sending registration request... ");		
 	cJSON * RegRequestJson = FormRegistrationRequest();	
-	SendHttpJsonRequest(&conn, url, HTTP_PUT, RegRequestJson, inBuff, 100);
+	SendHttpJsonRequest(&conn, url, HTTP_PUT, RegRequestJson, 100);
 	cJSON_Delete(RegRequestJson);
 	
 	const unsigned char SlaveAddr = 1;
@@ -117,7 +118,7 @@ void FlyportTask()
 	{
 		FormatCommandPollUrl(url);
 		UARTWrite(1, "Getting commands for the device... ");	
-		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, inBuff, 100);	
+		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, 100);	
 		if(result.RsponseIsOK && result.Response)
 		{	cJSON* jResponse = cJSON_Parse(result.Response);
 			struct HiveCommand Command = HandleServerCommand(jResponse);
@@ -130,9 +131,9 @@ void FlyportTask()
 			&& !strcmp(Command.Name->valuestring, "set"))
 			{
 				UARTWrite(1, "\r\nGot command to set new parameters.");					
-				cJSON* jRegType = cJSON_GetObjectItem(Command.Parameters, "RegType");				
-				cJSON* jStartAddress = cJSON_GetObjectItem(Command.Parameters, "StartAddress");
-				cJSON* jRegQnty = cJSON_GetObjectItem(Command.Parameters, "RegQnty");	
+				cJSON* jRegType = cJSON_DetachItemFromObject(Command.Parameters, "RegType");				
+				cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "StartAddress");
+				cJSON* jRegQnty = cJSON_DetachItemFromObject(Command.Parameters, "RegQnty");	
 				cJSON* jResultObj = cJSON_CreateObject();
 				
 				BOOL sendACK = FALSE;
@@ -169,11 +170,14 @@ void FlyportTask()
 				{
 					FormatAckUrl(url, Command.ID);
 					cJSON* jAck = FormAckRequest(jResultObj);
-					result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, inBuff, 100);	
-					cJSON_Delete(jResultObj);
-					cJSON_Delete(jAck);					
+					result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, 100);	
+					UARTWrite(1, "\r\nDeletting jAck");					
+					cJSON_Delete(jAck);		
+					UARTWrite(1, "\r\nDeletting Command.ID");											
 					cJSON_Delete(Command.ID);
-					cJSON_Delete(Command.Name);				
+					UARTWrite(1, "\r\nDeletting Command.Name");																
+					cJSON_Delete(Command.Name);			
+					UARTWrite(1, "\r\nDeletting Command.Parameters");											
 					cJSON_Delete(Command.Parameters);	
 				}
 			}
@@ -201,8 +205,7 @@ void FlyportTask()
 				sprintf(textBuf, "Value of register 0x%02hhX", i + 1);
 				cJSON* jNumericParam = FormParameter(textBuf, (double)mb_res.payload[i]);				
 				cJSON* NoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jNumericParam);
-				result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, inBuff, 100);	
-				cJSON_Delete(jNumericParam);
+				result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, 100);	
 				cJSON_Delete(NoifyRequestJson);
 			}
 			
@@ -212,6 +215,7 @@ void FlyportTask()
 		vTaskDelay(200);
 	}
 }
+
 
 
 

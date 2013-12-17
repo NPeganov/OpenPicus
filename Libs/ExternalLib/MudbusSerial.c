@@ -15,7 +15,7 @@ static unsigned int Baud_ = 0;
 
 void _232PortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity)
 {	
-    UARTWrite(1, "_232PortInit...");		
+    //UARTWrite(1, "_232PortInit...");		
 	Port_ = Port;
 	Baud_ = baud;
 	
@@ -28,12 +28,12 @@ void _232PortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned
 	RS232On(Port_);	
 	vTaskDelay(100);
 	
-    UARTWrite(1, "..._SerialPortInit");		
+    //UARTWrite(1, "..._SerialPortInit");		
 }
 
 void _485PortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned char Parity)
 {	
-    UARTWrite(1, "_485PortInit...");		
+    //UARTWrite(1, "_485PortInit...");		
 	Port_ = Port;
 	Baud_ = baud;
 	
@@ -46,7 +46,7 @@ void _485PortInit(unsigned char Port, int baud, unsigned char stopBits, unsigned
 	RS485On(Port_);	
 	vTaskDelay(100);
 	
-    UARTWrite(1, "..._SerialPortInit");		
+    //UARTWrite(1, "..._SerialPortInit");		
 }
 
 void _485Write(const unsigned char* Data, short len)
@@ -138,6 +138,7 @@ const struct SerialPort RS232 =
 	_SerialRead,
 	_GetBaud
 };
+
 
 
 

@@ -1,11 +1,17 @@
 #include "HTTPUtils.h"
 #include "taskFlyport.h"
 
-char _host[128];
-char _port[8];
+#define TCP_BUF_SIZE 1024
+
+//char _host[128];
+//char _port[8];
+char* _host = NULL;
+char* _port = NULL;
+
+unsigned char TCP_Buff[TCP_BUF_SIZE];
 static const char * AuthInfo = "Authorization: Basic ZGhhZG1pbjpkaGFkbWluXyM5MTE=";
 
-struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, unsigned char* BufForResp, int timeout_sec)
+struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsigned char type, cJSON* json, int timeout_sec)
 {	
 	struct HttpResponse res;
 	char *jsonStr = 0;
@@ -27,27 +33,27 @@ struct HttpResponse SendHttpJsonRequest(TCP_SOCKET* conn, const char* url, unsig
 	{	
 		jsonStr = cJSON_PrintUnformatted(json);	
 	}
-	res = SendHttpDataRequest(conn, url, type, (unsigned char*)jsonStr, BufForResp, timeout_sec);
+	res = SendHttpDataRequest(conn, url, type, (unsigned char*)jsonStr, timeout_sec);
 	free(jsonStr);	
 	
 	return res;
 }
 
-struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char* data, unsigned char* BufForResp, int timeout_sec)
+struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsigned char type, unsigned char* data, int timeout_sec)
 {
 	struct HttpResponse res;
 	res.RsponseIsOK = FALSE;
 	res.Response = 0; 	
 
-	strcpy(BufForResp, "Content-Length: ");
+	strcpy(TCP_Buff, "Content-Length: ");
 	char contentlength[5];
 	sprintf(contentlength, "%d", strlen((char*)data));
-	strcat(BufForResp, contentlength);
-	strcat(BufForResp, "\r\nContent-Type: application/json\r\nAccept: */*\r\n");
-	strcat(BufForResp, AuthInfo);						
-	strcat(BufForResp, "\r\n");												
-	strcat(BufForResp, "\r\n\r\n");
-	strcat(BufForResp, (char*)data);
+	strcat(TCP_Buff, contentlength);
+	strcat(TCP_Buff, "\r\nContent-Type: application/json\r\nAccept: */*\r\n");
+	strcat(TCP_Buff, AuthInfo);						
+	strcat(TCP_Buff, "\r\n");												
+	strcat(TCP_Buff, "\r\n\r\n");
+	strcat(TCP_Buff, (char*)data);
 	
 	int respLen = 0;
 	unsigned char attempts_counter = 0;
@@ -59,7 +65,7 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 			unsigned char ConnectionAtteptsNum = 2;
 			if(!EstablishHttpConnecion(conn, _host, _port, ConnectionAtteptsNum))
 			{
-				UARTWrite(1, "Cannot establish a connection.\r\n Sleep and reset...");	
+				UARTWrite(1, "Cannot establish a connection.\r\n Sleep and reset...\r\n");	
 				vTaskDelay(300);
 				Reset();		
 			}		
@@ -83,20 +89,20 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 		UARTWrite(1, urlToSend);    		
 		UARTWrite(1, "... "); 		
 		
-		HTTPRequest(conn, type, urlToSend, NULL, (char*)BufForResp);	
+		HTTPRequest(conn, type, urlToSend, NULL, (char*)TCP_Buff);	
 		ProcessCommand();
 		free(urlToSend);
 	
-		memset(BufForResp, 0, 2000);	
-		respLen = GetHttpResponse(conn, BufForResp, timeout_sec);
+		memset(TCP_Buff, 0, TCP_BUF_SIZE);	
+		respLen = GetHttpResponse(conn, TCP_Buff, timeout_sec);
 		
 		if(respLen > 0)
 		{
 			UARTWrite(1, "Raw response arrived:\r\n");    
-			UARTWrite(1, (char*)BufForResp);
+			UARTWrite(1, (char*)TCP_Buff);
 			UARTWrite(1, "\r\n");	
 		
-			res = ParseResponse(BufForResp);		
+			res = ParseResponse(TCP_Buff);		
 		}
 		else if(respLen == 0)
 		{
@@ -131,6 +137,7 @@ int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec
 	{
 		do
 		{		
+			UARTWrite(1, "\r\nReading data from the socket.");			
 			if(GetHttpStatus(conn) != CONNECTED)
 			{
 				UARTWrite(1, "\r\nGetHttpResponse: Bad socket status\r\n");				
@@ -144,6 +151,7 @@ int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec
 				UARTWrite(1, "\r\nGetHttpResponse: TIMEOUT\r\n");
 				return 0;
 			}
+			UARTWrite(1, "No data in the socket yet.\r\n");	
 		}while(conn->rxLen == 0);
 
 		first_time = FALSE;
@@ -154,7 +162,12 @@ int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec
 		}
 		else
 		{
-			UARTWrite(1, "\r\n READING REAL DATA:\r\n");			
+			UARTWrite(1, "\r\n READING REAL DATA:\r\n");	
+			if((lenTemp + conn->rxLen) >= TCP_BUF_SIZE)
+			{
+				UARTWrite(1, "\r\n RESPONSE IS TOO LONG:\r\n");					
+				break;
+			}
 			HTTPReadData(conn, (char*)&BufForResp[lenTemp], conn->rxLen);
 			lenTemp += conn->rxLen;
 			sprintf(loggBuff, "lenTemp: %d\r\n", lenTemp);		
@@ -176,18 +189,21 @@ int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec
 
 enum SocketState GetHttpStatus(TCP_SOCKET* conn)
 {
-	UARTWrite(1, "\r\n\r\nGetHttpStatus...\r\n"); 		
+	//UARTWrite(1, "\r\n\r\nGetHttpStatus...\r\n"); 		
 	char loggBuff[32];
 	
-	UARTWrite(1, "\r\nGetting HttpStatus... ");	
+	//UARTWrite(1, "\r\nGetting HttpStatus... ");	
 	HTTPStatus(conn);
 	if(ProcessCommand())
 	{
-		UARTWrite(1, "TCP Socket Status:\r\n");
-		sprintf(loggBuff, " - Status: %d\r\n", conn->status);
-		UARTWrite(1, loggBuff);
-		sprintf(loggBuff, " - RxLen: %d\r\n", conn->rxLen);
-		UARTWrite(1, loggBuff);	
+		if(conn->status != SOCK_CONNECT || conn->rxLen > 0)
+		{
+			UARTWrite(1, "TCP Socket Status:\r\n");
+			sprintf(loggBuff, " - Status: %d\r\n", conn->status);
+			UARTWrite(1, loggBuff);
+			sprintf(loggBuff, " - RxLen: %d\r\n", conn->rxLen);
+			UARTWrite(1, loggBuff);	
+		}
 		if(conn->status == SOCK_CONNECT)
 			return CONNECTED;
 		else
@@ -199,7 +215,7 @@ enum SocketState GetHttpStatus(TCP_SOCKET* conn)
 
 BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port)
 {		
-	UARTWrite(1, "\r\n\r\nHTTPConnect...\r\n"); 	
+//	UARTWrite(1, "\r\n\r\nHTTPConnect...\r\n"); 	
 	char loggBuff[32];
 
 	HTTPClose(conn);
@@ -217,21 +233,33 @@ BOOL HTTPConnect(TCP_SOCKET* conn, const char* host, const char* port)
 	{
 		UARTWrite(1, "\r\n HTTPOpen OK \r\n");
 		UARTWrite(1, "Socket Number: ");
-		sprintf(loggBuff, "%d", conn->number);
+		sprintf(loggBuff, "%d\r\n", conn->number);
 		UARTWrite(1, loggBuff);	
 		
 		return TRUE;
 	}
 
-	UARTWrite(1, "\r\n...HTTPConnect\r\n"); 		
+//	UARTWrite(1, "\r\n...HTTPConnect\r\n"); 		
 	return FALSE;			
 }
 
 BOOL EstablishHttpConnecion(TCP_SOCKET* conn, const char* host, const char* port, unsigned char attempts_num)
 {
-	UARTWrite(1, "\r\n\r\nEstablishHttpConnecion...\r\n"); 			
-	strcpy(_host, host);
-	strcpy(_port, port);	
+	UARTWrite(1, "\r\nEstablishHttpConnecion..."); 	
+	if(!_host)
+	{
+		_host = (char*)malloc(sizeof(char) * (strlen(host) + 1));	
+		strcpy(_host, host);
+	}
+
+	if(!_port)
+	{
+		_port = (char*)malloc(sizeof(char) * (strlen(port) + 1));		
+		strcpy(_port, port);
+	}	
+	
+//	strcpy(_host, host);
+//	strcpy(_port, port);	
 	do
 	{
 		if(HTTPConnect(conn, _host, _port) && (GetHttpStatus(conn) == CONNECTED))
@@ -298,6 +326,7 @@ struct HttpResponse ParseResponse(unsigned char* BufForResp)
 	
 	return res;
 }
+
 
 
 
