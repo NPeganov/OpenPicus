@@ -26,6 +26,8 @@
 #define		TX_485		p5
 #define		RX_485		p7
 
+#define SERVER_RESPONSE_TIMOUT_SEC 60
+
 extern const struct SerialPort RS232;
 extern const struct SerialPort RS485;	
 extern const struct ModbusMaster MBM;	
@@ -90,7 +92,7 @@ void FlyportTask()
 
 	FormatInfoUrl(url);	
 	UARTWrite(1, "Getting server info... ");	
-	result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, 100);	
+	result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, SERVER_RESPONSE_TIMOUT_SEC);	
 	if(result.RsponseIsOK && result.Response)
 	{
 		char* pTimeStamp = 0;
@@ -114,105 +116,142 @@ void FlyportTask()
 	unsigned short RegQnty = 1;	
 	unsigned char RegType = FC_Read_Holding_Registers;		
 	
+	BOOL ReportStarted = FALSE;	
+	
 	while(TRUE)
 	{
 		FormatCommandPollUrl(url);
-		UARTWrite(1, "Getting commands for the device... ");	
-		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, 100);	
-		if(result.RsponseIsOK && result.Response)
-		{	cJSON* jResponse = cJSON_Parse(result.Response);
+		UARTWrite(1, "\r\nGetting commands for the device...");	
+		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, SERVER_RESPONSE_TIMOUT_SEC);	
+		
+		BOOL sendACK = FALSE;		
+		
+		if(!result.RsponseIsOK || !result.Response)
+		{
+			UARTWrite(1, "\r\nFailed to get commands for the device...");			
+		}
+		else
+		{	
+			cJSON* jResponse = cJSON_Parse(result.Response);
 			struct HiveCommand Command = HandleServerCommand(jResponse);
 			cJSON_Delete(jResponse);			
 			if(Command.Name 
 			&& Command.Name->type == cJSON_String 
 			&& Command.ID 
 			&& Command.ID->type == cJSON_Number 			
-			&& Command.Parameters 
-			&& !strcmp(Command.Name->valuestring, "set"))
+			&& Command.Parameters)
 			{
-				UARTWrite(1, "\r\nGot command to set new parameters.");					
-				cJSON* jRegType = cJSON_DetachItemFromObject(Command.Parameters, "RegType");				
-				cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "StartAddress");
-				cJSON* jRegQnty = cJSON_DetachItemFromObject(Command.Parameters, "RegQnty");	
 				cJSON* jResultObj = cJSON_CreateObject();
-				
-				BOOL sendACK = FALSE;
-				
-				FormatNotificationUrl(url);					
-				if(jRegType && jRegType->type == cJSON_Number)
+				if(!strcmp(Command.Name->valuestring, "set") || !strcmp(Command.Name->valuestring, "start"))
 				{
-					RegType = jRegType->valueint;		
-					cJSON_Delete(jRegType);						
-					UARTWrite(1, "\r\nRequest type changed.");
-					cJSON_AddItemToObject(jResultObj, "NewRequestType", cJSON_CreateNumber((double)RegType));	
-					sendACK = TRUE;
-				}
+					BOOL isSet = !strcmp(Command.Name->valuestring, "set");
+					if(isSet)
+						UARTWrite(1, "\r\nGot command to set new parameters.");					
+					else
+					{
+						UARTWrite(1, "\r\nGot command to start mesurment loop.");	
+						ReportStarted = TRUE;
+					}
+						
+					cJSON* jRegType = cJSON_DetachItemFromObject(Command.Parameters, "RegType");				
+					cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "StartAddress");
+					cJSON* jRegQnty = cJSON_DetachItemFromObject(Command.Parameters, "RegQnty");						
 				
-				if(jStartAddress && jStartAddress->type == cJSON_Number)
-				{
-					StartAddress = jStartAddress->valueint;
-					cJSON_Delete(jStartAddress);						
-					UARTWrite(1, "\r\nStart address changed.");
-					cJSON_AddItemToObject(jResultObj, "NewStartAddress", cJSON_CreateNumber((double)StartAddress));	
-					sendACK = TRUE;						
-				}	
+					FormatNotificationUrl(url);					
+					if(jRegType && jRegType->type == cJSON_Number)
+					{
+						RegType = jRegType->valueint;		
+						cJSON_Delete(jRegType);						
+						UARTWrite(1, "\r\nRequest type changed.");
+						if(isSet)
+							cJSON_AddItemToObject(jResultObj, "NewRequestType", cJSON_CreateNumber((double)RegType));	
+						else
+							cJSON_AddItemToObject(jResultObj, "InitialRequestType", cJSON_CreateNumber((double)RegType));	
+							
+						sendACK = TRUE;
+					}
+					
+					if(jStartAddress && jStartAddress->type == cJSON_Number)
+					{
+						StartAddress = jStartAddress->valueint;
+						cJSON_Delete(jStartAddress);						
+						UARTWrite(1, "\r\nStart address changed.");
+						if(isSet)						
+							cJSON_AddItemToObject(jResultObj, "NewStartAddress", cJSON_CreateNumber((double)StartAddress));	
+						else
+							cJSON_AddItemToObject(jResultObj, "InitialStartAddress", cJSON_CreateNumber((double)StartAddress));	
+							
+						sendACK = TRUE;						
+					}	
 
-				if(jRegQnty && jRegQnty->type == cJSON_Number)
-				{
-					RegQnty = jRegQnty->valueint;
-					cJSON_Delete(jRegQnty);					
-					UARTWrite(1, "\r\nRegisters quantity changed.");
-					cJSON_AddItemToObject(jResultObj, "NewRegistersQnty", cJSON_CreateNumber((double)RegQnty));	
-					sendACK = TRUE;						
-				}
+					if(jRegQnty && jRegQnty->type == cJSON_Number)
+					{
+						RegQnty = jRegQnty->valueint;
+						cJSON_Delete(jRegQnty);					
+						UARTWrite(1, "\r\nRegisters quantity changed.");
+						if(isSet)
+							cJSON_AddItemToObject(jResultObj, "NewRegistersQnty", cJSON_CreateNumber((double)RegQnty));	
+						else
+							cJSON_AddItemToObject(jResultObj, "InitialRegistersQnty", cJSON_CreateNumber((double)RegQnty));	
+						sendACK = TRUE;						
+					}			
+					
+				}		
 				
 				if(sendACK)
 				{
 					FormatAckUrl(url, Command.ID);
 					cJSON* jAck = FormAckRequest(jResultObj);
-					result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, 100);	
-					UARTWrite(1, "\r\nDeletting jAck");					
+					result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, SERVER_RESPONSE_TIMOUT_SEC);	
 					cJSON_Delete(jAck);		
-					UARTWrite(1, "\r\nDeletting Command.ID");											
-					cJSON_Delete(Command.ID);
-					UARTWrite(1, "\r\nDeletting Command.Name");																
-					cJSON_Delete(Command.Name);			
-					UARTWrite(1, "\r\nDeletting Command.Parameters");											
-					cJSON_Delete(Command.Parameters);	
+				}	
+				
+				cJSON_Delete(Command.ID);
+				cJSON_Delete(Command.Name);			
+				cJSON_Delete(Command.Parameters);										
+			}
+		
+			if(ReportStarted)
+			{
+				struct ReadRegistersResp mb_res; mb_res.ec = EC_NO_ERROR;
+				switch(RegType)
+				{
+					case FC_Read_Holding_Registers: {
+						mb_res = MBM.ReadHoldingRegisters(SlaveAddr, StartAddress, RegQnty);				
+					}break;
+					
+					case FC_Read_Input_Registers: {
+						mb_res = MBM.ReadInputRegisters(SlaveAddr, StartAddress, RegQnty);				
+					}break;
+				}
+				
+				if(mb_res.ec == EC_NO_ERROR && mb_res.payload != NULL && mb_res.Qnty > 0)
+				{
+					FormatNotificationUrl(url);
+					unsigned char i = 0;
+					cJSON* jValuesArray = cJSON_CreateArray();					
+					cJSON* jParams = cJSON_CreateObject();
+					cJSON_AddItemToObject(jParams, "SlaveID", cJSON_CreateNumber((double)SlaveAddr));						
+					cJSON_AddItemToObject(jParams, "Data", jValuesArray);						
+					cJSON* jNoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jParams);					
+					for(i = 0; i < mb_res.Qnty; ++i)
+					{
+						cJSON* jRegister = cJSON_CreateObject();										
+						char addrBuf[5];
+						sprintf(addrBuf, "0x%02hhX", StartAddress + i);		
+						cJSON_AddItemToObject(jRegister, "Addr", cJSON_CreateString(addrBuf));										
+						cJSON_AddItemToObject(jRegister, "Val", cJSON_CreateNumber((double)mb_res.payload[i]));						
+						cJSON_AddItemToArray(jValuesArray, jRegister);												
+					}
+					
+					result = SendHttpJsonRequest(&conn, url, HTTP_POST, jNoifyRequestJson, SERVER_RESPONSE_TIMOUT_SEC);	
+					cJSON_Delete(jNoifyRequestJson);										
+					free(mb_res.payload);			
 				}
 			}
-		}
-		
-		struct ReadRegistersResp mb_res; mb_res.ec = EC_NO_ERROR;
-		switch(RegType)
-		{
-			case FC_Read_Holding_Registers: {
-				mb_res = MBM.ReadHoldingRegisters(SlaveAddr, StartAddress, RegQnty);				
-			}break;
 			
-			case FC_Read_Input_Registers: {
-				mb_res = MBM.ReadInputRegisters(SlaveAddr, StartAddress, RegQnty);				
-			}break;
+			vTaskDelay(200);
 		}
-		
-		if(mb_res.ec == EC_NO_ERROR && mb_res.payload != NULL && mb_res.Qnty > 0)
-		{
-			FormatNotificationUrl(url);
-			unsigned char i = 0;
-			for(i = 0; i < mb_res.Qnty; ++i)
-			{	
-				char textBuf[128];
-				sprintf(textBuf, "Value of register 0x%02hhX", i + 1);
-				cJSON* jNumericParam = FormParameter(textBuf, (double)mb_res.payload[i]);				
-				cJSON* NoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jNumericParam);
-				result = SendHttpJsonRequest(&conn, url, HTTP_POST, NoifyRequestJson, 100);	
-				cJSON_Delete(NoifyRequestJson);
-			}
-			
-			free(mb_res.payload);			
-		}
-		
-		vTaskDelay(200);
 	}
 }
 

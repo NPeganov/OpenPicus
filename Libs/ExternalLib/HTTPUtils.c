@@ -57,7 +57,7 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 	
 	int respLen = 0;
 	unsigned char attempts_counter = 0;
-	const unsigned char attempts_failure_limit = 20;
+	const unsigned char attempts_failure_limit = 5;
 	do
 	{
 		if(conn->number == INVALID_SOCKET || GetHttpStatus(conn) != CONNECTED)
