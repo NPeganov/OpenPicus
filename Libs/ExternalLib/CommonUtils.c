@@ -22,10 +22,17 @@ void GetError()
 BOOL ProcessCommand()
 {
 	UARTWrite(1, "\r\nProcessing Command..."); 		
+	DWORD start_sec = TickGetDiv64K();	
+	const DWORD timeout_sec = 60 * 2;
 	do 
 	{
 		vTaskDelay(20);		
-    	IOPut(p21, toggle);				
+    	IOPut(p21, toggle);		
+		if(TickGetDiv64K() - start_sec > timeout_sec)
+		{
+			UARTWrite(1, "\r\ProcessCommand: TIMEOUT\r\nReseting OpenPicus...\r\n");
+			Reset();
+		}		
 	}while(LastExecStat() == OP_EXECUTION);
 	
 	if(LastExecStat() == OP_SUCCESS)
