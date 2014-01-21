@@ -62,13 +62,15 @@ cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters)
 	return root;	
 }
 
-cJSON* FormAckRequest(cJSON* Result)
+cJSON* FormAckRequest(BOOL isResOK)
 {
 	//UARTWrite(1, "\r\nFormAckRequest...");
 	cJSON *root = cJSON_CreateObject();
 	cJSON_AddItemToObject(root, "status", cJSON_CreateString("success"));
-	cJSON_AddItemToObject(root, "result", Result);	
-		
+	if(isResOK)
+		cJSON_AddItemToObject(root, "res", cJSON_CreateNumber(1));	
+	else
+		cJSON_AddItemToObject(root, "res", cJSON_CreateNumber(-1));	
 	//UARTWrite(1, "\r\n...FormAckRequest");		
 	return root;	
 }
@@ -244,6 +246,7 @@ struct HiveCommand HandleServerCommand(cJSON* json)
 
 	return res;
 }
+
 
 
 

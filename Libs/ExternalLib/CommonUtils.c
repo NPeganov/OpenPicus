@@ -30,7 +30,7 @@ BOOL ProcessCommand()
     	IOPut(p21, toggle);		
 		if(TickGetDiv64K() - start_sec > timeout_sec)
 		{
-			UARTWrite(1, "\r\ProcessCommand: TIMEOUT\r\nReseting OpenPicus...\r\n");
+			UARTWrite(1, "\r\nProcessCommand: TIMEOUT\r\nReseting OpenPicus...\r\n");
 			Reset();
 		}		
 	}while(LastExecStat() == OP_EXECUTION);
@@ -84,6 +84,7 @@ void GetClockValue(const char * TimestampDest)
 	UARTWrite(1, TimestampDest);
 	UARTWrite(1, "\r\n");			
 }
+
 
 
 

@@ -140,7 +140,8 @@ not present on the network.
 	EC_NO_RESPONSE = 0x11,
 	EC_INTERBYTE_TIMEOUT = 0x12,
 	EC_UNEXPECTED_DATA = 0x13,
-	EC_CRC_MISMATCH = 0x14
+	EC_CRC_MISMATCH = 0x14,
+	EC_TOO_MANY_REGISTERS = 0x15	
 };
 
 struct ReadRegistersResp
@@ -153,10 +154,14 @@ struct ReadRegistersResp
 void _MBMInit(const struct SerialPort * Serial);	
 struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);
 struct ReadRegistersResp _ReadIRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);
+enum MODBUS_ERROR_CODE _WriteMultipleRegister(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues);
+enum MODBUS_ERRORODE _WriteSingleRegister(unsigned char SlaveID, const short Addr, const short NewValue);
 void dump(const unsigned char* buf, unsigned char len);	
 unsigned short CRC16(unsigned char * pcBlock, unsigned short len);
 
 void _SendRegistersReq(unsigned char SlaveID, unsigned char ReqType, const short StartAddr, const short RequestedQnty);
+enum MODBUS_ERROR_CODE _SendWriteRegistersReq(unsigned char SlaveID, unsigned char ReqType, const short StartAddr, const unsigned char Qnty, const short* NewValues);
+enum MODBUS_ERROR_CODE _ReadWriteConfirmResponse(unsigned char SlaveID, unsigned char ReqType, unsigned short* Address, unsigned short* Data);
 enum MODBUS_ERROR_CODE _ReadModbusResponse(unsigned char SlaveID, unsigned char ReqType, unsigned char** PayloadPointer, unsigned char* PayloadSize);
 enum MODBUS_ERROR_CODE _ReadResponseHeader(unsigned char* PayloadLen, unsigned char SlaveID, unsigned char ReqType);
 enum MODBUS_ERROR_CODE _ReadAndCheckCRC(unsigned char PayloadLen);
@@ -166,12 +171,15 @@ struct ModbusMaster
 	void (*Init)(const struct SerialPort * Serial);		
 	struct ReadRegistersResp (*ReadHoldingRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);	
 	struct ReadRegistersResp (*ReadInputRegisters)(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);		
+	enum MODBUS_ERROR_CODE (*WriteMultipleRegisters)(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues);	
+	enum MODBUS_ERROR_CODE (*WriteSingleRegister)(unsigned char SlaveID, const short Addr, const short NewValue);	
 };
 
 
 int MBM_Read(int v);
 
 #endif
+
 
 
 

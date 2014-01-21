@@ -173,13 +173,15 @@ int GetHttpResponse(TCP_SOCKET* conn, unsigned char* BufForResp, int timeout_sec
 			sprintf(loggBuff, "lenTemp: %d\r\n", lenTemp);		
 			UARTWrite(1, loggBuff);				
 			sprintf(loggBuff, "rxLen: %d\r\n", conn->rxLen);						
-			UARTWrite(1, loggBuff);				
+			UARTWrite(1, loggBuff);		
+			BufForResp[lenTemp] = 0;
 
+			if(lenTemp == 934)break;
+			DelayMs(1000);
 			/*
 			UARTWrite(1, "DATA READ: \r\n");	
-			UARTWrite(1, (char*)BufForResp);				
+			UARTWrite(1, (char*)&BufForResp[0]);				
 			*/
-			
 		}
 	}while(1);
 	
@@ -326,6 +328,9 @@ struct HttpResponse ParseResponse(unsigned char* BufForResp)
 	
 	return res;
 }
+
+
+
 
 
 
