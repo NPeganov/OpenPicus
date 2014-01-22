@@ -45,11 +45,19 @@ struct HttpResponse SendHttpDataRequest(TCP_SOCKET* conn, const char* url, unsig
 	res.RsponseIsOK = FALSE;
 	res.Response = 0; 	
 
-	strcpy(TCP_Buff, "Content-Length: ");
-	char contentlength[5];
-	sprintf(contentlength, "%d", strlen((char*)data));
-	strcat(TCP_Buff, contentlength);
-	strcat(TCP_Buff, "\r\nContent-Type: application/json\r\nAccept: */*\r\n");
+	memset(TCP_Buff, 0, TCP_BUF_SIZE);	
+	if(type != HTTP_GET)
+	{
+		strcpy(TCP_Buff, "Content-Length: ");
+		char contentlength[5];
+		sprintf(contentlength, "%d", strlen((char*)data));
+		strcat(TCP_Buff, contentlength);
+		strcat(TCP_Buff, "\r\nContent-Type: application/json\r\nAccept: */*\r\n");
+	}
+	else
+	{
+		strcpy(TCP_Buff, "Accept: */*\r\n");		
+	}
 	strcat(TCP_Buff, AuthInfo);						
 	strcat(TCP_Buff, "\r\n");												
 	strcat(TCP_Buff, "\r\n\r\n");

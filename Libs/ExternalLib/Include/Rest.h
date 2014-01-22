@@ -26,9 +26,10 @@ struct HiveCommand HandleServerCommand(cJSON* json);
 char* FetchTimeStamp(cJSON * TimestampFromServer);
 cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters);
 cJSON* FormParameter(const char * Name, double value);
-cJSON* FormAckRequest(cJSON* Result);
+cJSON* FormAckRequest(BOOL isResOK);
 
 #endif
+
 
 
 

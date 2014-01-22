@@ -141,9 +141,9 @@ enum MODBUS_ERROR_CODE _WriteSingleRegister(unsigned char SlaveID, const short A
 
 enum MODBUS_ERROR_CODE _WriteMultipleRegister(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues)
 {
-	UARTWrite(1, "\r\n_WriteOneRegister...");		
-	unsigned char ReqType = FC_Write_Single_Register;
-
+	UARTWrite(1, "\r\n_WriteMultipleRegister...");		
+	unsigned char ReqType = FC_Write_Multiple_Registers;
+	
 	_SendWriteRegistersReq(SlaveID, ReqType, StartAddr, Qnty, NewValues);		
 	unsigned short Address = 0;
 	unsigned short Value = 0;
@@ -166,14 +166,15 @@ enum MODBUS_ERROR_CODE _SendWriteRegistersReq(unsigned char SlaveID, unsigned ch
 	ModbusBuf[MB_REQ_IND + 0] = _RegHi(StartAddr);
 	ModbusBuf[MB_REQ_IND + 1] = _RegLow(StartAddr);	
 	
-	ModbusBuf[MB_REQ_IND + 2] = _RegHi(RequestedQnty);
-	ModbusBuf[MB_REQ_IND + 3] = _RegLow(RequestedQnty);
+	ModbusBuf[MB_REQ_IND + 2] = _RegHi(Qnty);
+	ModbusBuf[MB_REQ_IND + 3] = _RegLow(Qnty);
 	ModbusBuf[MB_REQ_IND + 4] = Qnty * MB_REGISTER_LEN;	
 	
-	unsigned char pNewValues = &ModbusBuf[MB_REQ_IND + 5];
+	unsigned char* pNewValues = &ModbusBuf[MB_REQ_IND + 5];
 	
-	for(unsigned char i = 0; i < Qnty; ++i)
-	{
+	unsigned char i = 0;
+	for(; i < Qnty; ++i)
+	{	
 		*pNewValues = _RegHi(NewValues[i]);++pNewValues;
 		*pNewValues = _RegLow(NewValues[i]);++pNewValues;		
 	}
@@ -182,12 +183,13 @@ enum MODBUS_ERROR_CODE _SendWriteRegistersReq(unsigned char SlaveID, unsigned ch
 	unsigned char total_len = ReqLen + ModbusBuf[MB_REQ_IND + 4];	
 	
 	unsigned short CRC = CRC16(&ModbusBuf[MB_ADDR_IND], total_len);		
-	RequestBuffer[total_len] = _RegLow(CRC);// LOW byte goes first!!!
-	RequestBuffer[total_len + 0] = _RegHi(CRC);		
+	ModbusBuf[total_len + 0] = _RegLow(CRC);// LOW byte goes first!!!
+	ModbusBuf[total_len + 1] = _RegHi(CRC);		
 	
 	UARTWrite(1, "\r\nSending request...");		
 	dump(ModbusBuf, total_len + MB_CRC_LEN);	
 	SPort.Write(ModbusBuf, total_len + MB_CRC_LEN);		
+	return EC_NO_ERROR;
 }
 
 void _SendRegistersReq(unsigned char SlaveID, unsigned char ReqType, const short StartAddr, const short RequestedQnty)
@@ -446,7 +448,7 @@ const struct ModbusMaster MBM =
 	_ReadHRegisters,
 	_ReadIRegisters,
 	_WriteMultipleRegister,
-	_WriteOneRegister
+	_WriteSingleRegister
 };
 
 

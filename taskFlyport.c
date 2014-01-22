@@ -80,7 +80,7 @@ void FlyportTask()
 
 	UARTWrite(1,"\r\nConnecting to a server... ");
 	const unsigned char ConnectionAtteptsNum = 3;
-	if(!EstablishHttpConnecion(&conn, BaseUrl, "80", ConnectionAtteptsNum))
+	if(!EstablishHttpConnecion(&conn, BaseUrl, "8010", ConnectionAtteptsNum))
 	{
 		UARTWrite(1, "Cannot connect to a server.\r\n Sleep and reset...\r\n");	
 		vTaskDelay(300);
@@ -117,14 +117,13 @@ void FlyportTask()
 		UARTWrite(1, "\r\nGetting commands for the device...");	
 		result = SendHttpDataRequest(&conn, url, HTTP_GET, NULL, SERVER_RESPONSE_TIMOUT_SEC);	
 		
-		BOOL sendACK = FALSE;		
 		
 		if(!result.RsponseIsOK || !result.Response)
 		{
 			UARTWrite(1, "\r\nFailed to get commands for the device...");			
 		}
 		else
-		{	BOOL isHandledOK = FALSE;
+		{	
 			cJSON* jResponse = cJSON_Parse(result.Response);
 			struct HiveCommand Command = HandleServerCommand(jResponse);
 			cJSON_Delete(jResponse);			
@@ -138,7 +137,7 @@ void FlyportTask()
 				{
 					// Parsing command
 					cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
-					unsigned char SlaveAddr = jRegType->valueint;cJSON_Delete(SlaveAddr);						
+					unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
 					
 					cJSON* jRegType = cJSON_DetachItemFromObject(Command.Parameters, "t");	
 					unsigned char RegType = jRegType->valueint;cJSON_Delete(jRegType);						
@@ -194,26 +193,30 @@ void FlyportTask()
 				} else if(!strcmp(Command.Name->valuestring, "write")) {
 					// Parsing command
 					cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
-					unsigned char SlaveAddr = jRegType->valueint;cJSON_Delete(SlaveAddr);						
+					unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
 								
 					cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "a");
 					unsigned short StartAddress = jStartAddress->valueint;cJSON_Delete(jStartAddress);
 					
 					cJSON* jData = cJSON_DetachItemFromObject(Command.Parameters, "d");	
 					unsigned short RegQnty = cJSON_GetArraySize(jData);
-					unsigned short pNewValues = (unsigned short*)malloc(sizeof(unsigned short) * RegQnty);
+					short* pNewValues = (short*)malloc(sizeof(short) * RegQnty);
 					
-					for(unsigned char i = 0; i < RegQnty; ++i)
+					unsigned char i = 0;
+					for(; i < RegQnty; ++i)
 					{
-						cJSON* jValue = cJSON_GetArrayItem(jData, i);
-						*pNewValues = jValue->valueint;
-						pNewValues++;						
+						cJSON* jItem = cJSON_GetArrayItem(jData, i);
+						cJSON* jValue = cJSON_GetObjectItem(jItem, "v");
+						if(jValue) {				
+							pNewValues[i] = jValue->valueint;
+						}
 					}
 					cJSON_Delete(jData);
 					
 					enum MODBUS_ERROR_CODE res = EC_NO_ERROR;					
-					sprintf(loggBuff, "\n\rWriting %d HOLDING registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, SlaveAddr);																		
-					res = MBM.WriteMultipleRegisters)(SlaveID, StartAddress, RegQnty, pNewValues);	
+					sprintf(loggBuff, "\n\rWriting %d HOLDING registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, (unsigned short)SlaveAddr);																		
+					UARTWrite(1,loggBuff);					
+					res = MBM.WriteMultipleRegisters(SlaveAddr, StartAddress, RegQnty, pNewValues);	
 					free(pNewValues);					
 					if(res == EC_NO_ERROR)
 					{
@@ -241,6 +244,8 @@ void FlyportTask()
 		vTaskDelay(20);		
 	}
 }
+
+
 
 
 
