@@ -37,6 +37,8 @@ static const int port485 = 3;
 static const char * BaseUrl = "ecloud.dataart.com";///ecapi8";
 //static const char * BaseUrl = "www.google.com";
 
+void SendAck(cJSON* ID, BOOL isOK);
+
 char loggBuff[255];
 TCP_SOCKET conn;
 
@@ -125,124 +127,142 @@ void FlyportTask()
 		else
 		{	
 			cJSON* jResponse = cJSON_Parse(result.Response);
-			struct HiveCommand Command = HandleServerCommand(jResponse);
-			cJSON_Delete(jResponse);			
-			if(Command.Name 
-			&& Command.Name->type == cJSON_String 
-			&& Command.ID 
-			&& Command.ID->type == cJSON_Number 			
-			&& Command.Parameters)
+			struct HiveCommand Command;
+			while(FetchServerCommand(jResponse, &Command))// will free jResponse if doesn't find any command left
 			{
-				if(!strcmp(Command.Name->valuestring, "read"))
+				if(Command.Name 
+				&& Command.Name->type == cJSON_String 
+				&& Command.ID 
+				&& Command.ID->type == cJSON_Number 			
+				&& Command.Parameters)
 				{
-					// Parsing command
-					cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
-					unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
-					
-					cJSON* jRegType = cJSON_DetachItemFromObject(Command.Parameters, "t");	
-					unsigned char RegType = jRegType->valueint;cJSON_Delete(jRegType);						
-					
-					cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "a");
-					unsigned short StartAddress = jStartAddress->valueint;cJSON_Delete(jStartAddress);
-					
-					cJSON* jRegQnty = cJSON_DetachItemFromObject(Command.Parameters, "c");	
-					unsigned short RegQnty = jRegQnty->valueint;cJSON_Delete(jRegQnty);						
-				
-					// Sending Ack
-					FormatAckUrl(url, Command.ID);
-					cJSON* jAck = FormAckRequest(TRUE);
-					result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, SERVER_RESPONSE_TIMOUT_SEC);	
-					cJSON_Delete(jAck);		
-					
-					// Reading registers
-					struct ReadRegistersResp mb_res; mb_res.ec = EC_NO_ERROR;
-					switch(RegType)
+					if(!strcmp(Command.Name->valuestring, "read"))
 					{
-						case FC_Read_Holding_Registers: {
-							sprintf(loggBuff, "\n\rReading %d HOLDING registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, SlaveAddr);																		
-							mb_res = MBM.ReadHoldingRegisters(SlaveAddr, StartAddress, RegQnty);				
-						}break;
+						// Parsing command
+						cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
+						unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
 						
-						case FC_Read_Input_Registers: {
-							sprintf(loggBuff, "\n\rReading %d INPUT registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, SlaveAddr);																									
-							mb_res = MBM.ReadInputRegisters(SlaveAddr, StartAddress, RegQnty);				
-						}break;
-					}
-					
-					// Sending notification
-					if(mb_res.ec == EC_NO_ERROR && mb_res.payload != NULL && mb_res.Qnty > 0)
-					{					
-						FormatNotificationUrl(url);
-						unsigned char i = 0;
-						cJSON* jValuesArray = cJSON_CreateArray();					
-						cJSON* jParams = cJSON_CreateObject();
-						cJSON_AddItemToObject(jParams, "i", cJSON_CreateNumber((double)SlaveAddr));//SlaveID						
-						cJSON_AddItemToObject(jParams, "d", jValuesArray);//Data						
-						cJSON* jNoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jParams);					
-						for(i = 0; i < mb_res.Qnty; ++i)
+						cJSON* jRegType = cJSON_DetachItemFromObject(Command.Parameters, "t");	
+						unsigned char RegType = jRegType->valueint;cJSON_Delete(jRegType);						
+						
+						cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "a");
+						unsigned short StartAddress = jStartAddress->valueint;cJSON_Delete(jStartAddress);
+						
+						cJSON* jRegQnty = cJSON_DetachItemFromObject(Command.Parameters, "c");	
+						unsigned short RegQnty = jRegQnty->valueint;cJSON_Delete(jRegQnty);						
+										
+						// Reading registers
+						struct ReadRegistersResp mb_res; mb_res.ec = EC_NO_ERROR;
+						switch(RegType)
 						{
-							cJSON* jRegister = cJSON_CreateObject();			
-							cJSON_AddItemToObject(jRegister, "v", cJSON_CreateNumber((double)mb_res.payload[i]));						
-							cJSON_AddItemToArray(jValuesArray, jRegister);												
+							case FC_Read_Holding_Registers: {
+								sprintf(loggBuff, "\n\rReading %d HOLDING registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, SlaveAddr);																		
+								mb_res = MBM.ReadHoldingRegisters(SlaveAddr, StartAddress, RegQnty);				
+							}break;
+							
+							case FC_Read_Input_Registers: {
+								sprintf(loggBuff, "\n\rReading %d INPUT registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, SlaveAddr);																									
+								mb_res = MBM.ReadInputRegisters(SlaveAddr, StartAddress, RegQnty);				
+							}break;
 						}
 						
-						result = SendHttpJsonRequest(&conn, url, HTTP_POST, jNoifyRequestJson, SERVER_RESPONSE_TIMOUT_SEC);	
-						cJSON_Delete(jNoifyRequestJson);										
-						free(mb_res.payload);			
-					}					
-				} else if(!strcmp(Command.Name->valuestring, "write")) {
-					// Parsing command
-					cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
-					unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
-								
-					cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "a");
-					unsigned short StartAddress = jStartAddress->valueint;cJSON_Delete(jStartAddress);
-					
-					cJSON* jData = cJSON_DetachItemFromObject(Command.Parameters, "d");	
-					unsigned short RegQnty = cJSON_GetArraySize(jData);
-					short* pNewValues = (short*)malloc(sizeof(short) * RegQnty);
-					
-					unsigned char i = 0;
-					for(; i < RegQnty; ++i)
-					{
-						cJSON* jItem = cJSON_GetArrayItem(jData, i);
-						cJSON* jValue = cJSON_GetObjectItem(jItem, "v");
-						if(jValue) {				
-							pNewValues[i] = jValue->valueint;
+						// Sending notification
+						if(mb_res.ec == EC_NO_ERROR && mb_res.payload != NULL && mb_res.Qnty > 0)
+						{					
+							FormatNotificationUrl(url);
+							cJSON* jParams = cJSON_CreateObject();
+							cJSON_AddItemToObject(jParams, "i", cJSON_CreateNumber((double)SlaveAddr));//SlaveID						
+							cJSON_AddItemToObject(jParams, "d", cJSON_CreateIntArray(mb_res.payload, mb_res.Qnty));//Data						
+							cJSON* jNoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jParams);											
+							result = SendHttpJsonRequest(&conn, url, HTTP_POST, jNoifyRequestJson, SERVER_RESPONSE_TIMOUT_SEC);	
+							cJSON_Delete(jNoifyRequestJson);										
+							free(mb_res.payload);			
+							
+							SendAck(Command.ID, TRUE);										
 						}
-					}
-					cJSON_Delete(jData);
-					
-					enum MODBUS_ERROR_CODE res = EC_NO_ERROR;					
-					sprintf(loggBuff, "\n\rWriting %d HOLDING registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, (unsigned short)SlaveAddr);																		
-					UARTWrite(1,loggBuff);					
-					res = MBM.WriteMultipleRegisters(SlaveAddr, StartAddress, RegQnty, pNewValues);	
-					free(pNewValues);					
-					if(res == EC_NO_ERROR)
-					{
-						// Sending Ack
-						FormatAckUrl(url, Command.ID);
-						cJSON* jAck = FormAckRequest(TRUE);
-						result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, SERVER_RESPONSE_TIMOUT_SEC);	
-						cJSON_Delete(jAck);							
-					}
-					else
-					{
-						// Sending Ack
-						FormatAckUrl(url, Command.ID);
-						cJSON* jAck = FormAckRequest(FALSE);
-						result = SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, SERVER_RESPONSE_TIMOUT_SEC);	
-						cJSON_Delete(jAck);						
-					}
-				}
-				
-				cJSON_Delete(Command.ID);
-				cJSON_Delete(Command.Name);			
-				cJSON_Delete(Command.Parameters);										
-			}
+						else
+						{
+							SendAck(Command.ID, FALSE);											
+						}
+					} //if(!strcmp(Command.Name->valuestring, "read"))
+					else if(!strcmp(Command.Name->valuestring, "write")) {
+						// Parsing command
+						cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
+						unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
+									
+						cJSON* jStartAddress = cJSON_DetachItemFromObject(Command.Parameters, "a");
+						unsigned short StartAddress = jStartAddress->valueint;cJSON_Delete(jStartAddress);
+						
+						cJSON* jData = cJSON_DetachItemFromObject(Command.Parameters, "d");	
+						unsigned short RegQnty = cJSON_GetArraySize(jData);
+						short* pNewValues = (short*)malloc(sizeof(short) * RegQnty);
+						
+						unsigned char i = 0;
+						for(; i < RegQnty; ++i)
+						{
+							cJSON* jItem = cJSON_GetArrayItem(jData, i);
+							if(jItem) {				
+								pNewValues[i] = jItem->valueint;
+							}							
+						}
+						cJSON_Delete(jData);
+						
+						enum MODBUS_ERROR_CODE res = EC_NO_ERROR;					
+						sprintf(loggBuff, "\n\rWriting %d HOLDING registers, starting at 0x%04hX form slave 0x%02hX", RegQnty, StartAddress, (unsigned short)SlaveAddr);																		
+						UARTWrite(1,loggBuff);					
+						res = MBM.WriteMultipleRegisters(SlaveAddr, StartAddress, RegQnty, pNewValues);	
+						free(pNewValues);			
+						
+						if(res == EC_NO_ERROR)SendAck(Command.ID, TRUE);
+						else SendAck(Command.ID, FALSE);
+					}//if(!strcmp(Command.Name->valuestring, "write"))
+					else if(!strcmp(Command.Name->valuestring, "write1")) {
+						UARTWrite(1,"\n\rHANDLING WRITE1\n\r");	
+						// Parsing command
+						cJSON* jSlaveID = cJSON_DetachItemFromObject(Command.Parameters, "i");
+						unsigned char SlaveAddr = jSlaveID->valueint;cJSON_Delete(jSlaveID);						
+						
+						cJSON* jAddress = cJSON_DetachItemFromObject(Command.Parameters, "a");
+						unsigned short Address = jAddress->valueint;cJSON_Delete(jAddress);
+						
+						cJSON* jValue = cJSON_DetachItemFromObject(Command.Parameters, "v");	
+						unsigned short Value = jValue->valueint;cJSON_Delete(jValue);	
+						
+						enum MODBUS_ERROR_CODE res = EC_NO_ERROR;					
+						sprintf(loggBuff, "\n\rWriting value 0x%04hX into HOLDING register at address 0x%04hX to slave 0x%02hX", Value, Address, (unsigned short)SlaveAddr);																		
+						UARTWrite(1,loggBuff);					
+						res = MBM.WriteSingleRegister(SlaveAddr, Address, Value);							
+						
+						if(res == EC_NO_ERROR)SendAck(Command.ID, TRUE);
+						else SendAck(Command.ID, FALSE);
+						
+					}// if(!strcmp(Command.Name->valuestring, "write1"))
+					else if(!strcmp(Command.Name->valuestring, "ack")) {
+						SendAck(Command.ID, TRUE);
+					}// if(!strcmp(Command.Name->valuestring, "ack"))				
+					else {						
+						sprintf(loggBuff, "\n\rUnknown command from server: \"%s\"", Command.Name->valuestring);																		
+						UARTWrite(1,loggBuff);											
+						SendAck(Command.ID, FALSE);
+					}// if(!strcmp(Command.Name->valuestring, "write1"))
+					cJSON_Delete(Command.ID);
+					cJSON_Delete(Command.Name);			
+					cJSON_Delete(Command.Parameters);										
+				}// if command is valid and has all necessary data
+			}//while(FetchServerCommand(jResponse, &Command))
 		}
 		vTaskDelay(20);		
 	}
+}
+
+
+void SendAck(cJSON* ID, BOOL isOK)
+{
+	char url[128];url[0] = 0;
+	FormatAckUrl(url, ID);
+	cJSON* jAck = FormAckRequest(isOK);
+	SendHttpJsonRequest(&conn, url, HTTP_PUT, jAck, SERVER_RESPONSE_TIMOUT_SEC);	
+	cJSON_Delete(jAck);			
 }
 
 

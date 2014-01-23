@@ -23,12 +23,14 @@ char* HandleServerInfo(cJSON* RawResponse);
 void SetLastTimeStamp(const char* NewTimeStamp);
 const char* GetLastTimeStamp();
 struct HiveCommand HandleServerCommand(cJSON* json);
+BOOL FetchServerCommand(cJSON* json, struct HiveCommand* dest);
 char* FetchTimeStamp(cJSON * TimestampFromServer);
 cJSON* FormNotificationRequest(const char * Name, cJSON* Parameters);
 cJSON* FormParameter(const char * Name, double value);
 cJSON* FormAckRequest(BOOL isResOK);
 
 #endif
+
 
 
 

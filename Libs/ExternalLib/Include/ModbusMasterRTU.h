@@ -154,7 +154,7 @@ struct ReadRegistersResp
 void _MBMInit(const struct SerialPort * Serial);	
 struct ReadRegistersResp _ReadHRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);
 struct ReadRegistersResp _ReadIRegisters(unsigned char SlaveID, const short StartAddr, const short RequestedQnty);
-enum MODBUS_ERROR_CODE _WriteMultipleRegister(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues);enum MODBUS_ERROR_CODE _WriteSingleRegister(unsigned char SlaveID, const short Addr, const short NewValue);
+enum MODBUS_ERROR_CODE _WriteMultipleRegisters(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues);enum MODBUS_ERROR_CODE _WriteSingleRegister(unsigned char SlaveID, const short Addr, const short NewValue);
 void dump(const unsigned char* buf, unsigned char len);	
 unsigned short CRC16(unsigned char * pcBlock, unsigned short len);
 
@@ -178,6 +178,7 @@ struct ModbusMaster
 int MBM_Read(int v);
 
 #endif
+
 
 
 

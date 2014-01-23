@@ -66,11 +66,16 @@ cJSON* FormAckRequest(BOOL isResOK)
 {
 	//UARTWrite(1, "\r\nFormAckRequest...");
 	cJSON *root = cJSON_CreateObject();
-	cJSON_AddItemToObject(root, "status", cJSON_CreateString("success"));
 	if(isResOK)
-		cJSON_AddItemToObject(root, "res", cJSON_CreateNumber(1));	
+	{
+		cJSON_AddItemToObject(root, "status", cJSON_CreateString("success"));		
+		cJSON_AddItemToObject(root, "r", cJSON_CreateNumber((double)1));	
+	}
 	else
-		cJSON_AddItemToObject(root, "res", cJSON_CreateNumber(-1));	
+	{
+		cJSON_AddItemToObject(root, "status", cJSON_CreateString("failed"));		
+		cJSON_AddItemToObject(root, "r", cJSON_CreateNumber((double)(0)));	
+	}
 	//UARTWrite(1, "\r\n...FormAckRequest");		
 	return root;	
 }
@@ -246,6 +251,75 @@ struct HiveCommand HandleServerCommand(cJSON* json)
 
 	return res;
 }
+
+
+BOOL FetchServerCommand(cJSON* json, struct HiveCommand* dest)
+{
+	char loggBuff[64];	
+	memset(dest, 0, sizeof(struct HiveCommand));		
+	
+	if (json)  
+	{	
+		int size = cJSON_GetArraySize(json);	
+		
+		if(size > 0)		
+		{
+			sprintf(loggBuff, "\n\rThere are %d commands from server left to handle.", size);		
+			UARTWrite(1, loggBuff);			
+			
+			cJSON* Command = cJSON_GetArrayItem(json, 0);
+			cJSON* timestampJSON = cJSON_GetObjectItem(Command, "timestamp");
+			if(FetchTimeStamp(timestampJSON))
+			{
+				dest->Name = cJSON_DetachItemFromObject(Command, "command");
+				if(dest->Name)
+				{
+					UARTWrite(1, "\r\nCommand name is: ");
+					char * s_out = cJSON_Print(dest->Name);
+					UARTWrite(1, s_out);
+					free(s_out);					
+				}
+				
+				dest->Parameters = cJSON_DetachItemFromObject(Command, "parameters");
+				if(dest->Parameters)
+				{
+					UARTWrite(1, "\r\nCommand parameters are: ");
+					char * s_out = cJSON_Print(dest->Parameters);
+					UARTWrite(1, s_out);
+					free(s_out);					
+				}	
+				
+				dest->ID = cJSON_DetachItemFromObject(Command, "id");
+				if(dest->ID)
+				{
+					UARTWrite(1, "\r\nCommand ID is: ");
+					char * s_out = cJSON_Print(dest->ID);
+					UARTWrite(1, s_out);
+					free(s_out);					
+				}
+			}	
+
+			cJSON_DeleteItemFromArray(json, 0);			
+		}
+		else
+		{
+			UARTWrite(1, "\n\rNo commands from server to handle. Will pull again.");
+			cJSON_Delete(json);
+		}
+	}		
+
+	if(dest->Name && dest->Parameters && dest->ID)
+		return TRUE;
+	else
+	{
+		if(dest->Name)cJSON_Delete(dest->Name);
+		if(dest->Parameters)cJSON_Delete(dest->Parameters);		
+		if(dest->ID)cJSON_Delete(dest->ID);				
+		return FALSE;
+	}
+}
+
+
 
 
 

@@ -139,9 +139,9 @@ enum MODBUS_ERROR_CODE _WriteSingleRegister(unsigned char SlaveID, const short A
 	return _ReadWriteConfirmResponse(SlaveID, ReqType, &Address, &Value);
 }
 
-enum MODBUS_ERROR_CODE _WriteMultipleRegister(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues)
+enum MODBUS_ERROR_CODE _WriteMultipleRegisters(unsigned char SlaveID, const short StartAddr, const unsigned char Qnty, const short* NewValues)
 {
-	UARTWrite(1, "\r\n_WriteMultipleRegister...");		
+	UARTWrite(1, "\r\n_WriteMultipleRegisters...");		
 	unsigned char ReqType = FC_Write_Multiple_Registers;
 	
 	_SendWriteRegistersReq(SlaveID, ReqType, StartAddr, Qnty, NewValues);		
@@ -325,10 +325,10 @@ enum MODBUS_ERROR_CODE _ReadWriteConfirmResponse(unsigned char SlaveID, unsigned
 	if(mb_res != EC_NO_ERROR)
 		return mb_res;
 	
-	*Address = (ModbusBuf[MB_FCODE_IND] << 8) | ModbusBuf[MB_PLOAD_IND];
+	*Address = (ModbusBuf[MB_PSIZE_IND] << 8) | ModbusBuf[MB_PSIZE_IND + 1];
 	*Data = (ModbusBuf[MB_PLOAD_IND + 1] << 8) | ModbusBuf[MB_PLOAD_IND + 2];	
 	
-	sprintf(loggBuff, "\r\nWrite request confirmation: (start) address 0x%04hX, quantity 0x%04hX", *Address, *Data);	
+	sprintf(loggBuff, "\r\nWrite request confirmation: (start) address 0x%04hX, quantity/value: 0x%04hX", *Address, *Data);	
 	UARTWrite(1, loggBuff);			
 	
 	return EC_NO_ERROR;	
@@ -447,9 +447,12 @@ const struct ModbusMaster MBM =
 	_MBMInit,
 	_ReadHRegisters,
 	_ReadIRegisters,
-	_WriteMultipleRegister,
+	_WriteMultipleRegisters,
 	_WriteSingleRegister
 };
+
+
+
 
 
 
