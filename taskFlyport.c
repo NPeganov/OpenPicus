@@ -171,8 +171,11 @@ void FlyportTask()
 						{					
 							FormatNotificationUrl(url);
 							cJSON* jParams = cJSON_CreateObject();
-							cJSON_AddItemToObject(jParams, "i", cJSON_CreateNumber((double)SlaveAddr));//SlaveID						
-							cJSON_AddItemToObject(jParams, "d", cJSON_CreateIntArray(mb_res.payload, mb_res.Qnty));//Data						
+							cJSON_AddItemToObject(jParams, "i", cJSON_CreateNumber(SlaveAddr));//SlaveID
+							cJSON* jData = cJSON_CreateObject();//Data	
+							cJSON_AddItemToObject(jData, "t", cJSON_CreateNumber(RegType));
+							cJSON_AddItemToObject(jData, "v", cJSON_CreateIntArray(mb_res.payload, mb_res.Qnty));					
+							cJSON_AddItemToObject(jParams, "d", jData);
 							cJSON* jNoifyRequestJson = FormNotificationRequest("MODBUS Slave Report", jParams);											
 							result = SendHttpJsonRequest(&conn, url, HTTP_POST, jNoifyRequestJson, SERVER_RESPONSE_TIMOUT_SEC);	
 							cJSON_Delete(jNoifyRequestJson);										
