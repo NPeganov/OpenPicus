@@ -1,0 +1,33 @@
+.container {
+	margin-top: 40px;
+}
+
+.read-data span {
+	margin-right: 3px;
+}
+
+.reg-address {
+	width: 150px;
+}
+
+.reg-values > div:first-child {
+	margin-right: 0;
+}
+
+.reg-values > div {
+	margin-right: 5px;
+	margin-bottom: 3px !important;
+}
+
+form .well {
+	margin-top: 20px;
+	margin-bottom: 0; 
+}
+
+select option {
+	height: 30px;
+}
+
+img {
+	margin: 0 10px;
+}

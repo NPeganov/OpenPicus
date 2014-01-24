@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DeviceHive ModBus Demo</title>
+    <!--<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>-->
+    <!--<script type="text/javascript" src="js/vendor/jquery-2.0.3.js"></script>-->
+    <!--<script type="text/javascript" src="js/vendor/bootstrap.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />-->
+
+    <script type="text/javascript" src="js/vendor/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.keyfilter.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/vendor/devicehive.js"></script>
+    <script type="text/javascript" src="js/modbusDevice.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <script type="text/html" id="value-tmpl">
+        <div class="form-group" style="width:110px">
+            <div class="input-group">
+                <input type="text" class="form-control write-reg-val" name="regValueAdditional" maxlength="4" value="0"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-remove-reg-val" type="button"><span class="glyphicon glyphicon-minus"></span></button>
+                </span>
+            </div>
+        </div>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="main" style="display:none">
+
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <div class="alert alert-danger alert-write" style="display: none">
+                        <strong>Failed!</strong>
+                        <span></span>.
+                        Probably application is not properly configured or device is turned off. Please check configuration, turn on device and try again.
+                    </div>
+                    <div class="alert alert-success alert-write" style="display: none">
+                        <strong>Values have been written!</strong>
+                    </div>
+                    <form role="form" class="form-inline" id="form-write" novalidate="novalidate">
+                        <fieldset>
+                            <button type="submit" class="btn btn-primary btn-write">Write</button>
+                            <div class="form-group">
+                                <label class="sr-only" for="write-reg-ad">Start address</label>
+                                <div class="input-group" style="width: 180px;">
+                                    <span class="input-group-addon">3</span>
+                                    <input type="text" placeholder="Start Address" id="write-reg-ad" class="form-control reg-address required" name="startAddress" required maxlength="4" />
+                                </div>
+                            </div>
+                            <div class="form-group loader-write" style="display: none">
+                                <img src="img/work-loader.gif" alt="Loading..." />
+                                <span>Communicating...</span>
+                            </div>
+                            <div class="well">
+                                <span class="help-block">You should specify minimum 1 register value</span>
+                                <div class="reg-values">
+                                    <div class="form-group" style="width: 110px; ">
+                                        <input type="text" class="form-control write-reg-val" name="regValue" maxlength="4" value="0" />
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-default btn-add-reg-val" style="width: 185px">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                    Add Register Value
+                                </button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="alert alert-danger alert-read" style="display: none">
+                        <strong>Failed!</strong>
+                        <span></span>.
+                        Probably application is not properly configured or device is turned off. Please check configuration, turn on device and try again.
+                    </div>
+                    <form role="form" class="form-inline" id="form-read" novalidate="novalidate">
+                        <fieldset>
+                            <input type="submit" class="btn btn-primary btn-read" value="Read" />
+                            <div class="form-group">
+                                <label class="sr-only" for="write-reg-ad">Register Type</label>
+                                <select id="read-reg-type" class="form-control">
+                                    <option value="3">Holding registers</option>
+                                    <option value="4">Analogue inputs</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="write-reg-ad">Start address</label>
+                                <div class="input-group" style="width: 180px;">
+                                    <span class="input-group-addon reg-address-prefix">3</span>
+                                    <input type="text" placeholder="Start Address" id="read-reg-ad" class="form-control reg-address required" name="startAddress" required maxlength="4" />
+                                </div>
+                            </div>
+                            <div class="form-group" style="width:20%">
+                                <label class="sr-only" for="read-reg-count">Registers Count</label>
+                                <input type="number" required placeholder="Registers Count" id="read-reg-count" class="form-control" name="registersCount" min="1" max="10" />
+                            </div>
+                            <div class="form-group loader-read" style="display: none">
+                                <img src="img/work-loader.gif" alt="Loading..." />
+                                <span>Communicating...</span>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="panel-footer read-data" style="display:none">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
