@@ -1,9 +1,9 @@
 (function () {
 	var config = {
-		serverUrl: "http://ecloud.dataart.com/ecapi8",
-		login: "admin",
-		password: "admin_6699$$",
-		deviceId: "b55cf00a-ffff-aaaa-bbbb-8af2a112cb57",
+		serverUrl: "[ServerUrl]",
+		login: "[Login]",
+		password: "[Password]",
+		deviceId: "[DeviceId]",
 		slaveId: 1,
 		commandTimeout: 200000,
 		notificationTimeout: 300000,
